@@ -1,0 +1,12 @@
+[
+  {
+    "key": "ctrl+shift+f",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Format all files with ESLint"
+  },
+  {
+    "key": "ctrl+alt+f",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Fix ESLint issues in current file"
+  }
+]
