@@ -1,5 +1,5 @@
+import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
-import { auth } from '@clerk/nextjs';
 
 // Mock database for demonstration
 const mockProducts = [
@@ -21,10 +21,9 @@ const mockProducts = [
 
 export async function GET() {
   try {
-    // In a real application, you would fetch products from your database
     return NextResponse.json(mockProducts);
-  } catch (error) {
-    console.error('Error fetching products:', error);
+  } catch (error: unknown) {
+    console.error('Failed to fetch products:', error);
     return NextResponse.json(
       { error: 'Failed to fetch products' },
       { status: 500 },
@@ -32,13 +31,7 @@ export async function GET() {
   }
 }
 
-export async function POST(request: Request) {
-  const { userId } = auth();
-  // Check if user is authenticated (for protected routes)
-  if (!userId) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-  }
-
+export async function POST(request: NextRequest) {
   try {
     const productData = await request.json();
     // In a real application, you would save the product to your database
