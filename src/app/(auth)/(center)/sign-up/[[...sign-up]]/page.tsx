@@ -1,12 +1,12 @@
-import { SignUp } from '@clerk/nextjs';
+// import { SignIn } from '@clerk/nextjs';
 
 export const metadata = {
-  title: 'Sign Up',
-  description: 'Create a new account',
+  title: 'Sign In',
+  description: 'Sign in to your account',
 };
 
-export default function SignUpPage() {
+export default function SignOutPage() {
   return (
-    <SignUp path="/sign-up" />
+    <div> Clerk removed please make the sign out route</div>
   );
 }

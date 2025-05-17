@@ -1,58 +1,42 @@
-import { withSentryConfig } from '@sentry/nextjs';
+import bundleAnalyzer from '@next/bundle-analyzer';
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    dirs: ['.'],
+  },
+  poweredByHeader: false,
+  basePath: '',
   reactStrictMode: true,
-  
-  // Configure webpack to handle Node.js modules in the browser
-  webpack: (config, { isServer }) => {
-    // If client-side (browser)
-    if (!isServer) {
-      // Replace Node.js modules with empty modules when bundling for the browser
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        net: false,
-        tls: false,
-        child_process: false,
-        worker_threads: false,
-        pino: false,
-        'pino-pretty': false,
-        '@logtail/pino': false,
-      };
-    }
-    
+  swcMinify: true,
+  output: 'standalone',
+
+  webpack(config) {
     return config;
   },
-  
-  // Disable image optimization during development to speed up builds
-  images: {
-    unoptimized: process.env.NODE_ENV === 'development',
+
+  sentry: {
+    hideSourceMaps: true,
+    disableLogger: true,
   },
-  
-  // Enable experimental features
+
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
+  },
+
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+
   experimental: {
-    serverComponentsExternalPackages: [
-      'pino',
-      'pino-pretty',
-      '@logtail/pino',
-    ],
+    instrumentationHook: false,
   },
 };
 
-// Wrap with Sentry config
-export default withSentryConfig(
-  nextConfig,
-  {
-    // Sentry options
-    silent: true, // Suppresses source map upload logs during build
-  },
-  {
-    // For all available options, see:
-    // https://github.com/getsentry/sentry-webpack-plugin#options
-    
-    // Upload source maps only in production
-    disableServerWebpackPlugin: process.env.NODE_ENV !== 'production',
-    disableClientWebpackPlugin: process.env.NODE_ENV !== 'production',
-  },
-);
+export default withBundleAnalyzer(nextConfig);

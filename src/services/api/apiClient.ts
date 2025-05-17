@@ -1,22 +1,24 @@
-import axios, { AxiosError, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosError, AxiosInstance, AxiosRequestConfig } from 'axios';
+import { clientLogger } from '@/libs/ClientLogger';
+import { logger } from '@/libs/Logger';
+import axios from 'axios';
+import createAuthRefreshInterceptor from 'axios-auth-refresh';
 import { setupCache } from 'axios-cache-interceptor';
 import axiosRetry from 'axios-retry';
-import createAuthRefreshInterceptor from 'axios-auth-refresh';
-import { setupMockInterceptors } from './mockService';
 import { handleApiError } from './errorHandler';
-import { logger } from '@/libs/Logger';
+import { setupMockInterceptors } from './mockService';
 
 // Types
-export interface ApiErrorResponse {
+export type ApiErrorResponse = {
   message: string;
   code?: string;
   details?: Record<string, any>;
-}
+};
 
 // API Configuration
 export const API_CONFIG = {
   BASE_URL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.example.com',
-  TIMEOUT: process.env.NEXT_PUBLIC_API_TIMEOUT ? parseInt(process.env.NEXT_PUBLIC_API_TIMEOUT) : 30000, // 30 seconds
+  TIMEOUT: process.env.NEXT_PUBLIC_API_TIMEOUT ? Number.parseInt(process.env.NEXT_PUBLIC_API_TIMEOUT) : 30000, // 30 seconds
   RETRY_COUNT: 3,
   RETRY_DELAY: 1000, // 1 second
   CACHE_MAX_AGE: 5 * 60 * 1000, // 5 minutes
@@ -25,11 +27,6 @@ export const API_CONFIG = {
 
 // Check if we're running in a browser environment
 const isBrowser = typeof window !== 'undefined';
-
-// Import the client logger if we're in a browser environment
-const clientLogger = isBrowser
-  ? require('@/libs/ClientLogger').clientLogger
-  : null;
 
 // Create Axios instance
 const createApiClient = (): AxiosInstance => {
@@ -124,7 +121,7 @@ const createApiClient = (): AxiosInstance => {
   });
 
   // Add token refresh logic
-  const refreshAuthLogic = async (failedRequest: any) => {
+  const refreshAuthLogic = async () => {
     try {
       // Implement your token refresh logic here
       // For example:

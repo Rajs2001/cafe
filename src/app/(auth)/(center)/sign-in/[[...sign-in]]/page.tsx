@@ -1,4 +1,4 @@
-import { SignIn } from '@clerk/nextjs';
+// import { SignIn } from '@clerk/nextjs';
 
 export const metadata = {
   title: 'Sign In',
@@ -7,6 +7,6 @@ export const metadata = {
 
 export default function SignInPage() {
   return (
-    <SignIn path="/sign-in" />
+    <div> Clerk removed please make the sign in route</div>
   );
 }

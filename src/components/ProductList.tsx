@@ -1,18 +1,24 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { Product, ProductFilter, ProductListResponse, productService } from '@/services/api/productService';
+import type { Product, ProductFilter, ProductListResponse } from '@/services/api/productService';
 import { API_CONFIG } from '@/services/api/apiClient';
+import { productService } from '@/services/api/productService';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
-interface ProductListProps {
+type ProductListProps = {
   initialFilters?: ProductFilter;
-}
+};
 
 export const ProductList = ({ initialFilters }: ProductListProps) => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [filters, setFilters] = useState<ProductFilter>(initialFilters || {});
+  const [filter, setFilter] = useState<ProductFilter>({
+    category: initialFilters?.category || '',
+    minPrice: initialFilters?.minPrice || 0,
+    maxPrice: initialFilters?.maxPrice || 1000,
+  });
   const [pagination, setPagination] = useState({
     total: 0,
     page: 1,
@@ -54,7 +60,7 @@ export const ProductList = ({ initialFilters }: ProductListProps) => {
           });
         } else {
           // Real API call
-          const response = await productService.getProducts(filters);
+          const response = await productService.getProducts(filter);
           setProducts(response.items);
           setPagination({
             total: response.total,
@@ -74,14 +80,10 @@ export const ProductList = ({ initialFilters }: ProductListProps) => {
     };
 
     fetchProducts();
-  }, [filters]);
-
-  const handleFilterChange = (newFilters: Partial<ProductFilter>) => {
-    setFilters(prev => ({ ...prev, ...newFilters, page: 1 })); // Reset to page 1 when filters change
-  };
+  }, [filter]);
 
   const handlePageChange = (newPage: number) => {
-    setFilters(prev => ({ ...prev, page: newPage }));
+    setFilter(prev => ({ ...prev, page: newPage }));
   };
 
   if (loading) {
@@ -99,15 +101,17 @@ export const ProductList = ({ initialFilters }: ProductListProps) => {
   return (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {products.map((product) => (
+        {products.map(product => (
           <div
             key={product.id}
             className="border rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow"
           >
             {product.imageUrl && (
-              <img
+              <Image
                 src={product.imageUrl}
                 alt={product.name}
+                width={400}
+                height={300}
                 className="w-full h-48 object-cover rounded-md mb-3"
               />
             )}
@@ -119,7 +123,10 @@ export const ProductList = ({ initialFilters }: ProductListProps) => {
             )}
             <p className="text-gray-600 mt-1">{product.description}</p>
             <div className="flex justify-between items-center mt-2">
-              <p className="text-blue-600 font-bold">${product.price.toFixed(2)}</p>
+              <p className="text-blue-600 font-bold">
+                $
+                {product.price.toFixed(2)}
+              </p>
               {product.rating && (
                 <div className="flex items-center">
                   <span className="text-yellow-500 mr-1">★</span>
@@ -138,16 +145,21 @@ export const ProductList = ({ initialFilters }: ProductListProps) => {
             <button
               onClick={() => handlePageChange(pagination.page - 1)}
               disabled={pagination.page === 1}
+              type="button"
               className="px-3 py-1 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Previous
             </button>
             <div className="px-4 py-1 border-t border-b border-gray-300 bg-white text-sm font-medium text-gray-700">
-              {pagination.page} of {pagination.totalPages}
+              {pagination.page}
+              {' '}
+              of
+              {pagination.totalPages}
             </div>
             <button
               onClick={() => handlePageChange(pagination.page + 1)}
               disabled={pagination.page === pagination.totalPages}
+              type="button"
               className="px-3 py-1 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Next
