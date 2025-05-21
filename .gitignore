@@ -58,3 +58,6 @@ storybook-static
 /test-results/
 /playwright-report/
 /playwright/.cache/
+
+package-lock.json
+pnpm-lock.yaml
