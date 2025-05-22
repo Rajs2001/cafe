@@ -1,7 +1,7 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Award, Calendar, Users, TrendingUp } from "lucide-react"
+import { Award, Calendar, TrendingUp, Users } from 'lucide-react';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 
 export default function VenturesPage() {
   return (
@@ -12,7 +12,11 @@ export default function VenturesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Our <span className="text-gold">Ventures</span> Journey
+                Our
+                {' '}
+                <span className="text-gold">Ventures</span>
+                {' '}
+                Journey
               </h1>
               <p className="text-gray-300 text-lg mb-8 max-w-xl">
                 From a small idea to a thriving ecosystem of experiences, discover the story behind Cruiserverse and the
@@ -42,7 +46,9 @@ export default function VenturesPage() {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              About <span className="text-gold">Us</span>
+              About
+              {' '}
+              <span className="text-gold">Us</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Cruiserverse was born from a passion for adventure, community, and storytelling. We create experiences
@@ -65,19 +71,29 @@ export default function VenturesPage() {
               <h3 className="text-2xl font-bold mb-4">Our Values</h3>
               <ul className="text-gray-400 space-y-2">
                 <li className="flex items-center gap-2">
-                  <span className="text-gold">•</span> Adventure in everything we do
+                  <span className="text-gold">•</span>
+                  {' '}
+                  Adventure in everything we do
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-gold">•</span> Community-driven approach
+                  <span className="text-gold">•</span>
+                  {' '}
+                  Community-driven approach
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-gold">•</span> Sustainability and responsibility
+                  <span className="text-gold">•</span>
+                  {' '}
+                  Sustainability and responsibility
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-gold">•</span> Innovation and creativity
+                  <span className="text-gold">•</span>
+                  {' '}
+                  Innovation and creativity
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-gold">•</span> Quality and excellence
+                  <span className="text-gold">•</span>
+                  {' '}
+                  Quality and excellence
                 </li>
               </ul>
             </div>
@@ -99,7 +115,9 @@ export default function VenturesPage() {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Our <span className="text-gold">Milestones</span>
+              Our
+              {' '}
+              <span className="text-gold">Milestones</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               The key moments that have shaped our journey and growth over the years.
@@ -237,7 +255,9 @@ export default function VenturesPage() {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Meet Our <span className="text-gold">Team</span>
+              Meet Our
+              {' '}
+              <span className="text-gold">Team</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               The passionate individuals behind Cruiserverse who bring our vision to life every day.
@@ -357,7 +377,11 @@ export default function VenturesPage() {
         <div className="container px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Join the <span className="text-gold">Cruiserverse</span> Journey?
+              Ready to Join the
+              {' '}
+              <span className="text-gold">Cruiserverse</span>
+              {' '}
+              Journey?
             </h2>
             <p className="text-gray-400 mb-8">
               Whether you're looking to join our team, partner with us, or become part of our community, we'd love to
@@ -375,5 +399,5 @@ export default function VenturesPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

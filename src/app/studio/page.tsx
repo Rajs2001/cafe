@@ -1,8 +1,8 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Play, ImageIcon, Film, Bookmark, Users, Calendar } from "lucide-react"
+import { Bookmark, Calendar, Film, ImageIcon, Play, Users } from 'lucide-react';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export default function StudioPage() {
   return (
@@ -13,7 +13,9 @@ export default function StudioPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Cruiserverse <span className="text-gold">Studio</span>
+                Cruiserverse
+                {' '}
+                <span className="text-gold">Studio</span>
               </h1>
               <p className="text-gray-300 text-lg mb-8 max-w-xl">
                 Our media gallery showcasing the visual stories, adventures, and moments that define the Cruiserverse
@@ -43,7 +45,9 @@ export default function StudioPage() {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Media <span className="text-gold">Gallery</span>
+              Media
+              {' '}
+              <span className="text-gold">Gallery</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Explore our collection of photos, videos, and stories that capture the essence of the Cruiserverse
@@ -67,7 +71,7 @@ export default function StudioPage() {
             {/* Photos Tab */}
             <TabsContent value="photos">
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {[...Array(12)].map((_, i) => (
+                {[...Array.from({ length: 12 })].map((_, i) => (
                   <div key={`photo-${i}`} className="relative group overflow-hidden rounded-lg">
                     <Image
                       src={`/placeholder.svg?height=300&width=300&text=Photo ${i + 1}`}
@@ -94,7 +98,7 @@ export default function StudioPage() {
             {/* Videos Tab */}
             <TabsContent value="videos">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[...Array(6)].map((_, i) => (
+                {[...Array.from({ length: 6 })].map((_, i) => (
                   <div key={`video-${i}`} className="relative group overflow-hidden rounded-lg">
                     <Image
                       src={`/placeholder.svg?height=300&width=500&text=Video ${i + 1}`}
@@ -113,7 +117,10 @@ export default function StudioPage() {
                       </Button>
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                      <h3 className="font-semibold text-white">Adventure Video {i + 1}</h3>
+                      <h3 className="font-semibold text-white">
+                        Adventure Video
+                        {i + 1}
+                      </h3>
                       <p className="text-sm text-gray-300">Exploring the wilderness</p>
                     </div>
                   </div>
@@ -129,7 +136,7 @@ export default function StudioPage() {
             {/* Stories Tab */}
             <TabsContent value="stories">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {[...Array(4)].map((_, i) => (
+                {[...Array.from({ length: 4 })].map((_, i) => (
                   <Card key={`story-${i}`} className="bg-zinc-800 border-zinc-700 overflow-hidden">
                     <div className="relative">
                       <Image
@@ -187,7 +194,9 @@ export default function StudioPage() {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Featured <span className="text-gold">Content</span>
+              Featured
+              {' '}
+              <span className="text-gold">Content</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Explore our handpicked selection of content that showcases the best of Cruiserverse experiences.
@@ -252,7 +261,9 @@ export default function StudioPage() {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Instagram <span className="text-gold">Feed</span>
+              Instagram
+              {' '}
+              <span className="text-gold">Feed</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Follow us on Instagram for daily updates, behind-the-scenes content, and community highlights.
@@ -260,7 +271,7 @@ export default function StudioPage() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {[...Array(12)].map((_, i) => (
+            {[...Array.from({ length: 12 })].map((_, i) => (
               <div key={`insta-${i}`} className="relative group overflow-hidden rounded-lg">
                 <Image
                   src={`/placeholder.svg?height=200&width=200&text=Insta ${i + 1}`}
@@ -304,7 +315,9 @@ export default function StudioPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Share Your <span className="text-gold">Story</span>
+                  Share Your
+                  {' '}
+                  <span className="text-gold">Story</span>
                 </h2>
                 <p className="text-gray-400 mb-8">
                   Have an amazing adventure story, photo, or video to share? Submit your content and be featured in our
@@ -347,5 +360,5 @@ export default function StudioPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

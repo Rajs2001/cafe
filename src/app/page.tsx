@@ -1,8 +1,8 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight, Coffee, Mountain, Camera, Cpu } from "lucide-react"
+import { ArrowRight, Camera, Coffee, Cpu, Mountain } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function Home() {
   return (
@@ -33,7 +33,9 @@ export default function Home() {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Welcome to <span className="text-gold">Cruiserverse</span>
+              Welcome to
+              {' '}
+              <span className="text-gold">Cruiserverse</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Discover our ecosystem of ventures, experiences, and innovations built for adventurers and storytellers.
@@ -54,7 +56,9 @@ export default function Home() {
               </CardContent>
               <CardFooter>
                 <Link href="/ventures" className="text-gold flex items-center gap-1 text-sm hover:underline">
-                  Learn more <ArrowRight className="h-4 w-4" />
+                  Learn more
+                  {' '}
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </CardFooter>
             </Card>
@@ -72,7 +76,9 @@ export default function Home() {
               </CardContent>
               <CardFooter>
                 <Link href="/pulse" className="text-gold flex items-center gap-1 text-sm hover:underline">
-                  Learn more <ArrowRight className="h-4 w-4" />
+                  Learn more
+                  {' '}
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </CardFooter>
             </Card>
@@ -90,7 +96,9 @@ export default function Home() {
               </CardContent>
               <CardFooter>
                 <Link href="/studio" className="text-gold flex items-center gap-1 text-sm hover:underline">
-                  Learn more <ArrowRight className="h-4 w-4" />
+                  Learn more
+                  {' '}
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </CardFooter>
             </Card>
@@ -108,7 +116,9 @@ export default function Home() {
               </CardContent>
               <CardFooter>
                 <Link href="/core" className="text-gold flex items-center gap-1 text-sm hover:underline">
-                  Learn more <ArrowRight className="h-4 w-4" />
+                  Learn more
+                  {' '}
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </CardFooter>
             </Card>
@@ -122,7 +132,9 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Discover Our <span className="text-gold">Featured Experiences</span>
+                Discover Our
+                {' '}
+                <span className="text-gold">Featured Experiences</span>
               </h2>
               <p className="text-gray-400 mb-8">
                 From café cruisers to mud adventures, we create unique experiences that bring communities together
@@ -205,5 +217,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  )
+  );
 }

@@ -5,8 +5,8 @@
  * It's useful for applying consistent formatting across the entire codebase.
  */
 
-const { execSync } = require('child_process');
-const path = require('path');
+const { execSync } = require('node:child_process');
+// const path = require('node:path');
 
 // Define file extensions to format
 const extensions = [

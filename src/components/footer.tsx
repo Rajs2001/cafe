@@ -1,6 +1,6 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -195,10 +195,14 @@ export default function Footer() {
 
         <div className="mt-12 pt-6 border-t border-border/40">
           <p className="text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Cruiserverse. All rights reserved.
+            ©
+            {' '}
+            {new Date().getFullYear()}
+            {' '}
+            Cruiserverse. All rights reserved.
           </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Calendar, MapPin, Users, Clock, ArrowRight } from "lucide-react"
+import { ArrowRight, Calendar, Clock, MapPin, Users } from 'lucide-react';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function PulsePage() {
   return (
@@ -12,7 +12,9 @@ export default function PulsePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Cruiserverse <span className="text-gold">Pulse</span>
+                Cruiserverse
+                {' '}
+                <span className="text-gold">Pulse</span>
               </h1>
               <p className="text-gray-300 text-lg mb-8 max-w-xl">
                 The heartbeat of our community. Events, marketing initiatives, and community-building activities that
@@ -42,7 +44,9 @@ export default function PulsePage() {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Our <span className="text-gold">Services</span>
+              Our
+              {' '}
+              <span className="text-gold">Services</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Discover the range of services we offer to create memorable experiences and build vibrant communities.
@@ -65,22 +69,32 @@ export default function PulsePage() {
                 </p>
                 <ul className="mt-4 space-y-2">
                   <li className="flex items-center gap-2">
-                    <span className="text-gold">•</span> Motorcycle Rides
+                    <span className="text-gold">•</span>
+                    {' '}
+                    Motorcycle Rides
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-gold">•</span> Café Meetups
+                    <span className="text-gold">•</span>
+                    {' '}
+                    Café Meetups
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-gold">•</span> Adventure Trips
+                    <span className="text-gold">•</span>
+                    {' '}
+                    Adventure Trips
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-gold">•</span> Community Gatherings
+                    <span className="text-gold">•</span>
+                    {' '}
+                    Community Gatherings
                   </li>
                 </ul>
               </CardContent>
               <CardFooter>
                 <Button variant="link" className="text-gold p-0 flex items-center gap-1">
-                  Learn More <ArrowRight className="h-4 w-4" />
+                  Learn More
+                  {' '}
+                  <ArrowRight className="h-4 w-4" />
                 </Button>
               </CardFooter>
             </Card>
@@ -114,22 +128,32 @@ export default function PulsePage() {
                 </p>
                 <ul className="mt-4 space-y-2">
                   <li className="flex items-center gap-2">
-                    <span className="text-gold">•</span> Brand Partnerships
+                    <span className="text-gold">•</span>
+                    {' '}
+                    Brand Partnerships
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-gold">•</span> Influencer Collaborations
+                    <span className="text-gold">•</span>
+                    {' '}
+                    Influencer Collaborations
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-gold">•</span> Content Creation
+                    <span className="text-gold">•</span>
+                    {' '}
+                    Content Creation
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-gold">•</span> Social Media Campaigns
+                    <span className="text-gold">•</span>
+                    {' '}
+                    Social Media Campaigns
                   </li>
                 </ul>
               </CardContent>
               <CardFooter>
                 <Button variant="link" className="text-gold p-0 flex items-center gap-1">
-                  Learn More <ArrowRight className="h-4 w-4" />
+                  Learn More
+                  {' '}
+                  <ArrowRight className="h-4 w-4" />
                 </Button>
               </CardFooter>
             </Card>
@@ -149,22 +173,32 @@ export default function PulsePage() {
                 </p>
                 <ul className="mt-4 space-y-2">
                   <li className="flex items-center gap-2">
-                    <span className="text-gold">•</span> Membership Programs
+                    <span className="text-gold">•</span>
+                    {' '}
+                    Membership Programs
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-gold">•</span> Workshops & Training
+                    <span className="text-gold">•</span>
+                    {' '}
+                    Workshops & Training
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-gold">•</span> Social Causes
+                    <span className="text-gold">•</span>
+                    {' '}
+                    Social Causes
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-gold">•</span> Community Forums
+                    <span className="text-gold">•</span>
+                    {' '}
+                    Community Forums
                   </li>
                 </ul>
               </CardContent>
               <CardFooter>
                 <Button variant="link" className="text-gold p-0 flex items-center gap-1">
-                  Learn More <ArrowRight className="h-4 w-4" />
+                  Learn More
+                  {' '}
+                  <ArrowRight className="h-4 w-4" />
                 </Button>
               </CardFooter>
             </Card>
@@ -177,7 +211,9 @@ export default function PulsePage() {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Upcoming <span className="text-gold">Events</span>
+              Upcoming
+              {' '}
+              <span className="text-gold">Events</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Join us for our upcoming events and experiences. Connect with like-minded individuals and create memories
@@ -323,7 +359,9 @@ export default function PulsePage() {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Marketing <span className="text-gold">Showcase</span>
+              Marketing
+              {' '}
+              <span className="text-gold">Showcase</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Explore our marketing initiatives and brand collaborations that connect businesses with our passionate
@@ -392,7 +430,9 @@ export default function PulsePage() {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Community <span className="text-gold">Initiatives</span>
+              Community
+              {' '}
+              <span className="text-gold">Initiatives</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Discover how we build and nurture our community through various initiatives and programs.
@@ -427,7 +467,9 @@ export default function PulsePage() {
                     a vibrant community.
                   </p>
                   <Button variant="link" className="text-gold p-0 flex items-center gap-1">
-                    Join Now <ArrowRight className="h-4 w-4" />
+                    Join Now
+                    {' '}
+                    <ArrowRight className="h-4 w-4" />
                   </Button>
                 </div>
               </div>
@@ -459,7 +501,9 @@ export default function PulsePage() {
                     techniques to maintenance.
                   </p>
                   <Button variant="link" className="text-gold p-0 flex items-center gap-1">
-                    Explore Workshops <ArrowRight className="h-4 w-4" />
+                    Explore Workshops
+                    {' '}
+                    <ArrowRight className="h-4 w-4" />
                   </Button>
                 </div>
               </div>
@@ -493,7 +537,9 @@ export default function PulsePage() {
                     conservation to community development.
                   </p>
                   <Button variant="link" className="text-gold p-0 flex items-center gap-1">
-                    Get Involved <ArrowRight className="h-4 w-4" />
+                    Get Involved
+                    {' '}
+                    <ArrowRight className="h-4 w-4" />
                   </Button>
                 </div>
               </div>
@@ -524,7 +570,9 @@ export default function PulsePage() {
                     and knowledge.
                   </p>
                   <Button variant="link" className="text-gold p-0 flex items-center gap-1">
-                    Join the Conversation <ArrowRight className="h-4 w-4" />
+                    Join the Conversation
+                    {' '}
+                    <ArrowRight className="h-4 w-4" />
                   </Button>
                 </div>
               </div>
@@ -538,7 +586,10 @@ export default function PulsePage() {
         <div className="container px-4">
           <div className="bg-gradient-to-r from-zinc-900 to-zinc-800 rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Experience the <span className="text-gold">Pulse</span>?
+              Ready to Experience the
+              {' '}
+              <span className="text-gold">Pulse</span>
+              ?
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto mb-8">
               Join our community and be part of exciting events, marketing initiatives, and community-building
@@ -556,5 +607,5 @@ export default function PulsePage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

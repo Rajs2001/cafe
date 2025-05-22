@@ -37,6 +37,7 @@ export default antfu(
     rules: {
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs['core-web-vitals'].rules,
+      'eslint-comments/no-unlimited-disable': 'off',
     },
   },
   // --- Accessibility Rules ---

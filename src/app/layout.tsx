@@ -1,23 +1,23 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import { ThemeProvider } from "@/components/theme-provider"
+import type { Metadata } from 'next';
+import type React from 'react';
+import { Inter } from 'next/font/google';
+import Footer from '@/components/footer';
+import Header from '@/components/header';
+import { ThemeProvider } from '@/components/theme-provider';
+import './globals.css';
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Cruiserverse | Built for the Wild",
-  description: "Built for the Wild. Powered by Stories. Driven by Community.",
-    generator: 'v0.dev'
-}
+  title: 'Cruiserverse | Built for the Wild',
+  description: 'Built for the Wild. Powered by Stories. Driven by Community.',
+  generator: 'v0.dev',
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -29,5 +29,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

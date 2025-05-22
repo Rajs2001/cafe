@@ -1,14 +1,14 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Menu, X, ChevronDown, Bell, User } from "lucide-react"
+import { Bell, ChevronDown, Menu, User, X } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -44,7 +44,9 @@ export default function Header() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="flex items-center gap-1 hover:text-gold">
-                Login <ChevronDown className="h-4 w-4" />
+                Login
+                {' '}
+                <ChevronDown className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-48 bg-secondary">
@@ -124,14 +126,18 @@ export default function Header() {
                   className="text-sm p-2 hover:bg-secondary rounded-md flex items-center gap-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <User className="h-4 w-4" /> Admin Login
+                  <User className="h-4 w-4" />
+                  {' '}
+                  Admin Login
                 </Link>
                 <Link
                   href="/employee-login"
                   className="text-sm p-2 hover:bg-secondary rounded-md flex items-center gap-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <User className="h-4 w-4" /> Employee Login
+                  <User className="h-4 w-4" />
+                  {' '}
+                  Employee Login
                 </Link>
                 <Link
                   href="https://cafecruisers.keka.com/"
@@ -140,7 +146,9 @@ export default function Header() {
                   className="text-sm p-2 hover:bg-secondary rounded-md flex items-center gap-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <User className="h-4 w-4" /> Candidate Login
+                  <User className="h-4 w-4" />
+                  {' '}
+                  Candidate Login
                 </Link>
               </div>
             </div>
@@ -148,5 +156,5 @@ export default function Header() {
         </div>
       )}
     </header>
-  )
+  );
 }

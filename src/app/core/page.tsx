@@ -1,8 +1,8 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Shield, Zap, Compass, Settings } from "lucide-react"
+import { Compass, Settings, Shield, Zap } from 'lucide-react';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export default function CorePage() {
   return (
@@ -13,7 +13,9 @@ export default function CorePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Cruiserverse <span className="text-gold">Core</span>
+                Cruiserverse
+                {' '}
+                <span className="text-gold">Core</span>
               </h1>
               <p className="text-gray-300 text-lg mb-8 max-w-xl">
                 Our product ecosystem designed to enhance your adventure experience with innovative solutions and
@@ -43,7 +45,9 @@ export default function CorePage() {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Our <span className="text-gold">Products</span>
+              Our
+              {' '}
+              <span className="text-gold">Products</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Discover our range of innovative products designed to enhance your adventure experience and provide
@@ -319,7 +323,9 @@ export default function CorePage() {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Key <span className="text-gold">Features</span>
+              Key
+              {' '}
+              <span className="text-gold">Features</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Our products are designed with these core features that set them apart from the competition.
@@ -423,7 +429,9 @@ export default function CorePage() {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Customer <span className="text-gold">Testimonials</span>
+              Customer
+              {' '}
+              <span className="text-gold">Testimonials</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Hear what our customers have to say about their experience with our products.
@@ -448,7 +456,7 @@ export default function CorePage() {
                   </div>
                 </div>
                 <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
+                  {[...Array.from({ length: 5 })].map((_, i) => (
                     <svg
                       key={i}
                       xmlns="http://www.w3.org/2000/svg"
@@ -491,7 +499,7 @@ export default function CorePage() {
                   </div>
                 </div>
                 <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
+                  {[...Array.from({ length: 5 })].map((_, i) => (
                     <svg
                       key={i}
                       xmlns="http://www.w3.org/2000/svg"
@@ -533,7 +541,7 @@ export default function CorePage() {
                   </div>
                 </div>
                 <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
+                  {[...Array.from({ length: 5 })].map((_, i) => (
                     <svg
                       key={i}
                       xmlns="http://www.w3.org/2000/svg"
@@ -567,7 +575,9 @@ export default function CorePage() {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Product <span className="text-gold">Showcase</span>
+              Product
+              {' '}
+              <span className="text-gold">Showcase</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Explore our latest products and innovations designed for adventure enthusiasts.
@@ -868,7 +878,10 @@ export default function CorePage() {
         <div className="container px-4">
           <div className="bg-gradient-to-r from-zinc-900 to-zinc-800 rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Enhance Your <span className="text-gold">Adventure</span>?
+              Ready to Enhance Your
+              {' '}
+              <span className="text-gold">Adventure</span>
+              ?
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto mb-8">
               Explore our product ecosystem and discover how our innovative solutions can transform your adventure
@@ -886,5 +899,5 @@ export default function CorePage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
