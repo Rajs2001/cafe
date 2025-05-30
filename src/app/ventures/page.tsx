@@ -1,7 +1,8 @@
-import { Award, Calendar, TrendingUp, Users } from 'lucide-react';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { ArrowRight, Award, Calendar, TrendingUp, Users } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function VenturesPage() {
   return (
@@ -12,15 +13,16 @@ export default function VenturesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Our
+                ADVENTURE IS OUR LANGUAGE.
                 {' '}
-                <span className="text-gold">Ventures</span>
-                {' '}
-                Journey
+                <br />
+                COMMUNITY IS OUR TERRAIN.
+
               </h1>
               <p className="text-gray-300 text-lg mb-8 max-w-xl">
-                From a small idea to a thriving ecosystem of experiences, discover the story behind Cruiserverse and the
-                team that makes it all possible.
+                Meet our thriving adventure verticals — communities
+                fueled by passion for the open road, off-road terrain,
+                and the stories in between.
               </p>
               <Button className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">Meet Our Team</Button>
             </div>
@@ -41,71 +43,61 @@ export default function VenturesPage() {
         </div>
       </section>
 
-      {/* About Us Section */}
+      {/* Ventures Section */}
       <section className="py-20 bg-zinc-900">
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              About
-              {' '}
-              <span className="text-gold">Us</span>
+              Our Flagship Ventures
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Cruiserverse was born from a passion for adventure, community, and storytelling. We create experiences
-              that bring people together.
+              Meet the communities that ride, roam, and rally together. Introducing
+              Café Cruisers and Mud Cruisers — where passion becomes a vibrant movement.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-              <p className="text-gray-400 mb-6">
-                To create immersive experiences that connect people through shared adventures, stories, and passions,
-                while fostering a community of like-minded individuals.
-              </p>
-              <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-              <p className="text-gray-400 mb-6">
-                To become the leading ecosystem for adventure enthusiasts, providing innovative products, services, and
-                experiences that inspire and empower our community.
-              </p>
-              <h3 className="text-2xl font-bold mb-4">Our Values</h3>
-              <ul className="text-gray-400 space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="text-gold">•</span>
-                  {' '}
-                  Adventure in everything we do
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-gold">•</span>
-                  {' '}
-                  Community-driven approach
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-gold">•</span>
-                  {' '}
-                  Sustainability and responsibility
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-gold">•</span>
-                  {' '}
-                  Innovation and creativity
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-gold">•</span>
-                  {' '}
-                  Quality and excellence
-                </li>
-              </ul>
-            </div>
-            <div className="order-1 md:order-2">
-              <Image
-                src="/placeholder.svg?height=600&width=600"
-                alt="About Cruiserverse"
-                width={600}
-                height={600}
-                className="rounded-lg object-cover"
-              />
-            </div>
+          {/* Grid with equal height and responsive layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {/* Venture Card Component */}
+            {[
+              {
+                title: 'Born to Ride. Built to Connect.',
+                desc: 'A premier space for motorcyclists to discover new routes, strengthen connections, and honor the essence of two-wheels.',
+                link: '/venture1',
+                img: '/placeholder.svg?height=400&width=400',
+              },
+              {
+                title: 'Unleash the Off-Road Within.',
+                desc: 'A rugged 4×4 culture for those who chase dirt, defy limits, and thrive in the wild unknown.',
+                link: '/venture2',
+                img: '/placeholder.svg?height=400&width=400',
+              },
+            ].map((venture, i) => (
+              <Card key={i} className="flex flex-col h-full overflow-hidden">
+                <Image
+                  src={venture.img}
+                  alt={venture.title}
+                  width={400}
+                  height={400}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="flex flex-col flex-grow justify-between">
+                  <CardContent className="pt-4 flex-grow">
+                    <h3 className="text-xl font-bold mb-1">{venture.title}</h3>
+                    <p className="text-sm text-gray-400">{venture.desc}</p>
+                  </CardContent>
+                  <CardFooter>
+                    <Link
+                      href={venture.link}
+                      className="text-gold flex items-center gap-1 text-sm hover:underline"
+                    >
+                      Learn more
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </CardFooter>
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -250,6 +242,122 @@ export default function VenturesPage() {
         </div>
       </section>
 
+      {/* Adventures Section */}
+      <section className="py-20 bg-zinc-900">
+        <div className="container px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Beyond Adventures
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Our initiatives focused on building a meaningful ecosystem for enthusiasts,
+              professionals, and change-makers.
+            </p>
+          </div>
+
+          {/* Grid for Adventures */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Career Opportunities:',
+                desc: `Offering structured roles for experienced riders to become certified Ride Pilots,
+          who lead group expeditions, ensure safety, and create memorable experiences.`,
+              },
+              {
+                title: 'Integrated Digital Platforms:',
+                desc: `Innovating cutting-edge technologies and planning tools to enhance every facet
+          of the adventure journey like route optimization, coordination, bookings, and more.`,
+              },
+              {
+                title: 'Skill Development & Training Academies:',
+                desc: `Through workshops and accredited programs, we enable riders and enthusiasts to
+          enhance skills and grow professionally within the adventure ecosystem.`,
+              },
+              {
+                title: 'A Purposeful Career Alternative:',
+                desc: `For those seeking a shift from high-stress jobs, Cruiserverse offers a fulfilling
+          career in the adventure industry — with balance, stability, and satisfaction.`,
+              },
+              {
+                title: 'Collaborative Creator Programs:',
+                desc: `We work with influencers, designers, and storytellers to share authentic narratives
+          from our experiences — building culture and connection.`,
+              },
+              {
+                title: 'Community-Led Growth:',
+                desc: `Cruiserverse builds an inclusive culture where passion, sustainability, and innovation
+          define how we ride and grow — together.`,
+              },
+            ].map((adventure, idx) => (
+              <Card key={idx} className="bg-zinc-800 border-zinc-700 flex flex-col h-full overflow-hidden">
+                <Image
+                  src="/placeholder.svg?height=400&width=400"
+                  alt={adventure.title}
+                  width={400}
+                  height={400}
+                  className="w-full h-64 object-cover"
+                />
+                <CardContent className="pt-4 flex-grow">
+                  <h3 className="text-xl font-bold mb-2">{adventure.title}</h3>
+                  <p className="text-sm text-gray-400 whitespace-pre-line">
+                    {adventure.desc}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Vision Section */}
+      <section className="py-20 bg-zinc-900">
+        <div className="container px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <h3 className="text-2xl font-bold mb-4">Future Vision</h3>
+              <p className="text-gray-400 mb-6">
+                Cruiserverse is committed to building futures and fostering a more connected,
+                inspired, and adventurous tomorrow
+              </p>
+
+              <ul className="text-gray-400 space-y-2">
+                <li className="flex items-center gap-2">
+                  <span className="text-gold">•</span>
+                  {' '}
+                  Establishing Pan-India Club Networks for local rider communities and skill development.
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-gold">•</span>
+                  {' '}
+                  Expanding Skill Development Academy into a national certification body for ride leaders and
+                  tour professionals.
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-gold">•</span>
+                  {' '}
+                  Developing Smart Touring Infrastructure to enhance the riding experience in India.
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-gold">•</span>
+                  {' '}
+                  Creating synergies for Rural & Urban Mobility through responsible tourism and sustainable
+                  models.
+                  {' '}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-gold">•</span>
+                  {' '}
+                  Positioning ourselves as the leading platform for adventure-based careers and community
+                  innovations
+                  {' '}
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Team Section */}
       <section className="py-20 bg-zinc-900">
         <div className="container px-4">
@@ -372,32 +480,27 @@ export default function VenturesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-b from-zinc-900 to-black">
-        <div className="container px-4">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Join the
-              {' '}
-              <span className="text-gold">Cruiserverse</span>
-              {' '}
-              Journey?
-            </h2>
-            <p className="text-gray-400 mb-8">
-              Whether you're looking to join our team, partner with us, or become part of our community, we'd love to
-              hear from you.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">
-                Join Our Community
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-full px-8 border-gold text-gold hover:bg-gold/10">
-                Contact Us
-              </Button>
-            </div>
+      {/* Join CTA Section */}
+      <section className="py-20 bg-zinc-900">
+        <div className="px-4 sm:px-8 lg:px-16 max-w-xl mx-auto">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-left">
+            Ready to Join the Adventure?
+            {' '}
+          </h3>
+          <p className="text-gray-400 text-center mb-12">
+            Whether you're looking for exciting career opportunities or interested in partnering with us, join the movement and be part of Cruiserverse's growing community.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <button className="bg-gold text-black rounded-full px-8 py-3 text-lg hover:bg-gold/90 transition">
+              Join as Job Seeker
+            </button>
+            <button className="bg-transparent border border-gold text-gold rounded-full px-8 py-3 text-lg hover:bg-gold hover:text-black transition">
+              Partner with Us
+            </button>
           </div>
         </div>
       </section>
+
     </div>
   );
 }

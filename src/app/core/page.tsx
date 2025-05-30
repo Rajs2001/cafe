@@ -1,8 +1,8 @@
-import { Compass, Settings, Shield, Zap } from 'lucide-react';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Compass, Settings, Shield, Zap } from 'lucide-react';
+import Image from 'next/image';
 
 export default function CorePage() {
   return (
@@ -13,13 +13,12 @@ export default function CorePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Cruiserverse
-                {' '}
-                <span className="text-gold">Core</span>
+                <span className="text-gold">
+                  WHERE ADVENTURE MEETS
+                  INNOVATION
+                </span>
               </h1>
               <p className="text-gray-300 text-lg mb-8 max-w-xl">
-                Our product ecosystem designed to enhance your adventure experience with innovative solutions and
-                technology.
               </p>
               <Button className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">Explore Products</Button>
             </div>
@@ -37,6 +36,191 @@ export default function CorePage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Black About Section */}
+      <section className="bg-black text-white py-20">
+        <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          {/* Text Left */}
+          <div>
+            <p className="text-gray-300 leading-relaxed">
+              Step into the Core of Cruiserverse, our
+              engine room of innovation, where
+              technology powers exploration, and bold
+              ideas shape the future of automotive
+              adventures.
+              {' '}
+              <br />
+              <br />
+              This is where rider-first digital tools meet
+              community spirit — building smarter
+              journeys, seamless operations, and
+              immersive experiences.
+            </p>
+          </div>
+
+          {/* Logo Right */}
+          <div className="flex justify-center lg:justify-end">
+            <Image
+              src="/path-to-your-logo.svg" // replace later
+              alt="Cruiserverse Studio Logo"
+              width={300}
+              height={300}
+              className="w-auto h-48 object-contain opacity-80"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* What Power's Core Section */}
+      <section className="py-20 bg-zinc-900">
+        <div className="container px-4">
+          <h3 className="text-2xl font-bold mb-4"> What Powers the Core? </h3>
+          <div className="text-center max-w-2xl mx-auto space-y-10">
+            <p></p>
+            {/* Section 1: Café Cruisers App */}
+            <div>
+              <p className="text-white mb-4 font-medium text-lg">
+                1. Café Cruisers App
+                {' '}
+                <br />
+                <span className="text-sm text-gray-400">Your portal to a vibrant motorcycling community.</span>
+              </p>
+
+              <ul className="space-y-3 text-gray-400 text-sm sm:text-base leading-tight text-left inline-block">
+                <li className="flex items-start gap-2">
+                  <span className="text-gold text-xl relative -top-0.5">•</span>
+                  <span>Reserve motorcycle rentals</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gold text-xl relative -top-0.5">•</span>
+                  <span>Participate in upcoming rides</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gold text-xl relative -top-0.5">•</span>
+                  <span>Connect with fellow riders</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gold text-xl relative -top-0.5">•</span>
+                  <span>Enjoy club features and local vendor benefits</span>
+                </li>
+              </ul>
+
+              <div className="mt-6">
+                <Button className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">
+                  Discover Café Cruisers
+                </Button>
+              </div>
+            </div>
+
+            {/* Section 2: Cruisers Pilot App */}
+            <div>
+              <p className="text-white mb-4 font-medium text-lg">
+                2. Cruisers Pilot App
+                {' '}
+                <br />
+                <span className="text-sm text-gray-400">Empowering ride leaders and event organizers.</span>
+              </p>
+
+              <ul className="space-y-3 text-gray-400 text-sm sm:text-base leading-tight text-left inline-block">
+                <li className="flex items-start gap-2">
+                  <span className="text-gold text-xl relative -top-0.5">•</span>
+                  <span>Monitor earnings and trips</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gold text-xl relative -top-0.5">•</span>
+                  <span>Organize rides and manage bookings</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gold text-xl relative -top-0.5">•</span>
+                  <span>Utilize ride analytics and tools</span>
+                </li>
+              </ul>
+              <div className="mt-6">
+                <Button className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">
+                  Find Out About the Pilot App
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What Power's the Experience Section */}
+      <section className="py-20 bg-zinc-900">
+        <div className="px-4 sm:px-8 lg:px-16">
+          <h3 className="text-2xl font-bold mb-4">What Powers the Experience?</h3>
+        </div>
+        <div className="text-center max-w-2xl mx-auto space-y-8">
+          <section className="py-16 bg-zinc-900 text-center">
+            <div className="max-w-3xl mx-auto px-4">
+              <p className="text-gray-400 text-lg mb-10">
+                At the core of
+                {' '}
+                <span className="text-gold font-semibold">Cruiserverse</span>
+                {' '}
+                is technology designed to foster freedom,
+                planning, and performance—suitable for both casual riders and
+                professional pilots.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+                <div className="bg-zinc-800 border border-zinc-700 p-6 rounded-xl w-full max-w-xs">
+                  <p className="text-gold font-semibold text-center">Intelligent Trip Planning</p>
+                </div>
+                <div className="bg-zinc-800 border border-zinc-700 p-6 rounded-xl w-full max-w-xs">
+                  <p className="text-gold font-semibold text-center">Real-Time Tracking</p>
+                </div>
+                <div className="bg-zinc-800 border border-zinc-700 p-6 rounded-xl w-full max-w-xs">
+                  <p className="text-gold font-semibold text-center">Ride & Rental Integration</p>
+                </div>
+                <div className="bg-zinc-800 border border-zinc-700 p-6 rounded-xl w-full max-w-xs">
+                  <p className="text-gold font-semibold text-center">Club & Community Modules</p>
+                </div>
+                <div className="bg-zinc-800 border border-zinc-700 p-6 rounded-xl w-full max-w-xs">
+                  <p className="text-gold font-semibold text-center">Smart Notifications</p>
+                </div>
+                <div className="bg-zinc-800 border border-zinc-700 p-6 rounded-xl w-full max-w-xs">
+                  <p className="text-gold font-semibold text-center">Location-Based Vendor Booking</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      {/* Future Tech Section */}
+      <section className="py-20 bg-zinc-900">
+        <div className="px-4 sm:px-8 lg:px-16">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-12">
+            Built for Today. Designed for Tomorrow.
+          </h3>
+
+          <p className="text-gray-400 max-w-2xl mx-auto mb-10">
+            Here’s a glimpse into what we’re building next to elevate the rider experience.
+          </p>
+          <ul className="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto text-left">
+            <li>
+              <span className="font-semibold text-white">AI Route Planning:</span>
+              {' '}
+              Predictive ride suggestions based on traffic, terrain, and mood.
+            </li>
+            <li>
+              <span className="font-semibold text-white">AR Ride Overlays:</span>
+              {' '}
+              Augmented Reality for immersive navigation and on-road guides.
+            </li>
+            <li>
+              <span className="font-semibold text-white">Backend Suite:</span>
+              {' '}
+              A control hub for community managers, ride hosts, and vendors.
+            </li>
+            <li>
+              <span className="font-semibold text-white">Cross-Platform Sync:</span>
+              {' '}
+              Seamless experience across devices and roles.
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -873,26 +1057,39 @@ export default function CorePage() {
         </div>
       </section>
 
+      {/* Core Tools Section */}
+      <section className="py-20 bg-zinc-900">
+        <div className="px-4 sm:px-8 lg:px-16">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-8">
+            Experience the Tools that Drive the Movement.
+          </h3>
+
+          <p className="text-gray-400 max-w-2xl mx-auto text-center mb-10">
+            Join the growing number of adventurers who use our tech daily.
+            Whether you're exploring or organizing, Core keeps you in control.
+          </p>
+
+          <div className="flex justify-center">
+            <button className="bg-gold text-black font-medium px-6 py-2 rounded-full hover:bg-gold/90 transition">
+              Download Café Cruisers
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-b from-zinc-900 to-black">
         <div className="container px-4">
           <div className="bg-gradient-to-r from-zinc-900 to-zinc-800 rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Enhance Your
-              {' '}
-              <span className="text-gold">Adventure</span>
-              ?
+              WANT TO BRING OUR TOOLS
+              TO YOUR COMMUNITY OR
+              BUSINESS? LET’S TALK
+              INNOVATION.
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-              Explore our product ecosystem and discover how our innovative solutions can transform your adventure
-              experience.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">
-                Shop Now
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-full px-8 border-gold text-gold hover:bg-gold/10">
-                Request Demo
+                Collaborate with us
               </Button>
             </div>
           </div>

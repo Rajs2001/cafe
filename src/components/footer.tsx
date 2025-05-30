@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4"> Our Verticals</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/ventures" className="text-sm text-muted-foreground hover:text-gold">
@@ -73,7 +73,43 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/Home" className="text-sm text-muted-foreground hover:text-gold">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/Culture" className="text-sm text-muted-foreground hover:text-gold">
+                  Culture
+                </Link>
+              </li>
+              <li>
+                <Link href="/Careers" className="text-sm text-muted-foreground hover:text-gold">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link href="/Partner" className="text-sm text-muted-foreground hover:text-gold">
+                  Partner
+                </Link>
+              </li>
+              <li>
+                <Link href="/Candidate-login" className="text-sm text-muted-foreground hover:text-gold">
+                  Candidate Login
+                </Link>
+              </li>
+              <li>
+                <Link href="/Corp-login" className="text-sm text-muted-foreground hover:text-gold">
+                  Corp Login
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Get in touch</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <MapPin className="h-5 w-5 text-gold shrink-0 mt-0.5" />
@@ -91,115 +127,31 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Documents</h3>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/documents/privacy-policy.pdf"
-                  className="text-sm text-muted-foreground hover:text-gold flex items-center gap-1"
-                >
-                  <span>Privacy Policy</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-download"
-                  >
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" x2="12" y1="15" y2="3" />
-                  </svg>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/documents/terms-conditions.pdf"
-                  className="text-sm text-muted-foreground hover:text-gold flex items-center gap-1"
-                >
-                  <span>Terms & Conditions</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-download"
-                  >
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" x2="12" y1="15" y2="3" />
-                  </svg>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/documents/startup-certificate.pdf"
-                  className="text-sm text-muted-foreground hover:text-gold flex items-center gap-1"
-                >
-                  <span>Startup Certificate</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-download"
-                  >
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" x2="12" y1="15" y2="3" />
-                  </svg>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/documents/msme-certificate.pdf"
-                  className="text-sm text-muted-foreground hover:text-gold flex items-center gap-1"
-                >
-                  <span>MSME Certificate</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-download"
-                  >
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" x2="12" y1="15" y2="3" />
-                  </svg>
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 pt-6 border-t border-border/40">
           <p className="text-center text-sm text-muted-foreground">
-            ©
+            <span>
+              ©
+              {' '}
+              {new Date().getFullYear()}
+              {' '}
+              Cruiserverse Ventures Pvt Ltd. All rights reserved.
+            </span>
+            <Link href="/Careers" className="ml-12 mr-3 text-sm text-muted-foreground hover:text-gold">
+              Private Policy
+            </Link>
             {' '}
-            {new Date().getFullYear()}
+            <Link href="/Partner" className="mr-3 text-sm text-muted-foreground hover:text-gold">
+              Terms
+            </Link>
             {' '}
-            Cruiserverse. All rights reserved.
+            <Link href="/Candidate-login" className="text-sm text-muted-foreground hover:text-gold">
+              Copyright
+            </Link>
           </p>
         </div>
       </div>

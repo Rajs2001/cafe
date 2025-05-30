@@ -1,7 +1,7 @@
-import { ArrowRight, Calendar, Clock, MapPin, Users } from 'lucide-react';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { ArrowRight, Calendar, Clock, MapPin, Users } from 'lucide-react';
+import Image from 'next/image';
 
 export default function PulsePage() {
   return (
@@ -12,13 +12,10 @@ export default function PulsePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Cruiserverse
-                {' '}
-                <span className="text-gold">Pulse</span>
+                <span className="text-gold">PULSE</span>
               </h1>
               <p className="text-gray-300 text-lg mb-8 max-w-xl">
-                The heartbeat of our community. Events, marketing initiatives, and community-building activities that
-                bring people together.
+                The Events & Brand Activation Wing of CRUISERVERSE
               </p>
               <Button className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">Explore Events</Button>
             </div>
@@ -36,6 +33,172 @@ export default function PulsePage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Black About Section */}
+      <section className="bg-black text-white py-20">
+        <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          {/* Text Left */}
+          <div>
+            <p className="text-gray-300 leading-relaxed">
+              Cruiserverse Pulse is the dynamic events and marketing division of Cruiserverse, focused on creating immersive
+              experiences for the automotive and lifestyle sectors.
+              {' '}
+              <br />
+              <br />
+              As a B2B platform, we support automotive brands, lifestyle ventures, and riding communities in connecting with
+              their audiences, emphasizing cultural crafting from concept to execution.
+            </p>
+          </div>
+
+          {/* Logo Right */}
+          <div className="flex justify-center lg:justify-end">
+            <Image
+              src="/path-to-your-logo.svg" // replace later
+              alt="Cruiserverse Pulse Logo"
+              width={300}
+              height={300}
+              className="w-auto h-48 object-contain opacity-80"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* What We Do Section */}
+      <section className="py-20 bg-zinc-900">
+        <div className="container px-4">
+          <h3 className="text-2xl font-bold mb-4">What We Do</h3>
+          <p className="text-gray-400 mb-6 font-medium">
+            End-to-End Project-Based Solutions
+            {' '}
+            <br />
+            <span className="text-sm text-gray-400 italic">
+              (We don’t do traditional retainers — each project gets our full throttle.)
+            </span>
+          </p>
+          <ul className="space-y-4 text-gray-400 text-sm sm:text-base leading-tight">
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>
+                🏁
+                <strong className="text-gold">Ride-Based Events</strong>
+                {' '}
+                – Route design, permissions, convoy management, marshals
+              </span>
+            </li>
+
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>
+                🚙
+                <strong className="text-gold">Brand Launches & Test-Ride Experiences</strong>
+                {' '}
+                – End-to-end planning and execution
+              </span>
+            </li>
+
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>
+                🎤
+                <strong className="text-gold">Community & Club Meets</strong>
+                {' '}
+                – Registration, rider kits, stage production, emceeing
+              </span>
+            </li>
+
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>
+                📸
+                <strong className="text-gold">Media Production</strong>
+                {' '}
+                – Aftermovies, reels, photography, storytelling (with Cruiserverse Studio)
+              </span>
+            </li>
+
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>
+                🎯
+                <strong className="text-gold">Strategic Brand Collaborations</strong>
+                {' '}
+                – On-ground influence meets digital presence
+              </span>
+            </li>
+
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>
+                🎪
+                <strong className="text-gold">Pop-Up Installations & Experiences</strong>
+                {' '}
+                – Café booths, experiential zones, product demos
+              </span>
+            </li>
+
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>
+                📊
+                <strong className="text-gold">Reporting & Feedback</strong>
+                {' '}
+                – Event analytics, coverage reports, and impact summaries
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Why choose Section */}
+      <section className="py-20 bg-zinc-900">
+        <div className="container px-4 max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 "> Why Brands Choose Pulse</h2>
+          <p className="text-gray-400 text-center mb-10 max-w-2xl mx-auto">
+            <span className="block mb-2">Because We Speak ‘Rider’.</span>
+          </p>
+          <span className="block mb-2 text-center text-gray-400 ">Bullets or Icons:</span>
+          <ul className="space-y-4 text-sm sm:text-base leading-tight">
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>Deep understanding of biking and automotive culture</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span> End-to-end execution by in-house experts</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>Pan-India mobility and terrain access</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>Scalable from intimate rides to national rollouts</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>Content-ready delivery with social & cinematic assets</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>Reliable, on-time, brand-safe operations</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Whats next Section */}
+      <section className="py-15 bg-zinc-900">
+        <div className="container px-4 max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center"> What’s Next</h2>
+          <p className="text-gray-400 text-center mb-10 max-w-2xl mx-auto">
+            <span className="block mb-2">
+              We're just getting started. As Cruiserverse expands, so will Pulse — with curated seasonal tours,
+              larger-scale festivals, and creator-led brand experiences.
+              “Join us as we shape the future of automotive events — one ride at a time.”
+            </span>
+          </p>
         </div>
       </section>
 
@@ -592,15 +755,15 @@ export default function PulsePage() {
               ?
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-              Join our community and be part of exciting events, marketing initiatives, and community-building
-              activities.
+              Got a Ride, Launch, or Event in Mind? Let’s make it an
+              experience they’ll talk about.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">
-                Join Our Community
+                Let's talk
               </Button>
               <Button size="lg" variant="outline" className="rounded-full px-8 border-gold text-gold hover:bg-gold/10">
-                Partner With Us
+                Join Team
               </Button>
             </div>
           </div>

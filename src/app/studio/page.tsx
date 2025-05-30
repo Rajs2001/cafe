@@ -1,8 +1,8 @@
-import { Bookmark, Calendar, Film, ImageIcon, Play, Users } from 'lucide-react';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Bookmark, Calendar, Film, ImageIcon, Play, Users } from 'lucide-react';
+import Image from 'next/image';
 
 export default function StudioPage() {
   return (
@@ -13,13 +13,10 @@ export default function StudioPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Cruiserverse
-                {' '}
-                <span className="text-gold">Studio</span>
+                <span className="text-gold"> STUDIO</span>
               </h1>
               <p className="text-gray-300 text-lg mb-8 max-w-xl">
-                Our media gallery showcasing the visual stories, adventures, and moments that define the Cruiserverse
-                experience.
+                Where Adventure Meets Art.
               </p>
               <Button className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">Explore Gallery</Button>
             </div>
@@ -37,6 +34,99 @@ export default function StudioPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Black About Section */}
+      <section className="bg-black text-white py-20">
+        <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          {/* Text Left */}
+          <div>
+            <p className="text-gray-300 leading-relaxed">
+              At Cruiserverse Studio, we are
+              committed to harnessing the
+              transformative power of storytelling to
+              inspire movement. As the dedicated
+              media and content division of
+              Cruiserverse, we produce visuals,
+              narratives, and campaigns that embody
+              the spirit of our adventure-driven
+              culture
+              {' '}
+              <br />
+              <br />
+              From cinematic reels and documentary
+              shorts to comic art and digital
+              storytelling, the Studio serves as a
+              creative hub where our community’s
+              most boldest ideas come to life visually
+            </p>
+          </div>
+
+          {/* Logo Right */}
+          <div className="flex justify-center lg:justify-end">
+            <Image
+              src="/path-to-your-logo.svg" // replace later
+              alt="Cruiserverse Studio Logo"
+              width={300}
+              height={300}
+              className="w-auto h-48 object-contain opacity-80"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* What We Do Section */}
+      <section className="py-20 bg-zinc-900">
+        <div className="container px-4">
+          <h3 className="text-2xl font-bold mb-4">What We Do</h3>
+          <p className="text-gray-400 mb-2 font-medium text-center">
+            Visual Storytelling | Creative Production | Branded Media
+            {' '}
+            <br />
+            <span className="text-sm text-gray-400 ">
+              Whether it’s launching a new ride series, building cinematic content for a campaign, or
+              publishing original comic universes — we offer end-to-end creative production services aligned
+              with the Cruiserverse spirit.
+            </span>
+            <span className="text-sm text-gray-400 text-center block mt-2">
+              Our Core Focus Areas:
+              {' '}
+            </span>
+          </p>
+          <ul className="space-y-4 text-gray-400 text-sm sm:text-base leading-tight">
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>
+                {' '}
+                Event & Ride Aftermovies – Crisp, cinematic edits that capture the soul of every journey.
+              </span>
+            </li>
+
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>
+                {' '}
+                Creator Collaborations – Partnering with riders, filmmakers, and artists to co-create content.
+              </span>
+            </li>
+
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>
+                {' '}
+                Cruiserverse Comics – Original illustrated narratives, combining mobility and mythology.
+              </span>
+            </li>
+
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>
+                {' '}
+                Content Design – From brand films and teasers to visual content for social and web.
+              </span>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -359,6 +449,108 @@ export default function StudioPage() {
           </div>
         </div>
       </section>
+
+      {/* Want to Join Section */}
+      <section className="py-20 bg-zinc-900">
+        <div className="container px-4">
+          <h3 className="text-2xl font-bold mb-4">
+            {' '}
+            Want to Join Us?
+          </h3>
+          <p className="text-gray-400 mb-2 font-medium text-center">
+            Help Us Craft the Future of Adventure Storytelling
+            We're building a collaborative studio of passionate filmmakers, editors, visual designers, and
+            writers who believe that motorcycles, mud, and media belong together. If you’ve got the spark,
+            we’ve got the canvas
+            <span className="text-sm text-gray-400 text-center block mt-2">
+              Ways to Collaborate:
+              {' '}
+            </span>
+          </p>
+          <ul className="space-y-4 text-gray-400 text-sm sm:text-base leading-tight">
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>
+                {' '}
+                Apply to Join the Studio Team (Form / Email CTA)
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>
+                {' '}
+                Pitch a Creative Project (Link to Google Form or Typeform)
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>
+                {' '}
+                Submit Your Portfolio or Reel
+              </span>
+            </li>
+            <p className="text-center">
+              {' '}
+              “Freelancers, creators, and curious minds — this is your open road.”
+            </p>
+          </ul>
+        </div>
+      </section>
+
+      {/* Future Vision Section */}
+      <section className="py-20 bg-zinc-900">
+        <div className="container px-4">
+          <h3 className="text-2xl font-bold mb-4"> Future Vision </h3>
+          <p className="text-gray-400 mb-2 font-medium text-center">
+            As we scale, Cruiserverse Studio aims to:
+          </p>
+          <ul className="space-y-4 text-gray-400 text-sm sm:text-base leading-tight">
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>
+                {' '}
+                Launch a full digital comic series by 2030
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>
+                {' '}
+                Host Creator Camps & Film Labs for
+                automotive content
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span>
+                {' '}
+                Expand into branded media services for
+                automotive startups
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-b from-zinc-900 to-black">
+        <div className="container px-4">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to tell stories that move people?
+            </h2>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">
+                Let’s Create Together
+              </Button>
+              <Button size="lg" variant="outline" className="rounded-full px-8 border-gold text-gold hover:bg-gold/10">
+                Join the Studio
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

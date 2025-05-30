@@ -1,8 +1,8 @@
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Camera, Coffee, Cpu, Mountain } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 hero-gradient"></div>
-        <div className="container relative z-10 px-4 py-24 md:py-32 lg:py-40 flex flex-col items-center text-center">
+        <div className="container relative z-10 px-4 py-12 md:py-20 lg:py-24 flex flex-col items-center text-center">
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 max-w-4xl">
             <span className="text-gold">BUILT FOR THE WILD.</span>
             <br />
@@ -19,8 +19,8 @@ export default function Home() {
             <span>DRIVEN BY COMMUNITY.</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-8">
-            Cruiserverse is a collective of ventures, experiences, and products designed for those who seek adventure
-            and community.
+            A Cruisers-Universe devoted to the spirit of adventure
+            and a passion for Automotive experiences.
           </p>
           <Button size="lg" className="rounded-full px-8 py-6 text-lg bg-gold text-black hover:bg-gold/90">
             Explore
@@ -29,16 +29,17 @@ export default function Home() {
       </section>
 
       {/* Intro Section */}
-      <section className="py-20 bg-gradient-to-b from-black to-zinc-900">
+      <section className="py-10 bg-gradient-to-b from-black to-zinc-900">
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Welcome to
-              {' '}
-              <span className="text-gold">Cruiserverse</span>
+              Explore Our Thriving Ecosystem
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Discover our ecosystem of ventures, experiences, and innovations built for adventurers and storytellers.
+              Uncover a world of adventures, experiences, and innovations designed for both
+              adventurers and storytellers. Dive into our four verticals that bring the Cruiserverse
+              to life.
+              {' '}
             </p>
           </div>
 
@@ -126,6 +127,100 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About Us Section */}
+      <section className="py-20 bg-zinc-900">
+        <div className="container px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
+              <p className="text-gray-400 mb-6">
+                Cruiserverse imagines a future where automotive adventure,
+                lifestyle, and technology come together harmoniously to create
+                enduring success. We advocate for innovation and sustainability,
+                empowering our teams to spearhead efforts that redefine
+                industries and enhance community.
+              </p>
+              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+              <p className="text-gray-400 mb-6">
+                To establish ourselves as the premier ecosystem for Automotive
+                adventure enthusiasts, offering innovative products, services, and
+                experiences that inspire and empower our community.
+              </p>
+              <h3 className="text-2xl font-bold mb-4">Our Values</h3>
+              <ul className="text-gray-400 space-y-2">
+                <li className="flex items-center gap-2">
+                  <span className="text-gold">•</span>
+                  {' '}
+                  Adventure in all that we do
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-gold">•</span>
+                  {' '}
+                  Community-focused approach
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-gold">•</span>
+                  {' '}
+                  Commitment to sustainability and responsibility
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-gold">•</span>
+                  {' '}
+                  Emphasis on innovation and creativity
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-gold">•</span>
+                  {' '}
+                  Pursuit of quality and excellence
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-gold">•</span>
+                  {' '}
+                  Purpose-driven growth
+                </li>
+              </ul>
+            </div>
+            <div className="order-1 md:order-2">
+              <Image
+                src="/placeholder.svg?height=600&width=600"
+                alt="About Cruiserverse"
+                width={600}
+                height={600}
+                className="rounded-lg object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* working Section */}
+      <section className="py-20 bg-zinc-900">
+        <div className="container px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="order-1 md:order-2">
+              <Image
+                src="/placeholder.svg?height=600&width=600"
+                alt="Working at Cruiserverse"
+                width={600}
+                height={600}
+                className="rounded-lg object-cover"
+              />
+            </div>
+            <div className="order-2 md:order-2">
+              <h3 className="text-2xl font-bold mb-4"> Working at Cruiserverse </h3>
+              <p className="text-gray-400 mb-6">
+                Fuelled by passion. Driven by purpose.
+                At Cruiserverse, every challenge is a
+                new road waiting to be conquered—together.
+              </p>
+              <Button size="lg" className="rounded-full px-8 py-6 text-lg bg-gold text-black hover:bg-gold/90">
+                Explore our culture
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Section */}
       <section className="py-20 bg-zinc-900">
         <div className="container px-4">
@@ -200,22 +295,19 @@ export default function Home() {
       <section className="py-20 bg-black">
         <div className="container px-4">
           <div className="bg-gradient-to-r from-zinc-900 to-zinc-800 rounded-2xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Join the Adventure?</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-              Become part of our community and experience the thrill of adventure, the warmth of connection, and the joy
-              of shared stories.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">  Looking for exciting job opportunities or interested in partnering or investing with us? Join the Cruiserverse movement today. </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">
-                Join Now
+                Apply for Job
               </Button>
-              <Button size="lg" variant="outline" className="rounded-full px-8 border-gold text-gold hover:bg-gold/10">
-                Contact Us
+              <Button size="lg" className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">
+                Contact for Partners / Investors
               </Button>
             </div>
           </div>
         </div>
       </section>
+
     </div>
   );
 }
