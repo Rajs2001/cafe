@@ -1,10 +1,31 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+'use client';
+
 import { ArrowRight, Camera, Coffee, Cpu, Mountain } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function Home() {
+  function buttonclick() {
+    window.location.href = '/core';
+  }
+
+  function cultureExploreButtonClick() {
+    window.location.href = '/studio';
+  }
+
+  function allExperiacneButtonClick() {
+    window.location.href = '/pulse';
+  }
+
+  function ctaClick(mailId: string) {
+    const a = document.createElement('a');
+    a.href = `mailto:${mailId}`;
+    a.click();
+  }
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -12,7 +33,7 @@ export default function Home() {
         <div className="absolute inset-0 hero-gradient"></div>
         <div className="container relative z-10 px-4 py-12 md:py-20 lg:py-24 flex flex-col items-center text-center">
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 max-w-4xl">
-            <span className="text-gold">BUILT FOR THE WILD.</span>
+            <span className="gold-text">BUILT FOR THE WILD.</span>
             <br />
             <span>POWERED BY STORIES.</span>
             <br />
@@ -22,7 +43,7 @@ export default function Home() {
             A Cruisers-Universe devoted to the spirit of adventure
             and a passion for Automotive experiences.
           </p>
-          <Button size="lg" className="rounded-full px-8 py-6 text-lg bg-gold text-black hover:bg-gold/90">
+          <Button size="lg" className="rounded-full px-8 py-6 text-lg bg-[#d95410] text-black hover:bg-[#d95410]/90" onClick={buttonclick}>
             Explore
           </Button>
         </div>
@@ -47,7 +68,7 @@ export default function Home() {
             {/* Ventures Card */}
             <Card className="bg-zinc-900 border-zinc-800 card-hover">
               <CardHeader className="pb-2">
-                <Coffee className="h-12 w-12 text-gold mb-2" />
+                <Coffee className="h-12 w-12 gold-text mb-2" />
                 <CardTitle className="text-xl font-bold">Ventures</CardTitle>
               </CardHeader>
               <CardContent>
@@ -56,7 +77,7 @@ export default function Home() {
                 </CardDescription>
               </CardContent>
               <CardFooter>
-                <Link href="/ventures" className="text-gold flex items-center gap-1 text-sm hover:underline">
+                <Link href="/ventures" className="gold-text flex items-center gap-1 text-sm hover:underline">
                   Learn more
                   {' '}
                   <ArrowRight className="h-4 w-4" />
@@ -67,7 +88,7 @@ export default function Home() {
             {/* Pulse Card */}
             <Card className="bg-zinc-900 border-zinc-800 card-hover">
               <CardHeader className="pb-2">
-                <Mountain className="h-12 w-12 text-gold mb-2" />
+                <Mountain className="h-12 w-12 gold-text mb-2" />
                 <CardTitle className="text-xl font-bold">Pulse</CardTitle>
               </CardHeader>
               <CardContent>
@@ -76,7 +97,7 @@ export default function Home() {
                 </CardDescription>
               </CardContent>
               <CardFooter>
-                <Link href="/pulse" className="text-gold flex items-center gap-1 text-sm hover:underline">
+                <Link href="/pulse" className="gold-text flex items-center gap-1 text-sm hover:underline">
                   Learn more
                   {' '}
                   <ArrowRight className="h-4 w-4" />
@@ -87,7 +108,7 @@ export default function Home() {
             {/* Studio Card */}
             <Card className="bg-zinc-900 border-zinc-800 card-hover">
               <CardHeader className="pb-2">
-                <Camera className="h-12 w-12 text-gold mb-2" />
+                <Camera className="h-12 w-12 gold-text mb-2" />
                 <CardTitle className="text-xl font-bold">Studio</CardTitle>
               </CardHeader>
               <CardContent>
@@ -96,7 +117,7 @@ export default function Home() {
                 </CardDescription>
               </CardContent>
               <CardFooter>
-                <Link href="/studio" className="text-gold flex items-center gap-1 text-sm hover:underline">
+                <Link href="/studio" className="gold-text flex items-center gap-1 text-sm hover:underline">
                   Learn more
                   {' '}
                   <ArrowRight className="h-4 w-4" />
@@ -107,7 +128,7 @@ export default function Home() {
             {/* Core Card */}
             <Card className="bg-zinc-900 border-zinc-800 card-hover">
               <CardHeader className="pb-2">
-                <Cpu className="h-12 w-12 text-gold mb-2" />
+                <Cpu className="h-12 w-12 gold-text mb-2" />
                 <CardTitle className="text-xl font-bold">Core</CardTitle>
               </CardHeader>
               <CardContent>
@@ -116,7 +137,7 @@ export default function Home() {
                 </CardDescription>
               </CardContent>
               <CardFooter>
-                <Link href="/core" className="text-gold flex items-center gap-1 text-sm hover:underline">
+                <Link href="/core" className="gold-text flex items-center gap-1 text-sm hover:underline">
                   Learn more
                   {' '}
                   <ArrowRight className="h-4 w-4" />
@@ -149,32 +170,32 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-4">Our Values</h3>
               <ul className="text-gray-400 space-y-2">
                 <li className="flex items-center gap-2">
-                  <span className="text-gold">•</span>
+                  <span className="gold-text">•</span>
                   {' '}
                   Adventure in all that we do
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-gold">•</span>
+                  <span className="gold-text">•</span>
                   {' '}
                   Community-focused approach
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-gold">•</span>
+                  <span className="gold-text">•</span>
                   {' '}
                   Commitment to sustainability and responsibility
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-gold">•</span>
+                  <span className="gold-text">•</span>
                   {' '}
                   Emphasis on innovation and creativity
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-gold">•</span>
+                  <span className="gold-text">•</span>
                   {' '}
                   Pursuit of quality and excellence
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-gold">•</span>
+                  <span className="gold-text">•</span>
                   {' '}
                   Purpose-driven growth
                 </li>
@@ -182,7 +203,7 @@ export default function Home() {
             </div>
             <div className="order-1 md:order-2">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/assets/image-vision.jpg"
                 alt="About Cruiserverse"
                 width={600}
                 height={600}
@@ -199,11 +220,11 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-1 md:order-2">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/assets/image-working.jpg"
                 alt="Working at Cruiserverse"
                 width={600}
-                height={600}
-                className="rounded-lg object-cover"
+                height={400}
+                className="rounded-lg object-cover h-[500px] "
               />
             </div>
             <div className="order-2 md:order-2">
@@ -213,7 +234,7 @@ export default function Home() {
                 At Cruiserverse, every challenge is a
                 new road waiting to be conquered—together.
               </p>
-              <Button size="lg" className="rounded-full px-8 py-6 text-lg bg-gold text-black hover:bg-gold/90">
+              <Button size="lg" className="rounded-full px-8 py-6 text-lg gold-bg text-black hover:bg-[#d95410]/90" onClick={cultureExploreButtonClick}>
                 Explore our culture
               </Button>
             </div>
@@ -229,7 +250,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Discover Our
                 {' '}
-                <span className="text-gold">Featured Experiences</span>
+                <span className="gold-text">Featured Experiences</span>
               </h2>
               <p className="text-gray-400 mb-8">
                 From café cruisers to mud adventures, we create unique experiences that bring communities together
@@ -237,8 +258,8 @@ export default function Home() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="bg-gold/20 p-2 rounded-full">
-                    <Coffee className="h-5 w-5 text-gold" />
+                  <div className="gold-bg/20 p-2 rounded-full">
+                    <Coffee className="h-5 w-5 gold-text" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Café Cruisers</h3>
@@ -248,8 +269,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="bg-gold/20 p-2 rounded-full">
-                    <Mountain className="h-5 w-5 text-gold" />
+                  <div className="gold-bg/20 p-2 rounded-full">
+                    <Mountain className="h-5 w-5 gold-text" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Mud Cruisers</h3>
@@ -259,8 +280,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="bg-gold/20 p-2 rounded-full">
-                    <Cpu className="h-5 w-5 text-gold" />
+                  <div className="gold-bg/20 p-2 rounded-full">
+                    <Cpu className="h-5 w-5 gold-text" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">GT Vault</h3>
@@ -270,20 +291,20 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <Button className="mt-8 rounded-full px-6 bg-gold text-black hover:bg-gold/90">
+              <Button className="mt-8 rounded-full px-6 gold-bg text-black hover:bg-[#d95410]/90" onClick={allExperiacneButtonClick}>
                 Explore All Experiences
               </Button>
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/assets/image-experience.jpeg"
                 alt="Featured Experiences"
                 width={600}
                 height={600}
                 className="rounded-lg object-cover"
               />
-              <div className="absolute -bottom-6 -left-6 bg-zinc-900 p-4 rounded-lg border border-gold/50 shadow-xl">
-                <p className="text-gold font-semibold">Join Our Community</p>
+              <div className="absolute -bottom-6 -left-6 bg-zinc-900 p-4 rounded-lg border gold-border shadow-xl">
+                <p className="gold-text font-semibold">Join Our Community</p>
                 <p className="text-sm text-gray-400">5000+ adventurers and growing</p>
               </div>
             </div>
@@ -297,10 +318,10 @@ export default function Home() {
           <div className="bg-gradient-to-r from-zinc-900 to-zinc-800 rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">  Looking for exciting job opportunities or interested in partnering or investing with us? Join the Cruiserverse movement today. </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">
+              <Button size="lg" className="rounded-full px-8 gold-bg text-black hover:bg-[#d95410]/90" onClick={() => ctaClick('Contact@cafecruisers.in')}>
                 Apply for Job
               </Button>
-              <Button size="lg" className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">
+              <Button size="lg" className="rounded-full px-8 gold-bg text-black hover:bg-[#d95410]/90" onClick={() => ctaClick('Contact@cafecruisers.in')}>
                 Contact for Partners / Investors
               </Button>
             </div>

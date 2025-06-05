@@ -1,11 +1,11 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { Bell, ChevronDown, Menu, User, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,34 +16,40 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/placeholder.svg?height=40&width=40"
+              src="/black/icon/white_icon_black_background.png"
               alt="Cruiserverse Logo"
               width={40}
               height={40}
               className="rounded-md"
             />
-            <span className="text-xl font-bold text-gold">Cruiserverse</span>
+            <Image
+              src="/black/text/white_textlogo_transparent_background.png"
+              alt="Cruiserverse Logo"
+              width={220}
+              height={40}
+              className="hidden md:block lg:block md:w-[150px] md:h-[100px]"
+            />
           </Link>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
-          <Link href="/ventures" className="text-sm font-medium hover:text-gold transition-colors">
+          <Link href="/ventures" className="text-sm font-medium hover:gold-text transition-colors">
             Ventures
           </Link>
-          <Link href="/pulse" className="text-sm font-medium hover:text-gold transition-colors">
+          <Link href="/pulse" className="text-sm font-medium hover:gold-text transition-colors">
             Pulse
           </Link>
-          <Link href="/studio" className="text-sm font-medium hover:text-gold transition-colors">
+          <Link href="/studio" className="text-sm font-medium hover:gold-text transition-colors">
             Studio
           </Link>
-          <Link href="/core" className="text-sm font-medium hover:text-gold transition-colors">
+          <Link href="/core" className="text-sm font-medium hover:gold-text transition-colors">
             Core
           </Link>
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="flex items-center gap-1 hover:text-gold">
+              <Button variant="ghost" className="flex items-center gap-1 hover:gold-text">
                 Login
                 {' '}
                 <ChevronDown className="h-4 w-4" />
