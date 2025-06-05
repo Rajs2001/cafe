@@ -7,23 +7,26 @@ export default function Footer() {
     <footer className="border-t border-border/40 bg-background">
       <div className="container py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+
           <div className="flex flex-col gap-4">
-            <Link href="/" className="flex items-center gap-2 justify-center md:justify-start lg:justify-start">
-              <Image
-                src="/black/icon/white_icon_black_background.png"
-                alt="Cruiserverse Logo"
-                width={60}
-                height={60}
-                className="rounded-md hidden md:block lg:block"
-              />
-              <Image
-                src="/black/text/white_textlogo_transparent_background.png"
-                alt="Cruiserverse Logo"
-                width={220}
-                height={20}
-                className=" md:block lg:block md:w-[150px] md:h-[100px]"
-              />
-              {/* <span className="text-xl font-bold gold-text">Cruiserverse</span> */}
+            <Link href="/" className="flex flex-col">
+              <div className="flex items-center gap-2 justify-center md:justify-start lg:justify-start">
+                <Image
+                  src="/black/icon/white_icon_black_background.png"
+                  alt="Cruiserverse Logo"
+                  width={60}
+                  height={60}
+                  className="rounded-md hidden md:block lg:block"
+                />
+                <Image
+                  src="/black/text/white_textlogo_transparent_background.png"
+                  alt="Cruiserverse Logo"
+                  width={220}
+                  height={20}
+                  className=" md:block lg:block md:w-[150px] md:h-[100px]"
+                />
+              </div>
+              <span className="text-xl font-bold gold-text">CIN: U52291TZ2025PTC033425</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
               Built for the Wild. Powered by Stories. Driven by Community.
@@ -115,6 +118,19 @@ export default function Footer() {
             </ul>
           </div>
 
+          <div className="flex gap-4">
+            {['/assets/registration/1.jpg', '/assets/registration/2.jpg', '/assets/registration/3.jpg'].map((src, index) => (
+              <Image
+                key={index}
+                src={src}
+                alt={`Registration Image ${index + 1}`}
+                width={30}
+                height={20}
+                className="rounded mb-4 h-[80px] w-[80px]"
+              />
+            ))}
+          </div>
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Get in touch</h3>
             <ul className="space-y-3">
@@ -142,14 +158,13 @@ export default function Footer() {
         <div className="mt-12 pt-6 border-t border-border/40">
           <p className="text-center text-sm text-muted-foreground">
             <span>
-              ©
+              All rights reserved. &copy;  Cruiserverse Ventures Pvt Ltd.
               {' '}
               {new Date().getFullYear()}
-              {' '}
-              Cruiserverse Ventures Pvt Ltd. All rights reserved.
             </span>
-            <Link href="/Careers" className="ml-12 mr-3 text-sm text-muted-foreground hover:gold-text">
-              Private Policy
+            <br />
+            {/* <Link href="/Careers" className="ml-12 mr-3 text-sm text-muted-foreground hover:gold-text">
+              Privacy Policy
             </Link>
             {' '}
             <Link href="/Partner" className="mr-3 text-sm text-muted-foreground hover:gold-text">
@@ -158,7 +173,7 @@ export default function Footer() {
             {' '}
             <Link href="/Candidate-login" className="text-sm text-muted-foreground hover:gold-text">
               Copyright
-            </Link>
+            </Link> */}
           </p>
         </div>
       </div>

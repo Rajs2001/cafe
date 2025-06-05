@@ -1,8 +1,7 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Bookmark, Calendar, Film, ImageIcon, Play, Users } from 'lucide-react';
+import { ImageIcon, Play } from 'lucide-react';
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export default function StudioPage() {
   return (
@@ -13,90 +12,65 @@ export default function StudioPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="text-gold"> STUDIO</span>
+                <span className="gold-text"> STUDIO</span>
               </h1>
               <p className="text-gray-300 text-lg mb-8 max-w-xl">
                 Where Adventure Meets Art.
               </p>
-              <Button className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">Explore Gallery</Button>
+              <p className="text-gray-300 leading-relaxed">
+                At Cruiserverse Studio, we are
+                committed to harnessing the
+                transformative power of storytelling to
+                inspire movement. As the dedicated
+                media and content division of
+                Cruiserverse, we produce visuals,
+                narratives, and campaigns that embody
+                the spirit of our adventure-driven
+                culture
+                {' '}
+                <br />
+                <br />
+                From cinematic reels and documentary
+                shorts to comic art and digital
+                storytelling, the Studio serves as a
+                creative hub where our community’s
+                most boldest ideas come to life visually
+              </p>
             </div>
-            <div className="relative">
+            <div className="relative flex justify-center">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="/assets/studio-hero.jpg" // replace with your image path
                 alt="Cruiserverse Studio"
                 width={600}
                 height={500}
                 className="rounded-lg object-cover"
               />
-              <div className="absolute -bottom-6 -right-6 bg-zinc-900 p-4 rounded-lg border border-gold/50 shadow-xl">
-                <p className="text-gold font-semibold">Visual Storytelling</p>
-                <p className="text-sm text-gray-400">Capturing moments</p>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Black About Section */}
-      <section className="bg-black text-white py-20">
-        <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          {/* Text Left */}
-          <div>
-            <p className="text-gray-300 leading-relaxed">
-              At Cruiserverse Studio, we are
-              committed to harnessing the
-              transformative power of storytelling to
-              inspire movement. As the dedicated
-              media and content division of
-              Cruiserverse, we produce visuals,
-              narratives, and campaigns that embody
-              the spirit of our adventure-driven
-              culture
-              {' '}
-              <br />
-              <br />
-              From cinematic reels and documentary
-              shorts to comic art and digital
-              storytelling, the Studio serves as a
-              creative hub where our community’s
-              most boldest ideas come to life visually
-            </p>
-          </div>
-
-          {/* Logo Right */}
-          <div className="flex justify-center lg:justify-end">
-            <Image
-              src="/path-to-your-logo.svg" // replace later
-              alt="Cruiserverse Studio Logo"
-              width={300}
-              height={300}
-              className="w-auto h-48 object-contain opacity-80"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* What We Do Section */}
-      <section className="py-20 bg-zinc-900">
-        <div className="container px-4">
-          <h3 className="text-2xl font-bold mb-4">What We Do</h3>
+      <section className="bg-zinc-900">
+        <div className="container ">
+          <h3 className="text-2xl font-bold mb-4 text-center">What We Do ?</h3>
           <p className="text-gray-400 mb-2 font-medium text-center">
             Visual Storytelling | Creative Production | Branded Media
             {' '}
             <br />
-            <span className="text-sm text-gray-400 ">
+            <span className="text-sm text-gray-400 mt-4">
               Whether it’s launching a new ride series, building cinematic content for a campaign, or
               publishing original comic universes — we offer end-to-end creative production services aligned
               with the Cruiserverse spirit.
             </span>
-            <span className="text-sm text-gray-400 text-center block mt-2">
+            <span className="text-lg text-white text-center block mt-14 text-start">
               Our Core Focus Areas:
               {' '}
             </span>
           </p>
           <ul className="space-y-4 text-gray-400 text-sm sm:text-base leading-tight">
             <li className="flex items-start gap-2">
-              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span className="gold-text text-xl relative -top-0.5">•</span>
               <span>
                 {' '}
                 Event & Ride Aftermovies – Crisp, cinematic edits that capture the soul of every journey.
@@ -104,7 +78,7 @@ export default function StudioPage() {
             </li>
 
             <li className="flex items-start gap-2">
-              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span className="gold-text text-xl relative -top-0.5">•</span>
               <span>
                 {' '}
                 Creator Collaborations – Partnering with riders, filmmakers, and artists to co-create content.
@@ -112,7 +86,7 @@ export default function StudioPage() {
             </li>
 
             <li className="flex items-start gap-2">
-              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span className="gold-text text-xl relative -top-0.5">•</span>
               <span>
                 {' '}
                 Cruiserverse Comics – Original illustrated narratives, combining mobility and mythology.
@@ -120,7 +94,7 @@ export default function StudioPage() {
             </li>
 
             <li className="flex items-start gap-2">
-              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span className="gold-text text-xl relative -top-0.5">•</span>
               <span>
                 {' '}
                 Content Design – From brand films and teasers to visual content for social and web.
@@ -137,7 +111,7 @@ export default function StudioPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Media
               {' '}
-              <span className="text-gold">Gallery</span>
+              <span className="gold-text">Gallery</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Explore our collection of photos, videos, and stories that capture the essence of the Cruiserverse
@@ -146,16 +120,16 @@ export default function StudioPage() {
           </div>
 
           <Tabs defaultValue="photos" className="w-full">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-3 mb-12">
-              <TabsTrigger value="photos" className="data-[state=active]:text-gold">
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12">
+              <TabsTrigger value="photos" className="data-[state=active]:gold-text">
                 Photos
               </TabsTrigger>
-              <TabsTrigger value="videos" className="data-[state=active]:text-gold">
+              <TabsTrigger value="videos" className="data-[state=active]:gold-text">
                 Videos
               </TabsTrigger>
-              <TabsTrigger value="stories" className="data-[state=active]:text-gold">
+              {/* <TabsTrigger value="stories" className="data-[state=active]:gold-text">
                 Stories
-              </TabsTrigger>
+              </TabsTrigger> */}
             </TabsList>
 
             {/* Photos Tab */}
@@ -171,15 +145,15 @@ export default function StudioPage() {
                       className="w-full aspect-square object-cover transition-transform duration-300 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <Button variant="ghost" size="icon" className="rounded-full bg-gold/20 hover:bg-gold/30">
-                        <ImageIcon className="h-6 w-6 text-gold" />
+                      <Button variant="ghost" size="icon" className="rounded-full gold-bg/20 hover:gold-bg/30">
+                        <ImageIcon className="h-6 w-6 gold-text" />
                       </Button>
                     </div>
                   </div>
                 ))}
               </div>
               <div className="mt-12 text-center">
-                <Button variant="outline" className="rounded-full px-8 border-gold text-gold hover:bg-gold/10">
+                <Button variant="outline" className="rounded-full px-8 gold-border gold-text hover:gold-bg/10">
                   Load More
                 </Button>
               </div>
@@ -201,9 +175,9 @@ export default function StudioPage() {
                       <Button
                         variant="ghost"
                         size="icon"
-                        className="rounded-full bg-gold/20 hover:bg-gold/30 group-hover:scale-110 transition-transform duration-300"
+                        className="rounded-full gold-bg/20 hover:gold-bg/30 group-hover:scale-110 transition-transform duration-300"
                       >
-                        <Play className="h-8 w-8 text-gold" />
+                        <Play className="h-8 w-8 gold-text" />
                       </Button>
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
@@ -217,14 +191,14 @@ export default function StudioPage() {
                 ))}
               </div>
               <div className="mt-12 text-center">
-                <Button variant="outline" className="rounded-full px-8 border-gold text-gold hover:bg-gold/10">
+                <Button variant="outline" className="rounded-full px-8 gold-border gold-text hover:gold-bg/10">
                   View All Videos
                 </Button>
               </div>
             </TabsContent>
 
             {/* Stories Tab */}
-            <TabsContent value="stories">
+            {/* <TabsContent value="stories">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {[...Array.from({ length: 4 })].map((_, i) => (
                   <Card key={`story-${i}`} className="bg-zinc-800 border-zinc-700 overflow-hidden">
@@ -238,13 +212,13 @@ export default function StudioPage() {
                       />
                       <div className="absolute top-4 right-4">
                         <Button variant="ghost" size="icon" className="rounded-full bg-black/50 hover:bg-black/70">
-                          <Bookmark className="h-5 w-5 text-gold" />
+                          <Bookmark className="h-5 w-5 gold-text" />
                         </Button>
                       </div>
                     </div>
                     <CardContent className="p-6">
                       <div className="flex items-center gap-2 mb-3">
-                        <div className="bg-gold/20 text-gold text-xs font-medium px-2.5 py-0.5 rounded">Adventure</div>
+                        <div className="gold-bg/20 gold-text text-xs font-medium px-2.5 py-0.5 rounded">Adventure</div>
                         <div className="text-xs text-gray-400">May 15, 2025</div>
                       </div>
                       <h3 className="text-xl font-bold mb-2">The Mountain Expedition</h3>
@@ -269,227 +243,51 @@ export default function StudioPage() {
                   </Card>
                 ))}
               </div>
-              <div className="mt-12 text-center">
-                <Button variant="outline" className="rounded-full px-8 border-gold text-gold hover:bg-gold/10">
-                  Read More Stories
-                </Button>
-              </div>
-            </TabsContent>
+            </TabsContent> */}
           </Tabs>
         </div>
       </section>
 
-      {/* Featured Content Section */}
-      <section className="py-20 bg-black">
-        <div className="container px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Featured
-              {' '}
-              <span className="text-gold">Content</span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Explore our handpicked selection of content that showcases the best of Cruiserverse experiences.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <Image
-                src="/placeholder.svg?height=600&width=600"
-                alt="Featured Content"
-                width={600}
-                height={600}
-                className="rounded-lg object-cover"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Button variant="ghost" size="icon" className="rounded-full bg-gold/20 hover:bg-gold/30 scale-150">
-                  <Play className="h-8 w-8 text-gold" />
-                </Button>
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div className="bg-gold/20 text-gold text-sm font-medium px-3 py-1 rounded-full inline-block">
-                Featured Documentary
-              </div>
-              <h3 className="text-3xl font-bold">The Road Less Traveled</h3>
-              <p className="text-gray-400">
-                An immersive documentary following a group of riders as they embark on a challenging journey through
-                remote landscapes, facing obstacles and discovering the true meaning of adventure and camaraderie.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Film className="h-5 w-5 text-gold" />
-                  <div>
-                    <p className="font-medium">Duration</p>
-                    <p className="text-sm text-gray-400">45 minutes</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Calendar className="h-5 w-5 text-gold" />
-                  <div>
-                    <p className="font-medium">Release Date</p>
-                    <p className="text-sm text-gray-400">April 10, 2025</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Users className="h-5 w-5 text-gold" />
-                  <div>
-                    <p className="font-medium">Featured Riders</p>
-                    <p className="text-sm text-gray-400">Rahul Sharma, Priya Patel, Vikram Singh</p>
-                  </div>
-                </div>
-              </div>
-              <Button className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">Watch Now</Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Instagram Feed Section */}
-      <section className="py-20 bg-zinc-900">
-        <div className="container px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Instagram
-              {' '}
-              <span className="text-gold">Feed</span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Follow us on Instagram for daily updates, behind-the-scenes content, and community highlights.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {[...Array.from({ length: 12 })].map((_, i) => (
-              <div key={`insta-${i}`} className="relative group overflow-hidden rounded-lg">
-                <Image
-                  src={`/placeholder.svg?height=200&width=200&text=Insta ${i + 1}`}
-                  alt={`Instagram Post ${i + 1}`}
-                  width={200}
-                  height={200}
-                  className="w-full aspect-square object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#FFD700"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-instagram"
-                  >
-                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                  </svg>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <Button className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">Follow Us on Instagram</Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Submit Content Section */}
-      <section className="py-20 bg-gradient-to-b from-zinc-900 to-black">
-        <div className="container px-4">
-          <div className="bg-gradient-to-r from-zinc-900 to-zinc-800 rounded-2xl p-8 md:p-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Share Your
-                  {' '}
-                  <span className="text-gold">Story</span>
-                </h2>
-                <p className="text-gray-400 mb-8">
-                  Have an amazing adventure story, photo, or video to share? Submit your content and be featured in our
-                  gallery.
-                </p>
-                <Button className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">Submit Content</Button>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <Image
-                  src="/placeholder.svg?height=200&width=200"
-                  alt="User Content 1"
-                  width={200}
-                  height={200}
-                  className="rounded-lg object-cover w-full h-full"
-                />
-                <Image
-                  src="/placeholder.svg?height=200&width=200"
-                  alt="User Content 2"
-                  width={200}
-                  height={200}
-                  className="rounded-lg object-cover w-full h-full"
-                />
-                <Image
-                  src="/placeholder.svg?height=200&width=200"
-                  alt="User Content 3"
-                  width={200}
-                  height={200}
-                  className="rounded-lg object-cover w-full h-full"
-                />
-                <Image
-                  src="/placeholder.svg?height=200&width=200"
-                  alt="User Content 4"
-                  width={200}
-                  height={200}
-                  className="rounded-lg object-cover w-full h-full"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Want to Join Section */}
-      <section className="py-20 bg-zinc-900">
+      <section className=" bg-zinc-900">
         <div className="container px-4">
-          <h3 className="text-2xl font-bold mb-4">
+          <h3 className="text-2xl font-bold mb-4 text-center">
             {' '}
             Want to Join Us?
           </h3>
-          <p className="text-gray-400 mb-2 font-medium text-center">
+          <p className="text-gray-400 mb-2 font-medium text-start">
             Help Us Craft the Future of Adventure Storytelling
             We're building a collaborative studio of passionate filmmakers, editors, visual designers, and
             writers who believe that motorcycles, mud, and media belong together. If you’ve got the spark,
-            we’ve got the canvas
-            <span className="text-sm text-gray-400 text-center block mt-2">
+            we’ve got the canvas.
+            <span className="text-lg text-white text-start block mt-10">
               Ways to Collaborate:
               {' '}
             </span>
           </p>
           <ul className="space-y-4 text-gray-400 text-sm sm:text-base leading-tight">
             <li className="flex items-start gap-2">
-              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span className="gold-text text-xl relative -top-0.5">•</span>
               <span>
                 {' '}
                 Apply to Join the Studio Team (Form / Email CTA)
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span className="gold-text text-xl relative -top-0.5">•</span>
               <span>
                 {' '}
                 Pitch a Creative Project (Link to Google Form or Typeform)
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span className="gold-text text-xl relative -top-0.5">•</span>
               <span>
                 {' '}
                 Submit Your Portfolio or Reel
               </span>
             </li>
-            <p className="text-center">
+            <p className="text-center text-start">
               {' '}
               “Freelancers, creators, and curious minds — this is your open road.”
             </p>
@@ -500,20 +298,20 @@ export default function StudioPage() {
       {/* Future Vision Section */}
       <section className="py-20 bg-zinc-900">
         <div className="container px-4">
-          <h3 className="text-2xl font-bold mb-4"> Future Vision </h3>
+          <h3 className="text-2xl font-bold mb-4 text-center"> Future Vision </h3>
           <p className="text-gray-400 mb-2 font-medium text-center">
             As we scale, Cruiserverse Studio aims to:
           </p>
-          <ul className="space-y-4 text-gray-400 text-sm sm:text-base leading-tight">
+          <ul className="space-y-4 text-gray-400 text-sm sm:text-base leading-tight mt-12">
             <li className="flex items-start gap-2">
-              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span className="gold-text text-xl relative -top-0.5">•</span>
               <span>
                 {' '}
                 Launch a full digital comic series by 2030
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span className="gold-text text-xl relative -top-0.5">•</span>
               <span>
                 {' '}
                 Host Creator Camps & Film Labs for
@@ -521,7 +319,7 @@ export default function StudioPage() {
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-gold text-xl relative -top-0.5">•</span>
+              <span className="gold-text text-xl relative -top-0.5">•</span>
               <span>
                 {' '}
                 Expand into branded media services for
@@ -529,25 +327,6 @@ export default function StudioPage() {
               </span>
             </li>
           </ul>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-b from-zinc-900 to-black">
-        <div className="container px-4">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to tell stories that move people?
-            </h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="rounded-full px-8 bg-gold text-black hover:bg-gold/90">
-                Let’s Create Together
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-full px-8 border-gold text-gold hover:bg-gold/10">
-                Join the Studio
-              </Button>
-            </div>
-          </div>
         </div>
       </section>
 
