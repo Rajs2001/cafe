@@ -132,7 +132,7 @@ export default function CorePage() {
               <CardContent className="pt-6">
                 <div className="flex items-center gap-4 mb-4">
                   <Image
-                    src="/assets/testimonials/1.jpg"
+                    src="/assets/testimonials/6.jpg"
                     alt="Customer"
                     width={60}
                     height={60}
@@ -171,7 +171,7 @@ export default function CorePage() {
               <CardContent className="pt-6">
                 <div className="flex items-center gap-4 mb-4">
                   <Image
-                    src="/assets/testimonials/2.jpg"
+                    src="/assets/testimonials/8.jpg"
                     alt="Customer"
                     width={60}
                     height={60}
@@ -210,7 +210,7 @@ export default function CorePage() {
               <CardContent className="pt-6">
                 <div className="flex items-center gap-4 mb-4">
                   <Image
-                    src="/assets/testimonials/3.png"
+                    src="/assets/testimonials/9.jpg"
                     alt="Customer"
                     width={60}
                     height={60}
