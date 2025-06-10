@@ -8,6 +8,14 @@ import { Card, CardContent } from '@/components/ui/card';
 export default function VenturesPage() {
   const targetRef = useRef<HTMLDivElement>(null);
 
+  const handleButtonClick = () => {
+    const a = document.createElement('a');
+    a.href = 'mailto:info@cafecruisers.in';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
+
   const handleScroll = () => {
     targetRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -50,7 +58,7 @@ export default function VenturesPage() {
             </div>
             <div className="relative">
               <Image
-                src="/assets/motorcycle.png.webp"
+                src="/assets/Motorcycle.png.webp"
                 alt="Ventures Team"
                 width={600}
                 height={500}
@@ -420,7 +428,7 @@ export default function VenturesPage() {
           </div>
 
           <div className="mt-12 text-center">
-            <Button className="rounded-full px-8 gold-bg text-black hover:gold-bg/90">Join Our Team</Button>
+            <Button className="rounded-full px-8 gold-bg text-black hover:gold-bg/90" onClick={handleButtonClick}>Join Our Team</Button>
           </div>
         </div>
       </section>
@@ -452,27 +460,6 @@ export default function VenturesPage() {
           </div>
         </div>
       </section>
-
-      {/* Join CTA Section */}
-      {/* <section className="py-20 bg-zinc-900">
-        <div className="px-4 sm:px-8 lg:px-16 max-w-xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-left">
-            Ready to Join the Adventure?
-            {' '}
-          </h3>
-          <p className="text-gray-400 text-center mb-12">
-            Whether you're looking for exciting career opportunities or interested in partnering with us, join the movement and be part of Cruiserverse's growing community.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <button className="gold-bg text-black rounded-full px-8 py-3 text-lg hover:gold-bg/90 transition">
-              Join as Job Seeker
-            </button>
-            <button className="bg-transparent border border-gold gold-text rounded-full px-8 py-3 text-lg hover:gold-bg hover:text-black transition">
-              Partner with Us
-            </button>
-          </div>
-        </div>
-      </section> */}
 
     </div>
   );

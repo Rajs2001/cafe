@@ -1,9 +1,19 @@
+'use client';
+
 import { Shield, Zap } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function CorePage() {
+  const handleButtonClick = () => {
+    const a = document.createElement('a');
+    a.href = 'mailto:info@cafecruisers.in';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -215,7 +225,7 @@ export default function CorePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-zinc-900">
+      <section className="py-16 bg-zinc-900">
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -320,26 +330,6 @@ export default function CorePage() {
         </div>
       </section>
 
-      {/* Core Tools Section */}
-      <section className="py-20 bg-zinc-900">
-        <div className="px-4 sm:px-8 lg:px-16">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-8">
-            Experience the Tools that Drive the Movement.
-          </h3>
-
-          <p className="text-gray-400 max-w-2xl mx-auto text-center mb-10">
-            Join the growing number of adventurers who use our tech daily.
-            Whether you're exploring or organizing, Core keeps you in control.
-          </p>
-
-          <div className="flex justify-center">
-            <Button className="gold-bg text-black font-medium px-6 py-2 rounded-full hover:gold-bg/90 transition">
-              Download Café Cruisers
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-b from-zinc-900 to-black">
         <div className="container px-4">
@@ -351,7 +341,7 @@ export default function CorePage() {
               INNOVATION.
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="rounded-full px-8 gold-bg text-black hover:gold-bg/90">
+              <Button size="lg" className="rounded-full px-8 gold-bg text-black hover:gold-bg/90" onClick={handleButtonClick}>
                 Collaborate with us
               </Button>
             </div>

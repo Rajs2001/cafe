@@ -335,7 +335,7 @@ export default function Home() {
                     alt="Customer"
                     width={60}
                     height={60}
-                    className="rounded-full"
+                    className="rounded-full h-[60px] w-[60px]"
                   />
                   <div>
                     <p className="font-semibold">Rahul Mehta</p>
@@ -414,7 +414,7 @@ export default function Home() {
               <CardContent className="pt-6">
                 <div className="flex items-center gap-4 mb-4">
                   <Image
-                    src="/placeholder.svg?height=60&width=60"
+                    src="/assets/testimonials/4.png"
                     alt="Customer"
                     width={60}
                     height={60}

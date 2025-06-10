@@ -111,7 +111,7 @@ export default function CorePage() {
       <section className="py-15 bg-zinc-900">
         <div className="px-4 sm:px-8 lg:px-16">
           <h3 className="text-2xl sm:text-3xl font-bold mb-12 text-center">
-            Why Partner with Us?
+            Why Partner With Us?
           </h3>
 
           <p className="text-gray-400 text-center max-w-2xl mx-auto mb-10">

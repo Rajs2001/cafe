@@ -1,6 +1,6 @@
 'use client';
 
-import { Bell, ChevronDown, Menu, User, X } from 'lucide-react';
+import { ChevronDown, Menu, User, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -72,7 +72,7 @@ export default function Header() {
                   Employee Login
                 </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem asChild>
+              {/* <DropdownMenuItem asChild>
                 <Link
                   href="https://cafecruisers.keka.com/"
                   target="_blank"
@@ -81,14 +81,14 @@ export default function Header() {
                 >
                   Candidate Login
                 </Link>
-              </DropdownMenuItem>
+              </DropdownMenuItem> */}
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <Button variant="ghost" size="icon" className="relative">
+          {/* <Button variant="ghost" size="icon" className="relative">
             <Bell className="h-5 w-5" />
             <span className="absolute top-0 right-0 h-2 w-2 rounded-full bg-primary"></span>
-          </Button>
+          </Button> */}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -151,7 +151,7 @@ export default function Header() {
                   {' '}
                   Employee Login
                 </Link>
-                <Link
+                {/* <Link
                   href="https://cafecruisers.keka.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -161,7 +161,7 @@ export default function Header() {
                   <User className="h-4 w-4" />
                   {' '}
                   Candidate Login
-                </Link>
+                </Link> */}
               </div>
             </div>
           </nav>
