@@ -6,9 +6,9 @@ export default function Footer() {
   return (
     <footer className="border-t border-border/40 bg-background">
       <div className="container py-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2">
             <Link href="/" className="flex flex-col">
               <div className="flex items-center gap-2 justify-center md:justify-start lg:justify-start">
                 <Image
@@ -26,29 +26,12 @@ export default function Footer() {
                   className=" md:block lg:block md:w-[150px] md:h-[100px]"
                 />
               </div>
-              <span className="text-xl font-bold gold-text">CIN: U52291TZ2025PTC033425</span>
+              <span className="text-sm font-bold gold-text">CIN: U52291TZ2025PTC033425</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
               Built for the Wild. Powered by Stories. Driven by Community.
             </p>
-            <div className="flex gap-4">
-              <Link href="#" className="text-muted-foreground hover:gold-text">
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:gold-text">
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:gold-text">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:gold-text">
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-            </div>
+
           </div>
 
           <div>
@@ -118,17 +101,18 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="flex gap-4">
-            {['/assets/registration/1.jpg', '/assets/registration/2.jpg', '/assets/registration/3.jpg'].map((src, index) => (
-              <Image
-                key={index}
-                src={src}
-                alt={`Registration Image ${index + 1}`}
-                width={30}
-                height={20}
-                className="rounded mb-4 h-[80px] w-[80px]"
-              />
-            ))}
+          <div className="flex gap-4 flex-wrap justify-start">
+            {['/assets/registration/1.jpg', '/assets/registration/2.jpg', '/assets/registration/3.jpg']
+              .map((src, index) => (
+                <Image
+                  key={index}
+                  src={src}
+                  alt={`Registration Image ${index + 1}`}
+                  width={30}
+                  height={20}
+                  className="rounded mb-4 h-[80px] w-[80px]"
+                />
+              ))}
           </div>
 
           <div>
@@ -149,13 +133,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <ul className="space-y-2">
-            </ul>
-          </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-border/40">
+        <div className="mt-12 pt-2 border-t border-border/40">
           <p className="text-center text-sm text-muted-foreground">
             <span>
               All rights reserved. &copy;  Cruiserverse Ventures Pvt Ltd.
@@ -175,6 +155,25 @@ export default function Footer() {
               Copyright
             </Link> */}
           </p>
+
+          <div className="flex gap-4 justify-center mt-4">
+            <Link href="#" className="text-muted-foreground hover:gold-text">
+              <Facebook className="h-5 w-5" />
+              <span className="sr-only">Facebook</span>
+            </Link>
+            <Link href="#" className="text-muted-foreground hover:gold-text">
+              <Instagram className="h-5 w-5" />
+              <span className="sr-only">Instagram</span>
+            </Link>
+            <Link href="#" className="text-muted-foreground hover:gold-text">
+              <Twitter className="h-5 w-5" />
+              <span className="sr-only">Twitter</span>
+            </Link>
+            <Link href="#" className="text-muted-foreground hover:gold-text">
+              <Linkedin className="h-5 w-5" />
+              <span className="sr-only">LinkedIn</span>
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

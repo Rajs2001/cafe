@@ -46,6 +46,12 @@ export default function Header() {
           <Link href="/core" className="text-sm font-medium hover:gold-text transition-colors">
             Core
           </Link>
+          <Link href="/culture" className="text-sm font-medium hover:gold-text transition-colors">
+            Culture
+          </Link>
+          <Link href="/partnership" className="text-sm font-medium hover:gold-text transition-colors">
+            Partnership
+          </Link>
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
