@@ -1,4 +1,4 @@
-# Next.js Boilerplate with Separate Backend
+# Next.js Boilerplate with Separate Backend. for cafecruiser
 
 This is a production-ready Next.js boilerplate configured to work with a separate backend API. It provides a robust, modular API service layer using Axios for data fetching.
 
