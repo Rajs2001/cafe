@@ -72,23 +72,8 @@ export default function Header() {
                   Employee Login
                 </Link>
               </DropdownMenuItem>
-              {/* <DropdownMenuItem asChild>
-                <Link
-                  href="https://cafecruisers.keka.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cursor-pointer"
-                >
-                  Candidate Login
-                </Link>
-              </DropdownMenuItem> */}
             </DropdownMenuContent>
           </DropdownMenu>
-
-          {/* <Button variant="ghost" size="icon" className="relative">
-            <Bell className="h-5 w-5" />
-            <span className="absolute top-0 right-0 h-2 w-2 rounded-full bg-primary"></span>
-          </Button> */}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -101,6 +86,7 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden border-t border-border/40 bg-background">
           <nav className="container py-4 flex flex-col gap-4">
+
             <Link
               href="/ventures"
               className="text-sm font-medium p-2 hover:bg-secondary rounded-md"
@@ -108,6 +94,7 @@ export default function Header() {
             >
               Ventures
             </Link>
+
             <Link
               href="/pulse"
               className="text-sm font-medium p-2 hover:bg-secondary rounded-md"
@@ -115,6 +102,7 @@ export default function Header() {
             >
               Pulse
             </Link>
+
             <Link
               href="/studio"
               className="text-sm font-medium p-2 hover:bg-secondary rounded-md"
@@ -122,12 +110,29 @@ export default function Header() {
             >
               Studio
             </Link>
+
             <Link
               href="/core"
               className="text-sm font-medium p-2 hover:bg-secondary rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
               Core
+            </Link>
+
+            <Link
+              href="/culture"
+              className="text-sm font-medium p-2 hover:bg-secondary rounded-md"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Culture
+            </Link>
+
+            <Link
+              href="/partnership"
+              className="text-sm font-medium p-2 hover:bg-secondary rounded-md"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Partnership
             </Link>
 
             <div className="border-t border-border/40 pt-4 mt-2">
@@ -151,17 +156,6 @@ export default function Header() {
                   {' '}
                   Employee Login
                 </Link>
-                {/* <Link
-                  href="https://cafecruisers.keka.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm p-2 hover:bg-secondary rounded-md flex items-center gap-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <User className="h-4 w-4" />
-                  {' '}
-                  Candidate Login
-                </Link> */}
               </div>
             </div>
           </nav>
