@@ -63,12 +63,12 @@ export default function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-48 bg-secondary">
               <DropdownMenuItem asChild>
-                <Link href="/admin-login" className="cursor-pointer">
+                <Link href="https://cafe-cruiser-admin-panel.vercel.app/login/" className="cursor-pointer">
                   Admin Login
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/employee-login" className="cursor-pointer">
+                <Link href="https://cafe-cruiser-admin-panel.vercel.app/login/" className="cursor-pointer">
                   Employee Login
                 </Link>
               </DropdownMenuItem>
