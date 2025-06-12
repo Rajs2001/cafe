@@ -142,7 +142,7 @@ const Intro = () => {
 
                   {/* Content */}
                   <div className="space-y-4">
-                    <h3 className="text-2xl font-bold text-white group-hover:text-gold-100 transition-colors duration-300">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-gold-500 transition-colors duration-300">
                       {card.title}
                     </h3>
 
@@ -152,9 +152,9 @@ const Intro = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <div className="mt-8 pt-6 border-t border-zinc-700/50 group-hover:border-gold -500/20 transition-colors duration-300">
-                    <button className="flex items-center gap-2 text-gold -400 hover:text-gold-300 font-semibold group-hover:gap-4 transition-all duration-300 relative overflow-hidden" onClick={() => window.location.href = card.href}>
-                      <span className="relative z-10">Learn more</span>
+                  <div className="mt-8 pt-6 border-t border-zinc-700/50 group-hover:border-gold-500/20 transition-colors duration-300 bg-transparent">
+                    <button className="flex items-center gap-2 text-gold -400 hover:text-white  font-semibold group-hover:gap-4 transition-all duration-300 relative overflow-hidden" onClick={() => window.location.href = card.href}>
+                      <span className="relative z-10 hover:border-none">Learn more</span>
                       <ArrowRight className={`w-5 h-5 transition-all duration-300 ${isHovered ? 'animate-pulse' : ''}`} />
 
                       {/* Button Hover Effect */}

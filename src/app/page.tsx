@@ -23,6 +23,7 @@ export default function Home() {
     const a = document.createElement('a');
     a.href = `mailto:${mailId}`;
     a.click();
+    a.remove();
   }
 
   return (

@@ -38,9 +38,11 @@
 
 .hero-gradient {
   /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url('/assets/hero-banner-v2.jpeg'); */
-  background:
+  /* background:
     radial-gradient(rgba(0, 0, 0, 0.151), rgba(0, 0, 0, 0.116), rgba(0, 0, 0, 0.356)),
-    url('/assets/hero-banner-v2.jpeg');
+    url('/assets/hero-banner-v2.jpeg'); */
+  background:
+    radial-gradient(rgba(0, 0, 0, 0.151), rgba(0, 0, 0, 0.116), rgba(0, 0, 0, 0.356)), url('/assets/images/herolg.jpg');
   background-size: cover;
   background-position: center;
 }

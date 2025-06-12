@@ -1,7 +1,7 @@
-import About from './about';
-import ExperienceSection from './feature';
-import Hero from './hero';
-import Intro from './intro';
+import About from './components/about';
+import ExperienceSection from './components/feature';
+import Hero from './components/hero';
+import Intro from './components/intro';
 
 export {
   About,
