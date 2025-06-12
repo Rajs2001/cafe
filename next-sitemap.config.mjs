@@ -1,4 +1,3 @@
-// next-sitemap.config.mjs
 export default {
   siteUrl: 'https://cafe-cruiser.com',
   generateRobotsTxt: true,
