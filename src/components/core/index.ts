@@ -1,4 +1,4 @@
-import AboutSection from './components/AboutSection';
+
 // import CTASection from './components/CTASection';
 // import FeaturesSection from './components/FeaturesSection';
 // import FutureTechSection from './components/FutureTechSection';
@@ -8,10 +8,6 @@ import PowersCoreSection from './components/PowersCoreSection';
 import PowersExperienceSection from './components/PowersExperienceSection';
 
 export {
-  AboutSection,
-  // CTASection,
-  // FeaturesSection,
-  // FutureTechSection,
   HeroSection,
   JoinMovementSection,
   PowersCoreSection,
