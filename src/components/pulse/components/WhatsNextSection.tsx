@@ -1,20 +1,20 @@
 'use client';
-import React from 'react';
 import { motion } from 'framer-motion';
+import React from 'react';
 
 export default function WhatsNextSection() {
   return (
     <section className="relative py-20 bg-gradient-to-b from-zinc-950 to-zinc-900 overflow-hidden">
       {/* Animated road lines in background */}
       <div className="absolute inset-0 opacity-10">
-        {[...Array(5)].map((_, i) => (
+        {[...Array.from({ length: 5 })].map((_, i) => (
           <motion.div
             key={i}
             className="absolute h-0.5 bg-amber-500/30"
             style={{
               top: `${20 + (i * 15)}%`,
               width: '150%',
-              left: '-25%'
+              left: '-25%',
             }}
             animate={{
               x: [0, -100, 0],
@@ -22,7 +22,7 @@ export default function WhatsNextSection() {
             transition={{
               duration: 8 + i * 2,
               repeat: Infinity,
-              ease: 'linear'
+              ease: 'linear',
             }}
           />
         ))}
@@ -36,7 +36,7 @@ export default function WhatsNextSection() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6 gold-text">What's Next</h2>
-          
+
           <div className="relative inline-block">
             <motion.div
               initial={{ width: 0 }}
@@ -55,18 +55,18 @@ export default function WhatsNextSection() {
             {
               title: 'Seasonal Tours',
               icon: '🗺️',
-              desc: 'Curated riding experiences across diverse terrains'
+              desc: 'Curated riding experiences across diverse terrains',
             },
             {
               title: 'Large Festivals',
-              icon: '🎪', 
-              desc: 'Expanding to major automotive celebrations'
+              icon: '🎪',
+              desc: 'Expanding to major automotive celebrations',
             },
             {
               title: 'Brand Experiences',
               icon: '✨',
-              desc: 'Creator-led activations for authentic engagement'
-            }
+              desc: 'Creator-led activations for authentic engagement',
+            },
           ].map((item, idx) => (
             <motion.div
               key={idx}

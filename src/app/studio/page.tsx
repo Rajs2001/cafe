@@ -1,19 +1,19 @@
 'use client';
 import {
-  StudioHero,
-  StudioJoinSection,
-  StudioWhatWeDo,
-  StudioGalleryTabs,
   FutureVisionSection,
   StudioCTA,
+  StudioGalleryTabs,
+  StudioHero,
+  // StudioJoinSection,
+  // StudioWhatWeDo,
 } from '@/components/studio';
 
 export default function StudioPage() {
   return (
     <div className="flex flex-col">
       <StudioHero />
-      <StudioWhatWeDo />
-      <StudioJoinSection />
+      {/* <StudioWhatWeDo /> */}
+      {/* <StudioJoinSection /> */}
       <StudioGalleryTabs />
       <FutureVisionSection />
       <StudioCTA />

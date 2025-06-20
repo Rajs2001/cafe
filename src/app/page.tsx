@@ -4,7 +4,7 @@ import Image from 'next/image';
 import React from 'react';
 import { About, ExperienceSection, Hero, Intro } from '@/components/home';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+// import { Card, CardContent } from '@/components/ui/card';
 
 export default function Home() {
   function buttonclick() {
@@ -62,7 +62,7 @@ export default function Home() {
       <ExperienceSection onExplore={allExperiacneButtonClick} />
 
       {/* Testimonials Section */}
-      <section className="bg-zinc-900">
+      {/* <section className="bg-zinc-900">
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -202,7 +202,7 @@ export default function Home() {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-zinc-900">

@@ -1,25 +1,31 @@
 'use client';
+import { useRef } from 'react';
 import {
-  HeroSection,
-  VenturesSection,
   AdventuresSection,
-  VisionSection,
+  HeroSection,
+  // StatsSection,
   TeamSection,
-  StatsSection,
+  VenturesSection,
+  VisionSection,
 } from '@/components/ventures';
 
 export default function VenturesPage() {
+  const teamSectionRef = useRef<HTMLDivElement>(null);
+
+  const scrollToTeam = () => {
+    teamSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div>
-      <HeroSection handleScroll={function (): void {
-        throw new Error('Function not implemented.');
-      } } />
+      <HeroSection handleScroll={scrollToTeam} />
       <VenturesSection />
       <AdventuresSection />
       <VisionSection />
-      <TeamSection />
-      <StatsSection />
+      <div ref={teamSectionRef}>
+        <TeamSection />
+      </div>
+      {/* <StatsSection /> */}
     </div>
   );
 }
-

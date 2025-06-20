@@ -6,32 +6,32 @@ import React from 'react';
 export const WhatWeValueSection: React.FC = () => {
   const values = [
     {
-      text: "Authenticity over appearances",
-      icon: "🛠️",
-      animation: { rotate: [0, 10, -10, 0] }
+      text: 'Authenticity over appearances',
+      icon: '🛠️',
+      animation: { rotate: [0, 10, -10, 0] },
     },
     {
-      text: "Agility over hierarchy",
-      icon: "⚡",
-      animation: { scale: [1, 1.1, 1] }
+      text: 'Agility over hierarchy',
+      icon: '⚡',
+      animation: { scale: [1, 1.1, 1] },
     },
     {
-      text: "Craftsmanship over shortcuts",
-      icon: "🔧",
-      animation: { x: [0, 5, -5, 0] }
+      text: 'Craftsmanship over shortcuts',
+      icon: '🔧',
+      animation: { x: [0, 5, -5, 0] },
     },
     {
-      text: "Adventure in everything — from code to content",
-      icon: "🏍️",
-      animation: { y: [0, -5, 0] }
-    }
+      text: 'Adventure in everything — from code to content',
+      icon: '🏍️',
+      animation: { y: [0, -5, 0] },
+    },
   ];
 
   return (
     <section className="relative py-20 bg-zinc-800 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
-        {[...Array(6)].map((_, i) => (
+        {[...Array.from({ length: 6 })].map((_, i) => (
           <motion.div
             key={i}
             className="absolute border border-orange-500/20 rounded-full"
@@ -47,7 +47,7 @@ export const WhatWeValueSection: React.FC = () => {
             transition={{
               duration: Math.random() * 60 + 60,
               repeat: Infinity,
-              ease: "linear",
+              ease: 'linear',
             }}
           />
         ))}
@@ -120,9 +120,9 @@ export const WhatWeValueSection: React.FC = () => {
             >
               <motion.div
                 className="bg-zinc-700/50 backdrop-blur-sm p-8 rounded-xl border border-zinc-600 hover:border-orange-500/50 transition-all duration-300 h-full flex flex-col items-center"
-                whileHover={{ 
+                whileHover={{
                   y: -5,
-                  boxShadow: "0 10px 25px -5px rgba(217, 84, 16, 0.1)"
+                  boxShadow: '0 10px 25px -5px rgba(217, 84, 16, 0.1)',
                 }}
               >
                 <motion.div
@@ -131,7 +131,7 @@ export const WhatWeValueSection: React.FC = () => {
                   transition={{
                     duration: 2,
                     repeat: Infinity,
-                    ease: "easeInOut"
+                    ease: 'easeInOut',
                   }}
                 >
                   {value.icon}
@@ -152,7 +152,7 @@ export const WhatWeValueSection: React.FC = () => {
           className="mt-16 mx-auto h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent w-3/4"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: 'easeInOut' }}
           viewport={{ once: true }}
         />
       </div>

@@ -1,7 +1,7 @@
 'use client';
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Route, Camera, Users, Mic2, BarChart2, Package, ClipboardList } from 'lucide-react';
+import { BarChart2, Camera, ClipboardList, Mic2, Package, Route, Users } from 'lucide-react';
+import React from 'react';
 
 // Animation variants
 const container = {
@@ -33,7 +33,7 @@ const FloatingShapes = () => {
 
   return (
     <>
-      {shapes.map((shape) => (
+      {shapes.map(shape => (
         <motion.div
           key={shape.id}
           className={`absolute ${shape.style} backdrop-blur-sm`}
@@ -110,7 +110,7 @@ export default function WhatWeDoSection() {
             >
               {/* Subtle glow effect on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
+
               {/* Icon with gradient ring */}
               <div className="relative z-10 flex items-center mb-4">
                 <div className="p-2 rounded-full bg-zinc-800/70 group-hover:bg-gradient-to-br from-amber-500/20 to-amber-500/10 ring-1 ring-zinc-700 group-hover:ring-amber-500/30 transition-all">

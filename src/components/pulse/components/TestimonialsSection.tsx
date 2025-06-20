@@ -29,7 +29,9 @@ export default function TestimonialsSection() {
       <div className="container px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            What Our <span className="gold-text">Community Says</span>
+            What Our
+            {' '}
+            <span className="gold-text">Community Says</span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto">
             Hear from the riders, brands, and creators who’ve been part of our journey.
@@ -42,7 +44,11 @@ export default function TestimonialsSection() {
               key={index}
               className="bg-zinc-800 border border-zinc-700 rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow"
             >
-              <p className="text-gray-300 italic mb-4">“{testimonial.content}”</p>
+              <p className="text-gray-300 italic mb-4">
+                “
+                {testimonial.content}
+                ”
+              </p>
               <h4 className="text-lg font-semibold gold-text">{testimonial.name}</h4>
               <p className="text-sm text-gray-400">{testimonial.title}</p>
             </div>

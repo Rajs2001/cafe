@@ -1,10 +1,9 @@
 'use client';
 
-import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
+import { animate, motion, useMotionValue, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-/** Tiny helper so we call window only on the client */
 const getWindowHeight = () =>
   typeof window !== 'undefined' ? window.innerHeight : 0;
 
@@ -33,7 +32,7 @@ export const HeroSection: React.FC = () => {
     const controls = animate(count, 100, { duration: 3 });
 
     // generate particle data once on mount
-    const generated: Particle[] = [...Array(20)].map((_, i) => ({
+    const generated: Particle[] = [...Array.from({ length: 20 })].map((_, i) => ({
       id: i,
       size: Math.random() * 10 + 2,
       left: Math.random() * 100,
@@ -80,7 +79,7 @@ export const HeroSection: React.FC = () => {
               strokeWidth="2"
               strokeDasharray="4 4"
             />
-            {[...Array(12)].map((_, i) => (
+            {[...Array.from({ length: 12 })].map((_, i) => (
               <line
                 key={i}
                 x1="100"
@@ -99,7 +98,7 @@ export const HeroSection: React.FC = () => {
       {/* -------- Floating particles (render only on the client) -------- */}
       {hasMounted && (
         <div className="absolute inset-0">
-          {particles.map((p) => (
+          {particles.map(p => (
             <motion.div
               key={p.id}
               className="absolute rounded-full bg-orange-500/10"
@@ -150,7 +149,9 @@ export const HeroSection: React.FC = () => {
                 transition={{ delay: 0.7, duration: 1 }}
                 viewport={{ once: true }}
               >
-                <span className="text-orange-400 font-medium">Cruiserverse</span> is a future‑facing
+                <span className="text-orange-400 font-medium">Cruiserverse</span>
+                {' '}
+                is a future‑facing
                 automotive adventure and lifestyle ecosystem.
               </motion.p>
 

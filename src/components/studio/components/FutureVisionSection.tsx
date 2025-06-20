@@ -1,8 +1,8 @@
 // components/FutureVisionSection.tsx
 'use client';
-import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { BookText, Film, Rocket } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 
 const FloatingOrb = ({ x, y, size, delay }: { x: number; y: number; size: number; delay: number }) => {
   return (
@@ -13,17 +13,17 @@ const FloatingOrb = ({ x, y, size, delay }: { x: number; y: number; size: number
         height: `${size}px`,
         left: `${x}%`,
         top: `${y}%`,
-        filter: 'blur(20px)'
+        filter: 'blur(20px)',
       }}
       animate={{
         scale: [1, 1.2, 1],
-        opacity: [0.2, 0.4, 0.2]
+        opacity: [0.2, 0.4, 0.2],
       }}
       transition={{
         duration: 6 + delay,
         delay,
         repeat: Infinity,
-        repeatType: 'reverse'
+        repeatType: 'reverse',
       }}
     />
   );
@@ -31,23 +31,23 @@ const FloatingOrb = ({ x, y, size, delay }: { x: number; y: number; size: number
 
 export default function FutureVisionSection() {
   const [isMounted, setIsMounted] = useState(false);
-  
+
   const visions = [
     {
       icon: <BookText className="w-5 h-5" />,
-      title: "Digital Comic Series",
-      description: "Launching a full digital comic universe by 2030 with interactive storytelling"
+      title: 'Digital Comic Series',
+      description: 'Launching a full digital comic universe by 2030 with interactive storytelling',
     },
     {
       icon: <Film className="w-5 h-5" />,
-      title: "Creator Labs",
-      description: "Cutting-edge film labs for automotive content creators with VR capabilities"
+      title: 'Creator Labs',
+      description: 'Cutting-edge film labs for automotive content creators with VR capabilities',
     },
     {
       icon: <Rocket className="w-5 h-5" />,
-      title: "Branded Media",
-      description: "Next-gen media services powered by AI for automotive startups"
-    }
+      title: 'Branded Media',
+      description: 'Next-gen media services powered by AI for automotive startups',
+    },
   ];
 
   // Fixed positions for orbs (no randomness)
@@ -55,7 +55,7 @@ export default function FutureVisionSection() {
     { x: 10, y: 20, size: 200, delay: 0 },
     { x: 80, y: 40, size: 150, delay: 2 },
     { x: 30, y: 70, size: 180, delay: 4 },
-    { x: 70, y: 10, size: 120, delay: 6 }
+    { x: 70, y: 10, size: 120, delay: 6 },
   ];
 
   useEffect(() => {
@@ -103,7 +103,7 @@ export default function FutureVisionSection() {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#FF8C0010,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative z-10">
                 <div className="gold-bg p-3 rounded-full w-max mb-6">
-                  {React.cloneElement(vision.icon, { className: "w-6 h-6 text-black" })}
+                  {React.cloneElement(vision.icon, { className: 'w-6 h-6 text-black' })}
                 </div>
                 <h3 className="text-2xl font-bold gold-text mb-3">{vision.title}</h3>
                 <p className="text-zinc-300">{vision.description}</p>

@@ -1,7 +1,7 @@
 'use client';
 
+import { Bike, Coffee, Sparkles, Users } from 'lucide-react';
 import React from 'react';
-import { Bike, Coffee, Users, Sparkles } from 'lucide-react';
 
 const features = [
   {

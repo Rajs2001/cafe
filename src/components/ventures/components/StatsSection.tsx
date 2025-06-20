@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
-import { Award, Calendar, TrendingUp, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Award, Calendar, TrendingUp, Users } from 'lucide-react';
+import React from 'react';
 
 export default function StatsSection() {
   const stats = [
@@ -11,28 +11,28 @@ export default function StatsSection() {
       value: '7+',
       label: 'Years of Experience',
       suffix: 'Years',
-      color: 'from-orange-400 to-orange-600'
+      color: 'from-orange-400 to-orange-600',
     },
     {
       icon: <Users className="h-10 w-10" />,
       value: '5,000+',
       label: 'Community Members',
       suffix: 'Riders',
-      color: 'from-amber-400 to-amber-600'
+      color: 'from-amber-400 to-amber-600',
     },
     {
       icon: <Calendar className="h-10 w-10" />,
       value: '100+',
       label: 'Events Organized',
       suffix: 'Events',
-      color: 'from-orange-500 to-amber-500'
+      color: 'from-orange-500 to-amber-500',
     },
     {
       icon: <TrendingUp className="h-10 w-10" />,
       value: '3',
       label: 'Ventures Launched',
       suffix: 'Ventures',
-      color: 'from-amber-500 to-orange-400'
+      color: 'from-amber-500 to-orange-400',
     },
   ];
 
@@ -41,21 +41,21 @@ export default function StatsSection() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const item = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 }
+    show: { opacity: 1, y: 0 },
   };
 
   return (
     <section className="relative py-28 bg-gradient-to-b from-zinc-900 to-black overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-5">
-        {[...Array(12)].map((_, i) => (
+        {[...Array.from({ length: 12 })].map((_, i) => (
           <motion.div
             key={i}
             className="absolute rounded-full bg-orange-500"
@@ -68,7 +68,7 @@ export default function StatsSection() {
               duration: 10,
               repeat: Infinity,
               repeatType: 'reverse',
-              ease: 'linear'
+              ease: 'linear',
             }}
             style={{
               width: `${100 + (i * 20)}px`,
@@ -81,16 +81,16 @@ export default function StatsSection() {
       </div>
 
       <div className="container px-4 mx-auto relative z-10">
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
         >
           {stats.map((stat, idx) => (
-            <motion.div 
-              key={idx} 
+            <motion.div
+              key={idx}
               variants={item}
               className="group perspective-1000"
               whileHover={{ y: -5 }}

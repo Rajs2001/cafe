@@ -8,14 +8,14 @@ export const WhatDrivesUsSection: React.FC = () => {
     { icon: '⚙️', text: 'Freedom to innovate' },
     { icon: '🔧', text: 'Responsibility to our community' },
     { icon: '🏍️', text: 'Passion for riding' },
-    { icon: '💡', text: 'Bold thinking' }
+    { icon: '💡', text: 'Bold thinking' },
   ];
 
   return (
     <section className="relative bg-zinc-900 overflow-hidden ">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-5">
-        {[...Array(8)].map((_, i) => (
+        {[...Array.from({ length: 8 })].map((_, i) => (
           <motion.div
             key={i}
             className="absolute border border-orange-500/20 rounded-full"
@@ -31,7 +31,7 @@ export const WhatDrivesUsSection: React.FC = () => {
             transition={{
               duration: Math.random() * 60 + 60,
               repeat: Infinity,
-              ease: "linear",
+              ease: 'linear',
             }}
           />
         ))}
@@ -46,7 +46,7 @@ export const WhatDrivesUsSection: React.FC = () => {
         transition={{
           duration: 6,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       >
         <svg className="w-24 h-24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -90,7 +90,10 @@ export const WhatDrivesUsSection: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            At <span className="text-orange-400 font-semibold">Cruiserverse</span>, we're not just building products or events — we're igniting a movement. And it starts within. Our culture is rooted in freedom, responsibility, and creativity, allowing every individual to bring their best — not just to work, but to life.
+            At
+            {' '}
+            <span className="text-orange-400 font-semibold">Cruiserverse</span>
+            , we're not just building products or events — we're igniting a movement. And it starts within. Our culture is rooted in freedom, responsibility, and creativity, allowing every individual to bring their best — not just to work, but to life.
           </motion.p>
 
           <motion.p
@@ -129,7 +132,7 @@ export const WhatDrivesUsSection: React.FC = () => {
           className="mt-20 mx-auto h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent w-3/4"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: 'easeInOut' }}
           viewport={{ once: true }}
         />
       </div>

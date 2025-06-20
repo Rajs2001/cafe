@@ -1,9 +1,9 @@
 'use client';
 
+import { ImageIcon, Play } from 'lucide-react';
 import Image from 'next/image';
-import { Play, ImageIcon } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export default function StudioGalleryTabs() {
   return (
@@ -11,7 +11,9 @@ export default function StudioGalleryTabs() {
       <div className="container px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Media <span className="gold-text">Gallery</span>
+            Media
+            {' '}
+            <span className="gold-text">Gallery</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Explore our collection of photos, videos, and stories that capture the essence of the Cruiserverse experience.
@@ -26,7 +28,7 @@ export default function StudioGalleryTabs() {
 
           <TabsContent value="photos">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {[...Array(12)].map((_, i) => (
+              {[...Array.from({ length: 12 })].map((_, i) => (
                 <div key={`photo-${i}`} className="relative group overflow-hidden rounded-lg">
                   <Image
                     src={`/placeholder.svg?height=300&width=300&text=Photo ${i + 1}`}
@@ -52,7 +54,7 @@ export default function StudioGalleryTabs() {
 
           <TabsContent value="videos">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[...Array(6)].map((_, i) => (
+              {[...Array.from({ length: 6 })].map((_, i) => (
                 <div key={`video-${i}`} className="relative group overflow-hidden rounded-lg">
                   <Image
                     src={`/placeholder.svg?height=300&width=500&text=Video ${i + 1}`}
@@ -71,7 +73,10 @@ export default function StudioGalleryTabs() {
                     </Button>
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                    <h3 className="font-semibold text-white">Adventure Video {i + 1}</h3>
+                    <h3 className="font-semibold text-white">
+                      Adventure Video
+                      {i + 1}
+                    </h3>
                     <p className="text-sm text-gray-300">Exploring the wilderness</p>
                   </div>
                 </div>

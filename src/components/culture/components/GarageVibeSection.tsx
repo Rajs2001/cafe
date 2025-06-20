@@ -5,33 +5,33 @@ import React from 'react';
 
 export const GarageVibeSection: React.FC = () => {
   const vibePoints = [
-    { 
-      text: "Open tables, not cubicles",
-      icon: "🛠️",
-      color: "from-orange-400 to-orange-500"
+    {
+      text: 'Open tables, not cubicles',
+      icon: '🛠️',
+      color: 'from-orange-400 to-orange-500',
     },
-    { 
-      text: "Loud ideas, quiet focus",
-      icon: "🔊",
-      color: "from-amber-400 to-amber-500"
+    {
+      text: 'Loud ideas, quiet focus',
+      icon: '🔊',
+      color: 'from-amber-400 to-amber-500',
     },
-    { 
-      text: "Music, machines, and meaningful work",
-      icon: "🎵",
-      color: "from-yellow-400 to-yellow-500"
+    {
+      text: 'Music, machines, and meaningful work',
+      icon: '🎵',
+      color: 'from-yellow-400 to-yellow-500',
     },
-    { 
-      text: "Team hangouts, ride days, and café runs",
-      icon: "🏍️",
-      color: "from-red-400 to-red-500"
-    }
+    {
+      text: 'Team hangouts, ride days, and café runs',
+      icon: '🏍️',
+      color: 'from-red-400 to-red-500',
+    },
   ];
 
   return (
     <section className="relative py-20 bg-zinc-900 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
-        {[...Array(8)].map((_, i) => (
+        {[...Array.from({ length: 8 })].map((_, i) => (
           <motion.div
             key={i}
             className="absolute border border-orange-500/20 rounded-full"
@@ -47,7 +47,7 @@ export const GarageVibeSection: React.FC = () => {
             transition={{
               duration: Math.random() * 60 + 60,
               repeat: Infinity,
-              ease: "linear",
+              ease: 'linear',
             }}
           />
         ))}
@@ -72,7 +72,7 @@ export const GarageVibeSection: React.FC = () => {
               repeat: Infinity,
               repeatType: 'loop',
               ease: 'linear',
-              delay: Math.random() * 5
+              delay: Math.random() * 5,
             }}
           >
             {tool}

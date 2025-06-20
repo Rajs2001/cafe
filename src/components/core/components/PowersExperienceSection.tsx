@@ -1,16 +1,14 @@
-
-
-"use client";
+'use client';
 
 import {
-  Users,
-  Calendar,
-  Trophy,
-  Wrench,
   ArrowRight,
+  Calendar,
   Sparkles,
-} from "lucide-react";
-import React, { useEffect, useState } from "react";
+  Trophy,
+  Users,
+  Wrench,
+} from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 
 /**
  * PowersExperienceSection – revamp of the original “What Powers the Experience?” block.
@@ -26,56 +24,56 @@ export default function PowersExperienceSection() {
 
   const cards = [
     {
-      id: "community",
+      id: 'community',
       icon: Users,
-      title: "Community",
+      title: 'Community',
       points: [
-        "Build local and national motorcycle communities.",
-        "Attend meetups, rides, and special club events.",
-        "Engage with passionate riders across India.",
+        'Build local and national motorcycle communities.',
+        'Attend meetups, rides, and special club events.',
+        'Engage with passionate riders across India.',
       ],
-      gradient: "from-gold-500/20 to-gold-600/20",
-      glowColor: "shadow-gold-500/25",
-      delay: "0ms",
+      gradient: 'from-gold-500/20 to-gold-600/20',
+      glowColor: 'shadow-gold-500/25',
+      delay: '0ms',
     },
     {
-      id: "rides",
+      id: 'rides',
       icon: Calendar,
-      title: "Rides",
+      title: 'Rides',
       points: [
-        "Participate in weekly city rides and long‑hauls.",
-        "Curated routes led by experienced ride pilots.",
-        "Safe and well‑organised for all skill levels.",
+        'Participate in weekly city rides and long‑hauls.',
+        'Curated routes led by experienced ride pilots.',
+        'Safe and well‑organised for all skill levels.',
       ],
-      gradient: "from-purple-500/20 to-pink-600/20",
-      glowColor: "shadow-purple-500/25",
-      delay: "100ms",
+      gradient: 'from-purple-500/20 to-pink-600/20',
+      glowColor: 'shadow-purple-500/25',
+      delay: '100ms',
     },
     {
-      id: "rewards",
+      id: 'rewards',
       icon: Trophy,
-      title: "Rewards",
+      title: 'Rewards',
       points: [
-        "Earn points for taking part in rides and activities.",
-        "Redeem exclusive club merchandise and services.",
-        "Enjoy discounts from partner brands and vendors.",
+        'Earn points for taking part in rides and activities.',
+        'Redeem exclusive club merchandise and services.',
+        'Enjoy discounts from partner brands and vendors.',
       ],
-      gradient: "from-amber-500/20 to-amber-600/20",
-      glowColor: "shadow-amber-500/25",
-      delay: "200ms",
+      gradient: 'from-amber-500/20 to-amber-600/20',
+      glowColor: 'shadow-amber-500/25',
+      delay: '200ms',
     },
     {
-      id: "services",
+      id: 'services',
       icon: Wrench,
-      title: "Services",
+      title: 'Services',
       points: [
-        "On‑demand motorcycle rentals through the app.",
-        "Access service partners and riding‑gear discounts.",
-        "Dedicated support for trip planning and issues.",
+        'On‑demand motorcycle rentals through the app.',
+        'Access service partners and riding‑gear discounts.',
+        'Dedicated support for trip planning and issues.',
       ],
-      gradient: "from-cyan-500/20 to-sky-600/20",
-      glowColor: "shadow-cyan-500/25",
-      delay: "300ms",
+      gradient: 'from-cyan-500/20 to-sky-600/20',
+      glowColor: 'shadow-cyan-500/25',
+      delay: '300ms',
     },
   ];
 
@@ -90,7 +88,7 @@ export default function PowersExperienceSection() {
 
       {/* Floating particles */}
       <div className="absolute inset-0 pointer-events-none">
-        {[...Array(20)].map((_, i) => (
+        {[...Array.from({ length: 20 })].map((_, i) => (
           <div
             // eslint-disable-next-line react/no-array-index-key
             key={i}
@@ -108,7 +106,7 @@ export default function PowersExperienceSection() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div
-          className={`text-center mb-20 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+          className={`text-center mb-20 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
         >
           <div className="relative inline-block mb-6">
             <Sparkles className="absolute -top-2 -left-2 w-6 h-6 text-gold-400 animate-spin" />
@@ -120,7 +118,7 @@ export default function PowersExperienceSection() {
                 Experience?
                 <div
                   className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-gold-500 to-gold-500 rounded-full transform scale-x-0 animate-pulse"
-                  style={{ animation: "scaleX 2s ease-out 0.5s forwards" }}
+                  style={{ animation: 'scaleX 2s ease-out 0.5s forwards' }}
                 />
               </span>
             </h2>
@@ -136,7 +134,7 @@ export default function PowersExperienceSection() {
             return (
               <div
                 key={card.id}
-                className={`group relative transform transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}`}
+                className={`group relative transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}
                 style={{ transitionDelay: card.delay }}
                 onMouseEnter={() => setHoveredCard(card.id)}
                 onMouseLeave={() => setHoveredCard(null)}
@@ -155,7 +153,7 @@ export default function PowersExperienceSection() {
                     />
                     <div className="relative bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-2xl p-4 group-hover:from-zinc-700 group-hover:to-zinc-800 transition-all duration-500">
                       <Icon
-                        className={`w-12 h-12 text-gold-400 group-hover:text-gold-300 transition-all duration-500 ${isHovered ? "animate-bounce" : ""}`}
+                        className={`w-12 h-12 text-gold-400 group-hover:text-gold-300 transition-all duration-500 ${isHovered ? 'animate-bounce' : ''}`}
                       />
                     </div>
                   </div>
@@ -166,7 +164,7 @@ export default function PowersExperienceSection() {
                       {card.title}
                     </h3>
                     <ul className="list-disc list-inside space-y-1 text-gray-400 group-hover:text-gray-300 text-sm leading-relaxed">
-                      {card.points.map((pt) => (
+                      {card.points.map(pt => (
                         <li key={pt}>{pt}</li>
                       ))}
                     </ul>
@@ -179,7 +177,7 @@ export default function PowersExperienceSection() {
                       className="flex items-center gap-2 text-gold-400 hover:text-white font-semibold group-hover:gap-4 transition-all duration-300 relative overflow-hidden"
                     >
                       <span className="relative z-10">Join the club</span>
-                      <ArrowRight className={`w-5 h-5 transition-all duration-300 ${isHovered ? "animate-pulse" : ""}`} />
+                      <ArrowRight className={`w-5 h-5 transition-all duration-300 ${isHovered ? 'animate-pulse' : ''}`} />
                       <div className="absolute inset-0 bg-gradient-to-r from-gold-500/10 to-gold-500/10 rounded-lg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                     </button>
                   </div>
@@ -202,7 +200,7 @@ export default function PowersExperienceSection() {
 
         {/* Bottom CTA */}
         <div
-          className={`text-center mt-20 transform transition-all duration-1000 delay-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+          className={`text-center mt-20 transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
         >
           <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gold-500/10 to-gold-500/10 backdrop-blur-sm border border-gold-500/20 rounded-full">
             <Sparkles className="w-5 h-5 text-gold-400 animate-spin" />
@@ -215,7 +213,8 @@ export default function PowersExperienceSection() {
       </div>
 
       {/* Local keyframes */}
-      <style jsx>{`
+      <style jsx>
+        {`
         @keyframes float {
           0%, 100% {
             transform: translateY(0) rotate(0deg);
@@ -232,7 +231,8 @@ export default function PowersExperienceSection() {
             transform: scaleX(1);
           }
         }
-      `}</style>
+      `}
+      </style>
     </section>
   );
 }

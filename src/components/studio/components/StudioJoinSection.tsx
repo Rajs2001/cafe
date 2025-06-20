@@ -21,14 +21,20 @@ export default function StudioJoinSection() {
       <div className="relative z-10 container px-4">
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Want to <span className="gold-text">Join</span> Us?
+            Want to
+            {' '}
+            <span className="gold-text">Join</span>
+            {' '}
+            Us?
           </h2>
           <p className="text-gray-400 mb-8">
             Become a part of our Cruiserverse family and embark on an unforgettable journey. Share your
             passion, collaborate with fellow riders, and explore new adventures together.
           </p>
           <Button className="rounded-full px-6 py-3 text-lg font-medium gold-bg hover:gold-bg/90">
-            Join Now <ArrowRight className="ml-2 h-5 w-5" />
+            Join Now
+            {' '}
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </div>

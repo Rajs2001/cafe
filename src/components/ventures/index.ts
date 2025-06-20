@@ -1,15 +1,15 @@
-import HeroSection from './components/HeroSection';
-import VenturesSection from './components/VenturesSection';
 import AdventuresSection from './components/AdventuresSection';
-import VisionSection from './components/VisionSection';
-import TeamSection from './components/TeamSection';
+import HeroSection from './components/HeroSection';
 import StatsSection from './components/StatsSection';
+import TeamSection from './components/TeamSection';
+import VenturesSection from './components/VenturesSection';
+import VisionSection from './components/VisionSection';
 
 export {
-  HeroSection,
-  VenturesSection,
   AdventuresSection,
-  VisionSection,
-  TeamSection,
+  HeroSection,
   StatsSection,
+  TeamSection,
+  VenturesSection,
+  VisionSection,
 };

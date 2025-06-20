@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-border/40 bg-background">
       <div className="container py-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
 
           <div className="flex flex-col gap-2">
             <Link href="/" className="flex flex-col">
@@ -27,6 +27,19 @@ export default function Footer() {
                 />
               </div>
               <span className="text-sm font-bold gold-text">CIN: U52291TZ2025PTC033425</span>
+
+              {/* <span className="text-sm font-bold text-yellow-500">CIN: 234567890ijhgfdwe5678</span> */}
+
+              <div className="grid grid-cols-3 gap-4 mt-2 md:gap-2 lg:gap-2 w-[50%] lg:w-[100%] md:w-[50%]">
+                {['/assets/registration/1.jpg', '/assets/registration/2.jpg', '/assets/registration/3.jpg'].map((src, index) => (
+                  <div
+                    key={index}
+                    className="w-10 h-10 bg-cover bg-center rounded shadow"
+                    style={{ backgroundImage: `url(${src})` }}
+                  />
+                ))}
+              </div>
+
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
               Built for the Wild. Powered by Stories. Driven by Community.
@@ -101,7 +114,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="flex gap-4 flex-wrap justify-start">
+          {/* <div className="flex gap-4 flex-wrap justify-start">
             {['/assets/registration/1.jpg', '/assets/registration/2.jpg', '/assets/registration/3.jpg']
               .map((src, index) => (
                 <Image
@@ -113,7 +126,7 @@ export default function Footer() {
                   className="rounded mb-4 h-[80px] w-[80px]"
                 />
               ))}
-          </div>
+          </div> */}
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Get in touch</h3>

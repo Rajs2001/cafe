@@ -1,13 +1,15 @@
 'use client';
 
-import React from 'react';
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import React from 'react';
+import { Button } from '@/components/ui/button';
 
 export default function TeamSection() {
   const handleButtonClick = () => {
-    window.location.href = 'mailto:info@cafecruisers.in';
+    const a = document.createElement('a');
+    a.href = 'mailto:info@cafecruisers.in';
+    a.click();
   };
 
   const teamMembers = [
@@ -16,22 +18,21 @@ export default function TeamSection() {
       role: 'Founder & CTO',
       image: '/assets/founder/1.jpg',
       description: 'Adventure enthusiast with a passion for building communities and creating unique experiences.',
-      accent: 'from-orange-500 to-amber-500'
+      accent: 'from-orange-500 to-amber-500',
     },
     {
       name: 'Shree Babu',
       role: 'Co-founder & CEO',
       image: '/assets/founder/2.jpg',
       description: 'Visionary designer who brings our brand and experiences to life through creative storytelling.',
-      accent: 'from-amber-500 to-orange-400'
+      accent: 'from-amber-500 to-orange-400',
     },
   ];
-
   return (
-    <section className="relative py-28 bg-gradient-to-b from-zinc-900 to-black overflow-hidden">
+    <section className="relative py-24 bg-gradient-to-b from-zinc-900 to-black overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-10 overflow-hidden">
-        {[...Array(8)].map((_, i) => (
+        {[...Array.from({ length: 8 })].map((_, i) => (
           <motion.div
             key={i}
             className="absolute rounded-full bg-orange-500"
@@ -44,7 +45,7 @@ export default function TeamSection() {
               duration: 10,
               repeat: Infinity,
               repeatType: 'reverse',
-              ease: 'linear'
+              ease: 'linear',
             }}
             style={{
               width: `${100 + (i * 20)}px`,
@@ -56,7 +57,7 @@ export default function TeamSection() {
         ))}
       </div>
 
-      <div className="container px-4 mx-auto relative z-10">
+      <div className="container px-6 md:px-8 mx-auto relative z-10">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -65,7 +66,9 @@ export default function TeamSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500">Team</span>
+            Meet Our
+            {' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500">Team</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             The passionate individuals behind Cruiserverse who bring our vision to life every day.
@@ -83,7 +86,7 @@ export default function TeamSection() {
               className="group perspective-1000 w-full sm:w-[360px]"
             >
               <div className="relative h-full transform-style-preserve-3d transition-all duration-500 group-hover:rotate-x-5">
-                <div className={`bg-gradient-to-br from-zinc-800 to-zinc-900 border border-zinc-700 rounded-2xl shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 group-hover:shadow-orange-500/20`}>
+                <div className="bg-gradient-to-br from-zinc-800 to-zinc-900 border border-zinc-700 rounded-2xl shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 group-hover:shadow-orange-500/20">
                   <div className="relative h-[380px] overflow-hidden">
                     <Image
                       fill

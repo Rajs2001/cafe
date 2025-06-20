@@ -1,43 +1,43 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { Button } from '@/components/ui/button';
 
 export default function PowersCoreSection() {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
 
   const apps = [
     {
-      title: "Café Cruisers App",
-      subtitle: "Your portal to a vibrant motorcycling community",
+      title: 'Café Cruisers App',
+      subtitle: 'Your portal to a vibrant motorcycling community',
       features: [
         'Reserve motorcycle rentals',
         'Participate in upcoming rides',
         'Connect with fellow riders',
         'Enjoy club features and local vendor benefits',
       ],
-      buttonText: "Discover Café Cruisers",
-      color: "from-orange-400 to-orange-600"
+      buttonText: 'Discover Café Cruisers',
+      color: 'from-orange-400 to-orange-600',
     },
     {
-      title: "Cruisers Pilot App",
-      subtitle: "Empowering ride leaders and event organizers",
+      title: 'Cruisers Pilot App',
+      subtitle: 'Empowering ride leaders and event organizers',
       features: [
         'Monitor earnings and trips',
         'Organize rides and manage bookings',
         'Utilize ride analytics and tools',
       ],
-      buttonText: "Find Out About the Pilot App",
-      color: "from-amber-400 to-amber-600"
-    }
+      buttonText: 'Find Out About the Pilot App',
+      color: 'from-amber-400 to-amber-600',
+    },
   ];
 
   return (
     <section className="relative py-20 bg-zinc-900 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
-        {[...Array(8)].map((_, i) => (
+        {[...Array.from({ length: 8 })].map((_, i) => (
           <motion.div
             key={i}
             className="absolute border border-orange-500/30 rounded-full"
@@ -69,8 +69,12 @@ export default function PowersCoreSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-        > What Powers The Core? </motion.h4>
-        
+        >
+          {' '}
+          What Powers The Core?
+          {' '}
+        </motion.h4>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {apps.map((app, index) => (
             <motion.div
@@ -84,17 +88,17 @@ export default function PowersCoreSection() {
               onMouseLeave={() => setHoveredItem(null)}
             >
               {/* Animated hover effect */}
-              <motion.div 
+              <motion.div
                 className={`absolute inset-0 bg-gradient-to-br ${app.color} opacity-0`}
                 animate={{
-                  opacity: hoveredItem === index ? 0.1 : 0
+                  opacity: hoveredItem === index ? 0.1 : 0,
                 }}
                 transition={{ duration: 0.3 }}
               />
-              
+
               {/* App icon placeholder */}
               <div className="relative z-10">
-                <motion.div 
+                <motion.div
                   className="w-16 h-16 rounded-xl mb-6 flex items-center justify-center bg-gradient-to-br from-zinc-700 to-zinc-800 border border-zinc-600"
                   whileHover={{ scale: 1.05 }}
                 >
@@ -103,7 +107,7 @@ export default function PowersCoreSection() {
                   </span>
                 </motion.div>
 
-                <motion.p 
+                <motion.p
                   className="text-xl md:text-2xl font-bold mb-2 text-white"
                   whileHover={{ x: 5 }}
                 >
@@ -114,7 +118,7 @@ export default function PowersCoreSection() {
                 <ul className="space-y-3 mb-8">
                   {app.features.map((feature, i) => (
                     <li key={i} className="list-none">
-                      <motion.div 
+                      <motion.div
                         className="flex items-start gap-3 text-gray-300 group"
                         initial={{ opacity: 0, x: -10 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -122,10 +126,10 @@ export default function PowersCoreSection() {
                         viewport={{ once: true }}
                         whileHover={{ x: 5 }}
                       >
-                        <motion.span 
+                        <motion.span
                           className={`text-xl relative top-0.5 bg-gradient-to-br ${app.color} bg-clip-text text-transparent`}
                           animate={{
-                            scale: hoveredItem === index ? [1, 1.2, 1] : 1
+                            scale: hoveredItem === index ? [1, 1.2, 1] : 1,
                           }}
                           transition={{ duration: 0.5 }}
                         >
@@ -141,14 +145,14 @@ export default function PowersCoreSection() {
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <Button 
+                  <Button
                     className={`rounded-full px-8 bg-gradient-to-r ${app.color} text-white hover:shadow-lg hover:shadow-orange-500/20 transition-all`}
                   >
                     {app.buttonText}
                     <motion.span
                       className="ml-2 inline-block"
                       animate={{
-                        x: hoveredItem === index ? [0, 5, 0] : 0
+                        x: hoveredItem === index ? [0, 5, 0] : 0,
                       }}
                       transition={{ duration: 1, repeat: Infinity }}
                     >
@@ -159,7 +163,7 @@ export default function PowersCoreSection() {
               </div>
 
               {/* Floating elements */}
-              {[...Array(3)].map((_, i) => (
+              {[...Array.from({ length: 3 })].map((_, i) => (
                 <motion.div
                   key={i}
                   className={`absolute rounded-full bg-gradient-to-br ${app.color} opacity-10`}
@@ -186,7 +190,7 @@ export default function PowersCoreSection() {
         </div>
 
         {/* Animated divider */}
-        <motion.div 
+        <motion.div
           className="mt-16 mx-auto h-px bg-gradient-to-r from-transparent via-orange-500/50 to-transparent w-3/4"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}

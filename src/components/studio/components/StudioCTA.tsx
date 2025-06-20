@@ -9,7 +9,11 @@ export default function StudioCTA() {
     <section className="bg-gradient-to-br from-zinc-800 to-zinc-900 text-white py-20">
       <div className="container px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Step into the <span className="gold-text">Cruiserverse</span> Studio
+          Step into the
+          {' '}
+          <span className="gold-text">Cruiserverse</span>
+          {' '}
+          Studio
         </h2>
         <p className="max-w-2xl mx-auto text-gray-300 mb-8">
           Book your studio experience today and take your brand storytelling to the next level. Our team is ready to bring your vision to life.

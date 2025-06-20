@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function JoinMovementSection() {
   const [isHovered, setIsHovered] = useState(false);
-  const [particles, setParticles] = useState<Array<{id: number, x: number, y: number, size: number}>>([]);
+  const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; size: number }>>([]);
 
   const generateParticles = () => {
     const newParticles = [];
@@ -14,7 +14,7 @@ export default function JoinMovementSection() {
         id: Math.random(),
         x: Math.random() * 100,
         y: Math.random() * 100,
-        size: Math.random() * 3 + 1
+        size: Math.random() * 3 + 1,
       });
     }
     setParticles(newParticles);
@@ -24,7 +24,7 @@ export default function JoinMovementSection() {
     <section className="relative bg-zinc-900 py-28 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
-        {[...Array(5)].map((_, i) => (
+        {[...Array.from({ length: 5 })].map((_, i) => (
           <motion.div
             key={i}
             className="absolute border border-orange-500/20 rounded-full"
@@ -51,7 +51,7 @@ export default function JoinMovementSection() {
 
       {/* Floating particles */}
       <div className="absolute inset-0">
-        {particles.map((particle) => (
+        {particles.map(particle => (
           <motion.div
             key={particle.id}
             className="absolute bg-orange-500 rounded-full"
@@ -82,7 +82,7 @@ export default function JoinMovementSection() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <motion.h3 
+          <motion.h3
             className="text-4xl sm:text-5xl font-bold mb-8 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-500"
             whileInView={{
               backgroundPositionX: ['0%', '100%'],
@@ -96,7 +96,7 @@ export default function JoinMovementSection() {
             Ready to Ride with Us?
           </motion.h3>
 
-          <motion.p 
+          <motion.p
             className="max-w-2xl mx-auto text-lg sm:text-xl mb-12 text-gray-300"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -137,7 +137,7 @@ export default function JoinMovementSection() {
               )}
 
               <span>Visit Cafecruisers</span>
-              
+
               <motion.span
                 className="ml-3 inline-block"
                 animate={{

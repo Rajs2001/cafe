@@ -1,32 +1,32 @@
 'use client';
-import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Film, Users, BookOpen, PenTool } from 'lucide-react';
+import { BookOpen, Film, PenTool, Users } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 
 export default function StudioWhatWeDo() {
   const [isMounted, setIsMounted] = useState(false);
-  
+
   const services = [
     {
       icon: <Film className="w-5 h-5" />,
-      title: "Event & Ride Aftermovies",
-      description: "Crisp, cinematic edits that capture the soul of every journey"
+      title: 'Event & Ride Aftermovies',
+      description: 'Crisp, cinematic edits that capture the soul of every journey',
     },
     {
       icon: <Users className="w-5 h-5" />,
-      title: "Creator Collaborations",
-      description: "Partnering with riders, filmmakers, and artists to co-create content"
+      title: 'Creator Collaborations',
+      description: 'Partnering with riders, filmmakers, and artists to co-create content',
     },
     {
       icon: <BookOpen className="w-5 h-5" />,
-      title: "Cruiserverse Comics",
-      description: "Original illustrated narratives combining mobility and mythology"
+      title: 'Cruiserverse Comics',
+      description: 'Original illustrated narratives combining mobility and mythology',
     },
     {
       icon: <PenTool className="w-5 h-5" />,
-      title: "Content Design",
-      description: "From brand films to visual content for social and web"
-    }
+      title: 'Content Design',
+      description: 'From brand films to visual content for social and web',
+    },
   ];
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export default function StudioWhatWeDo() {
       {/* Animated floating film reels */}
       {isMounted && (
         <div className="absolute inset-0 opacity-5 pointer-events-none">
-          {[...Array(4)].map((_, i) => (
+          {[...Array.from({ length: 4 })].map((_, i) => (
             <motion.div
               key={i}
               className="absolute border border-amber-500/20 rounded-full"
@@ -52,12 +52,12 @@ export default function StudioWhatWeDo() {
                 x: [0, 20, 0],
                 y: [0, 20, 0],
                 rotate: [0, 180],
-                opacity: [0.1, 0.3, 0.1]
+                opacity: [0.1, 0.3, 0.1],
               }}
               transition={{
                 duration: 20 + i * 5,
                 repeat: Infinity,
-                repeatType: 'reverse'
+                repeatType: 'reverse',
               }}
             />
           ))}
@@ -71,7 +71,7 @@ export default function StudioWhatWeDo() {
           className="text-center mb-16"
         >
           <h3 className="text-3xl md:text-4xl font-bold mb-6 gold-text">What We Do</h3>
-          
+
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

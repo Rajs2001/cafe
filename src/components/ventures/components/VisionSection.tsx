@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
+import React from 'react';
 
 const visionPoints = [
   {
@@ -29,8 +29,8 @@ const visionPoints = [
 
 export default function VisionSection() {
   return (
-    <section className="relative z-10 py-28 bg-gradient-to-b from-[#1f1a17] via-[#191512] to-black text-white">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section className="relative z-10 py-24 bg-gradient-to-b from-[#1f1a17] via-[#191512] to-black text-white">
+      <div className="container mx-auto px-6 md:px-8 max-w-6xl">
         <motion.h2
           className="text-4xl font-bold text-center mb-4"
           initial={{ opacity: 0, y: -20 }}

@@ -1,17 +1,19 @@
 import FeaturesSection from './components/FeaturesSection';
-import ServicesSection from './components/ServicesSection';
 import HeroSection from './components/HeroSection';
+import PulseCTA from './components/PulseCTA';
+import ServicesSection from './components/ServicesSection';
 import TestimonialsSection from './components/TestimonialsSection';
-import WhatWeDoSection from './components/WhatWeDoSection';
 import WhatsNextSection from './components/WhatsNextSection';
+import WhatWeDoSection from './components/WhatWeDoSection';
 import WhyBrandsChooseSection from './components/WhyBrandsChooseSection';
 
 export {
   FeaturesSection,
-  ServicesSection,
   HeroSection,
+  PulseCTA,
+  ServicesSection,
   TestimonialsSection,
-  WhatWeDoSection,
   WhatsNextSection,
-  WhyBrandsChooseSection
+  WhatWeDoSection,
+  WhyBrandsChooseSection,
 };

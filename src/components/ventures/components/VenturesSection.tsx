@@ -1,10 +1,10 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
+import { Card, CardContent } from '@/components/ui/card';
 
 const ventures = [
   {
@@ -12,23 +12,23 @@ const ventures = [
     desc: 'A premier space for motorcyclists to discover new routes, strengthen connections, and honor the essence of two-wheels.',
     link: '/venture',
     img: '/assets/cafe-cruiser.jpg',
-    accent: 'from-orange-400 to-amber-500'
+    accent: 'from-orange-400 to-amber-500',
   },
   {
     title: 'Unleash the Off-Road Within.',
     desc: 'A rugged 4×4 culture for those who chase dirt, defy limits, and thrive in the wild unknown.',
     link: '/venture2',
     img: '/assets/mud-cruiser.jpg',
-    accent: 'from-amber-500 to-orange-400'
+    accent: 'from-amber-500 to-orange-400',
   },
 ];
 
 export default function VenturesSection() {
   return (
-    <section className="relative py-28 bg-gradient-to-b from-zinc-900 to-black overflow-hidden">
+    <section className="relative py-24 bg-gradient-to-b from-zinc-900 to-black overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10 overflow-hidden">
-        {[...Array(6)].map((_, i) => (
+        {[...Array.from({ length: 6 })].map((_, i) => (
           <motion.div
             key={i}
             className="absolute rounded-full bg-orange-500"
@@ -41,7 +41,7 @@ export default function VenturesSection() {
               duration: 10,
               repeat: Infinity,
               repeatType: 'reverse',
-              ease: 'linear'
+              ease: 'linear',
             }}
             style={{
               width: `${100 + (i * 20)}px`,
@@ -53,7 +53,7 @@ export default function VenturesSection() {
         ))}
       </div>
 
-      <div className="container px-4 mx-auto relative z-10">
+      <div className="container px-6 md:px-8 mx-auto relative z-10">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}

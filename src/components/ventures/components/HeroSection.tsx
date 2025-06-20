@@ -1,9 +1,9 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Image from 'next/image';
 import { useRef } from 'react';
+import { Button } from '@/components/ui/button';
 
 // Predefined animation values to avoid hydration mismatch
 const ANIMATION_VALUES = [
@@ -14,22 +14,21 @@ const ANIMATION_VALUES = [
   { left: '70%', top: '40%', duration: 5.0, delay: 0.7 },
   { left: '85%', top: '60%', duration: 4.8, delay: 0.4 },
   { left: '30%', top: '10%', duration: 5.5, delay: 0.6 },
-  { left: '90%', top: '90%', duration: 4.0, delay: 0.9 }
+  { left: '90%', top: '90%', duration: 4.0, delay: 0.9 },
 ];
 
 const HeroSection = ({ handleScroll }: { handleScroll: () => void }) => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end start"]
+    offset: ['start start', 'end start'],
   });
-  
-  const y = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
+  const y = useTransform(scrollYProgress, [0, 1], [0, 100]);
   return (
-    <section 
+    <section
       ref={containerRef}
-      className="relative w-full min-h-[80vh] overflow-hidden bg-gradient-to-b from-black via-[#0a0a0a] to-zinc-900"
+      className="py-24 relative w-full min-h-[80vh] overflow-hidden bg-gradient-to-b from-black via-[#0a0a0a] to-zinc-900"
     >
       {/* Static adventure trail elements */}
       <div className="absolute inset-0 opacity-20 overflow-hidden">
@@ -46,7 +45,7 @@ const HeroSection = ({ handleScroll }: { handleScroll: () => void }) => {
               duration: value.duration,
               repeat: Infinity,
               repeatType: 'reverse',
-              ease: 'linear'
+              ease: 'linear',
             }}
             style={{
               width: `${100 + (i * 20)}px`,
@@ -57,9 +56,11 @@ const HeroSection = ({ handleScroll }: { handleScroll: () => void }) => {
             }}
           />
         ))}
+        {' '}
+
       </div>
 
-      <div className="container relative z-10 h-full px-4 mx-auto flex items-center">
+      <div className="container relative z-10 h-full px-6 md:px-8 mx-auto flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -75,13 +76,13 @@ const HeroSection = ({ handleScroll }: { handleScroll: () => void }) => {
                 COMMUNITY IS OUR TERRAIN.
               </span>
             </h1>
-            
+
             <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-xl">
               Meet our thriving adventure verticals — communities fueled by passion for the open road, off-road terrain,
               and the stories in between.
             </p>
 
-            <Button 
+            <Button
               className="rounded-full px-8 bg-orange-500 hover:bg-orange-600 text-black font-medium transition-all transform hover:scale-105"
               onClick={handleScroll}
             >
@@ -89,7 +90,7 @@ const HeroSection = ({ handleScroll }: { handleScroll: () => void }) => {
             </Button>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="relative"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -109,7 +110,7 @@ const HeroSection = ({ handleScroll }: { handleScroll: () => void }) => {
               <div className="absolute inset-0 rounded-lg opacity-20 bg-orange-500 blur-xl" />
             </div>
 
-            <motion.div 
+            <motion.div
               className="absolute -bottom-6 -right-3 bg-zinc-900 p-4 rounded-lg border border-orange-500/30 shadow-xl"
               whileHover={{ y: -5 }}
             >
@@ -128,7 +129,7 @@ const HeroSection = ({ handleScroll }: { handleScroll: () => void }) => {
       >
         <div className="text-orange-400">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M6 9l6 6 6-6"/>
+            <path d="M6 9l6 6 6-6" />
           </svg>
         </div>
       </motion.div>

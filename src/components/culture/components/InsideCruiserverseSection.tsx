@@ -6,32 +6,32 @@ import React from 'react';
 export const InsideCruiserverseSection: React.FC = () => {
   const culturePoints = [
     {
-      title: "Flat Structure",
-      description: "Ideas win here — not titles",
-      icon: "📊"
+      title: 'Flat Structure',
+      description: 'Ideas win here — not titles',
+      icon: '📊',
     },
     {
-      title: "Creative Freedom",
-      description: "You get space to explore, experiment, and shape what we're building",
-      icon: "🎨"
+      title: 'Creative Freedom',
+      description: 'You get space to explore, experiment, and shape what we\'re building',
+      icon: '🎨',
     },
     {
-      title: "Rider's Rhythm",
-      description: "We respect your time — whether it's the 6 AM ride or the 2 PM brainstorm",
-      icon: "⏱️"
+      title: 'Rider\'s Rhythm',
+      description: 'We respect your time — whether it\'s the 6 AM ride or the 2 PM brainstorm',
+      icon: '⏱️',
     },
     {
-      title: "Outcome Hours",
-      description: "Work isn't clocked. It's lived, created, and delivered",
-      icon: "🚀"
-    }
+      title: 'Outcome Hours',
+      description: 'Work isn\'t clocked. It\'s lived, created, and delivered',
+      icon: '🚀',
+    },
   ];
 
   return (
     <section className="relative py-20 bg-zinc-800 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
-        {[...Array(6)].map((_, i) => (
+        {[...Array.from({ length: 6 })].map((_, i) => (
           <motion.div
             key={i}
             className="absolute border border-orange-500/20 rounded-full"
@@ -47,7 +47,7 @@ export const InsideCruiserverseSection: React.FC = () => {
             transition={{
               duration: Math.random() * 60 + 60,
               repeat: Infinity,
-              ease: "linear",
+              ease: 'linear',
             }}
           />
         ))}
@@ -62,7 +62,7 @@ export const InsideCruiserverseSection: React.FC = () => {
         transition={{
           duration: 40,
           repeat: Infinity,
-          ease: "linear",
+          ease: 'linear',
         }}
       >
         <svg className="w-32 h-32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -105,7 +105,7 @@ export const InsideCruiserverseSection: React.FC = () => {
             <motion.li
               key={index}
               className="bg-zinc-700/30 backdrop-blur-sm p-6 rounded-xl border border-zinc-600 hover:border-orange-500/50 transition-all duration-300"
-              whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(217, 84, 16, 0.1)" }}
+              whileHover={{ y: -5, boxShadow: '0 10px 25px -5px rgba(217, 84, 16, 0.1)' }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 + 0.4 }}
@@ -139,7 +139,7 @@ export const InsideCruiserverseSection: React.FC = () => {
           className="mt-16 mx-auto h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent w-3/4"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: 'easeInOut' }}
           viewport={{ once: true }}
         />
       </div>

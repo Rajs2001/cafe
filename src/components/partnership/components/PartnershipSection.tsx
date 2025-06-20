@@ -1,10 +1,10 @@
 'use client';
 import { motion } from 'framer-motion';
-import React, { useState, useEffect  } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export const PartnershipSection: React.FC = () => {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
-   const [hasMounted, setHasMounted] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
     setHasMounted(true);
@@ -12,87 +12,87 @@ export const PartnershipSection: React.FC = () => {
 
   const collaborations = [
     {
-      title: "Event Sponsorships",
-      description: "Co-host and fund ride events, fests, launches, and tours",
-      icon: "🎪"
+      title: 'Event Sponsorships',
+      description: 'Co-host and fund ride events, fests, launches, and tours',
+      icon: '🎪',
     },
     {
-      title: "Brand Collaborations",
-      description: "Product integration, test rides, gear & apparel collabs",
-      icon: "🤝"
+      title: 'Brand Collaborations',
+      description: 'Product integration, test rides, gear & apparel collabs',
+      icon: '🤝',
     },
     {
-      title: "Media & Content",
-      description: "Joint video series, custom storytelling",
-      icon: "🎥"
+      title: 'Media & Content',
+      description: 'Joint video series, custom storytelling',
+      icon: '🎥',
     },
     {
-      title: "Technology",
-      description: "Co-develop or pilot digital mobility tools",
-      icon: "💻"
+      title: 'Technology',
+      description: 'Co-develop or pilot digital mobility tools',
+      icon: '💻',
     },
     {
-      title: "Training & Academy",
-      description: "Skill-building with our academy model",
-      icon: "🎓"
+      title: 'Training & Academy',
+      description: 'Skill-building with our academy model',
+      icon: '🎓',
     },
     {
-      title: "Investment Partnerships",
-      description: "Strategic scaling of Cruiserverse initiatives",
-      icon: "📈"
-    }
+      title: 'Investment Partnerships',
+      description: 'Strategic scaling of Cruiserverse initiatives',
+      icon: '📈',
+    },
   ];
 
   const benefits = [
     {
-      title: "Pan-India reach",
-      description: "Fast-growing rider & creator communities",
-      icon: "🗺️"
+      title: 'Pan-India reach',
+      description: 'Fast-growing rider & creator communities',
+      icon: '🗺️',
     },
     {
-      title: "B2C + B2B crossover",
-      description: "Model that delivers measurable impact",
-      icon: "🔄"
+      title: 'B2C + B2B crossover',
+      description: 'Model that delivers measurable impact',
+      icon: '🔄',
     },
     {
-      title: "Full-cycle execution",
-      description: "Idea → Activation → Media → Analytics",
-      icon: "🔄"
+      title: 'Full-cycle execution',
+      description: 'Idea → Activation → Media → Analytics',
+      icon: '🔄',
     },
     {
-      title: "Multi-vertical ecosystem",
-      description: "Designed to scale your impact",
-      icon: "🌐"
-    }
+      title: 'Multi-vertical ecosystem',
+      description: 'Designed to scale your impact',
+      icon: '🌐',
+    },
   ];
 
   return (
     <section className="relative py-20 bg-zinc-900 overflow-hidden">
       {/* Animated background elements */}
-     { hasMounted && (
-       <div className="absolute inset-0 opacity-10">
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute border border-orange-500/20 rounded-full"
-            style={{
-              width: `${Math.random() * 300 + 100}px`,
-              height: `${Math.random() * 300 + 100}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              rotate: 360,
-            }}
-            transition={{
-              duration: Math.random() * 60 + 60,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          />
-        ))}
-      </div>
-     ) }
+      { hasMounted && (
+        <div className="absolute inset-0 opacity-10">
+          {[...Array.from({ length: 6 })].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute border border-orange-500/20 rounded-full"
+              style={{
+                width: `${Math.random() * 300 + 100}px`,
+                height: `${Math.random() * 300 + 100}px`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                rotate: 360,
+              }}
+              transition={{
+                duration: Math.random() * 60 + 60,
+                repeat: Infinity,
+                ease: 'linear',
+              }}
+            />
+          ))}
+        </div>
+      ) }
 
       <div className="container px-4 mx-auto relative z-10">
         <motion.h3
@@ -107,7 +107,7 @@ export const PartnershipSection: React.FC = () => {
 
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Left - Partnership Types */}
-          <motion.div 
+          <motion.div
             className="flex-1"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -117,13 +117,13 @@ export const PartnershipSection: React.FC = () => {
             <h4 className="text-xl font-semibold mb-8 text-white flex items-center gap-3">
               <motion.span
                 animate={{ rotate: [0, 360] }}
-                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
               >
                 ⚙️
               </motion.span>
               Where We Collaborate
             </h4>
-            
+
             <div className="space-y-6">
               {collaborations.map((item, index) => (
                 <motion.div
@@ -141,7 +141,7 @@ export const PartnershipSection: React.FC = () => {
                       className={`text-2xl p-3 rounded-lg ${hoveredItem === index ? 'bg-orange-500/20' : 'bg-zinc-700/50'}`}
                       animate={{
                         rotate: hoveredItem === index ? [0, 10, -10, 0] : 0,
-                        scale: hoveredItem === index ? [1, 1.1, 1] : 1
+                        scale: hoveredItem === index ? [1, 1.1, 1] : 1,
                       }}
                       transition={{ duration: 0.5 }}
                     >
@@ -158,7 +158,7 @@ export const PartnershipSection: React.FC = () => {
           </motion.div>
 
           {/* Right - Why Partner */}
-          <motion.div 
+          <motion.div
             className="flex-1"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -168,19 +168,19 @@ export const PartnershipSection: React.FC = () => {
             <h4 className="text-xl font-semibold mb-8 text-white flex items-center gap-3">
               <motion.span
                 animate={{ scale: [1, 1.1, 1] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
               >
                 ✨
               </motion.span>
               Why Partner With Us?
             </h4>
-            
+
             <div className="space-y-6">
               {benefits.map((item, index) => (
                 <motion.div
                   key={index}
                   className="p-6 rounded-xl border border-zinc-700 bg-zinc-800/30 hover:border-orange-500/50 transition-all duration-300"
-                  whileHover={{ y: -3, boxShadow: "0 10px 25px -5px rgba(217, 84, 16, 0.1)" }}
+                  whileHover={{ y: -3, boxShadow: '0 10px 25px -5px rgba(217, 84, 16, 0.1)' }}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 + 0.4 }}
@@ -206,7 +206,7 @@ export const PartnershipSection: React.FC = () => {
           className="mt-20 mx-auto h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent w-3/4"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: 'easeInOut' }}
           viewport={{ once: true }}
         />
       </div>

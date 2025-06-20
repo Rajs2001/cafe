@@ -10,7 +10,9 @@ export default function ServicesSection() {
       <div className="container px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our <span className="gold-text">Services</span>
+            Our
+            {' '}
+            <span className="gold-text">Services</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Discover the range of services we offer to create memorable experiences and build vibrant communities.
@@ -28,7 +30,7 @@ export default function ServicesSection() {
 
           {/* Marketing Service */}
           <ServiceCard
-            icon={
+            icon={(
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="80"
@@ -43,7 +45,7 @@ export default function ServicesSection() {
                 <path d="m3 11 18-5v12L3 13v-2z" />
                 <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
               </svg>
-            }
+            )}
             title="Marketing"
             items={['Brand Partnerships', 'Influencer Collaborations', 'Content Creation', 'Social Media Campaigns']}
             description="We help brands connect with our community through authentic marketing initiatives that resonate with adventure enthusiasts."
@@ -66,7 +68,7 @@ function ServiceCard({
   icon,
   title,
   description,
-  items
+  items,
 }: {
   icon: React.ReactNode;
   title: string;
@@ -86,7 +88,9 @@ function ServiceCard({
         <ul className="mt-4 space-y-2">
           {items.map((item, idx) => (
             <li key={idx} className="flex items-center gap-2">
-              <span className="gold-text">•</span> {item}
+              <span className="gold-text">•</span>
+              {' '}
+              {item}
             </li>
           ))}
         </ul>
