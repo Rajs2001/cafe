@@ -3429,7 +3429,7 @@ fraction.js@^4.3.7:
 
 framer-motion@^12.17.0:
   version "12.17.0"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-12.17.0.tgz#1f4c68e396f5f28860a84e102d92f28db44a85de"
+  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-12.17.0.tgz"
   integrity sha512-2hISKgDk49yCLStwG1wf4Kdy/D6eBw9/eRNaWFIYoI9vMQ/Mqd1Fz+gzVlEtxJmtQ9y4IWnXm19/+UXD3dAYAA==
   dependencies:
     motion-dom "^12.17.0"
@@ -4720,14 +4720,14 @@ mlly@^1.7.4:
 
 motion-dom@^12.17.0:
   version "12.17.0"
-  resolved "https://registry.yarnpkg.com/motion-dom/-/motion-dom-12.17.0.tgz#69661708d0a0859042c3003cddf31d544c46d9fd"
+  resolved "https://registry.npmjs.org/motion-dom/-/motion-dom-12.17.0.tgz"
   integrity sha512-FA6/c70R9NKs3g41XDVONzmUUrEmyaifLVGCWtAmHP0usDnX9W+RN/tmbC4EUl0w6yLGvMTOwnWCFVgA5luhRg==
   dependencies:
     motion-utils "^12.12.1"
 
 motion-utils@^12.12.1:
   version "12.12.1"
-  resolved "https://registry.yarnpkg.com/motion-utils/-/motion-utils-12.12.1.tgz#63e28751325cb9d1cd684f3c273a570022b0010e"
+  resolved "https://registry.npmjs.org/motion-utils/-/motion-utils-12.12.1.tgz"
   integrity sha512-f9qiqUHm7hWSLlNW8gS9pisnsN7CRFRD58vNjptKdsqFLpkVnX00TNeD6Q0d27V9KzT7ySFyK1TZ/DShfVOv6w==
 
 ms@^2.1.1, ms@^2.1.3:
