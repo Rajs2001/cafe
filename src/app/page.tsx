@@ -28,13 +28,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-
       <Hero buttonclick={buttonclick} />
-
       <Intro />
-
       <About />
-
       {/* working Section */}
       <section className="py-20 bg-zinc-900">
         <div className="container px-4">

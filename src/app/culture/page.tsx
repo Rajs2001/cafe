@@ -1,7 +1,7 @@
 'use client';
 import { CTASection, GarageVibeSection, HeroSection, InsideCruiserverseSection, TestimonialsSection, WhatDrivesUsSection, WhatWeValueSection } from '@/components/culture';
 
-export default function CorePage() {
+export default function CulturePage() {
   const handleCTAClick = () => {
     const a = document.createElement('a');
     a.href = 'mailto:info@cafecruisers.in';

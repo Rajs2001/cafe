@@ -1,22 +1,25 @@
 'use client';
 
-import { Calendar, Users } from 'lucide-react';
-import Image from 'next/image';
+
+
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import {FeaturesSection,ServicesSection,HeroSection,TestimonialsSection,WhatWeDoSection,WhatsNextSection,WhyBrandsChooseSection} from '@/components/pulse';
+
+
+
 
 export default function PulsePage() {
-  function ctaClick(mailId: string) {
-    const a = document.createElement('a');
-    a.href = `mailto:${mailId}`;
-    a.click();
-  }
+  // function ctaClick(mailId: string) {
+  //   const a = document.createElement('a');
+  //   a.href = `mailto:${mailId}`;
+  //   a.click();
+
+  // }
 
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative w-full py-20 md:py-28 bg-gradient-to-b from-black to-zinc-900">
+      {/* <section className="relative w-full py-20 md:py-28 bg-gradient-to-b from-black to-zinc-900">
         <div className="container px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -32,7 +35,6 @@ export default function PulsePage() {
               <p className="mt-4">
                 As a B2B platform, we support automotive brands, lifestyle ventures, and riding communities in connecting with their audiences, emphasizing cultural crafting from concept to execution.
               </p>
-              {/* <Button className="rounded-full px-8 gold-bg text-black hover:bg-[#d95410]/90">Explore Events</Button> */}
             </div>
             <div className="relative flex justify-center">
               <Image
@@ -45,10 +47,10 @@ export default function PulsePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* What We Do Section */}
-      <section className="bg-zinc-900">
+      {/* <section className="bg-zinc-900">
         <div className="container px-4">
           <h3 className="text-2xl font-bold mb-4">What We Do ?</h3>
           <p className="text-gray-400 mb-6 font-medium">
@@ -124,10 +126,10 @@ export default function PulsePage() {
             </li>
           </ul>
         </div>
-      </section>
+      </section> */}
 
       {/* Why choose Section */}
-      <section className="py-20 bg-zinc-900">
+      {/* <section className="py-20 bg-zinc-900">
         <div className="container px-4 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
             Why Brands Choose
@@ -136,7 +138,6 @@ export default function PulsePage() {
           <p className="text-gray-400 text-center mb-10 max-w-2xl mx-auto">
             <span className="block mb-2">Because We Speak "Rider".</span>
           </p>
-          {/* <span className="block mb-2 text-center text-gray-400 ">Bullets or Icons:</span> */}
           <ul className="space-y-4 text-sm sm:text-base leading-tight">
             <li className="flex items-start gap-2">
               <span className="gold-text text-xl relative -top-0.5">•</span>
@@ -164,10 +165,10 @@ export default function PulsePage() {
             </li>
           </ul>
         </div>
-      </section>
+      </section> */}
 
       {/* Whats next Section */}
-      <section className="py-15 bg-zinc-900">
+      {/* <section className="py-15 bg-zinc-900">
         <div className="container px-4 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center"> What’s Next</h2>
           <p className="text-gray-400 text-center mb-10 max-w-2xl mx-auto">
@@ -178,10 +179,10 @@ export default function PulsePage() {
             </span>
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* Services Section */}
-      <section className="py-20 bg-zinc-900">
+      {/* <section className="py-20 bg-zinc-900">
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -195,7 +196,6 @@ export default function PulsePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Events Service */}
             <Card className="bg-zinc-800 border-zinc-700 overflow-hidden">
               <div className="h-48 bg-gradient-to-br from-gold/20 to-zinc-800 flex items-center justify-center">
                 <Calendar className="h-20 w-20 gold-text" />
@@ -233,7 +233,6 @@ export default function PulsePage() {
               </CardContent>
             </Card>
 
-            {/* Marketing Service */}
             <Card className="bg-zinc-800 border-zinc-700 overflow-hidden">
               <div className="h-48 bg-gradient-to-br from-gold/20 to-zinc-800 flex items-center justify-center">
                 <svg
@@ -285,7 +284,6 @@ export default function PulsePage() {
               </CardContent>
             </Card>
 
-            {/* Community Initiatives Service */}
             <Card className="bg-zinc-800 border-zinc-700 overflow-hidden">
               <div className="h-48 bg-gradient-to-br from-gold/20 to-zinc-800 flex items-center justify-center">
                 <Users className="h-20 w-20 gold-text" />
@@ -324,10 +322,10 @@ export default function PulsePage() {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-b from-zinc-900 to-black">
+      {/* <section className="py-20 bg-gradient-to-b from-zinc-900 to-black">
         <div className="container px-4">
           <div className="bg-gradient-to-r from-zinc-900 to-zinc-800 rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -350,7 +348,17 @@ export default function PulsePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+   
+      <HeroSection />
+      <WhatWeDoSection />
+      <WhyBrandsChooseSection />
+      <WhatsNextSection />
+      <FeaturesSection />
+      <ServicesSection />
+      <TestimonialsSection />
+     
     </div>
   );
 }
