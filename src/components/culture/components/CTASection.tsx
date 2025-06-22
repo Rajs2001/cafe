@@ -23,7 +23,8 @@ export const CTASection: React.FC<CTASectionProps> = ({ onCTAButtonClick }) => (
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
             size="lg"
-            className="rounded-full px-8 gold-bg text-black hover:gold-bg/90"
+            // variant='outline'
+            className="rounded-full px-8 gold-bg text-black hover:gold-bg/90 hover:bg-gold-600"
             onClick={onCTAButtonClick}
           >
             Collaborate with us

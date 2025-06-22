@@ -98,7 +98,7 @@ export const WhatWeValueSection: React.FC = () => {
               ease: 'linear',
             }}
           >
-            What We Value
+            What We Value ?
           </motion.h3>
         </motion.div>
 

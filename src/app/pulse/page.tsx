@@ -6,7 +6,7 @@ import {
   HeroSection,
   PulseCTA,
   // ServicesSection,
-  TestimonialsSection,
+  // TestimonialsSection,
   WhatsNextSection,
   WhatWeDoSection,
   WhyBrandsChooseSection,
@@ -22,7 +22,7 @@ export default function PulsePage() {
       {' '}
       {/* <FeaturesSection /> */}
       {/* <ServicesSection /> */}
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <PulseCTA />
     </div>
   );

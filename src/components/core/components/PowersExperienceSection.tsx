@@ -111,7 +111,7 @@ export default function PowersExperienceSection() {
           <div className="relative inline-block mb-6">
             <Sparkles className="absolute -top-2 -left-2 w-6 h-6 text-gold-400 animate-spin" />
             <Sparkles className="absolute -bottom-2 -right-2 w-4 h-4 text-purple-400 animate-pulse" />
-            <h2 className="text-3xl md:text-5xl lg:text-4xl font-black bg-gradient-to-r from-white via-gold-300 to-gold-400 bg-clip-text text-transparent leading-tight">
+            <h2 className="text-3xl md:text-5xl lg:text-4xl font-black bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 bg-clip-text text-transparent leading-tight">
               What Powers The Experience?
               <br />
               <span className="relative">
@@ -198,18 +198,6 @@ export default function PowersExperienceSection() {
           })}
         </div>
 
-        {/* Bottom CTA */}
-        <div
-          className={`text-center mt-20 transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-        >
-          <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gold-500/10 to-gold-500/10 backdrop-blur-sm border border-gold-500/20 rounded-full">
-            <Sparkles className="w-5 h-5 text-gold-400 animate-spin" />
-            <span className="text-gold-300 font-medium whitespace-nowrap">
-              Fuel your passion—ride with us!
-            </span>
-            <ArrowRight className="w-5 h-5 text-gold-400 animate-pulse" />
-          </div>
-        </div>
       </div>
 
       {/* Local keyframes */}

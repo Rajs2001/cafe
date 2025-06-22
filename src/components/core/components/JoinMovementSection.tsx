@@ -136,7 +136,7 @@ export default function JoinMovementSection() {
                 />
               )}
 
-              <span>Visit Cafecruisers</span>
+              <span>Join Us</span>
 
               <motion.span
                 className="ml-3 inline-block"
@@ -145,7 +145,20 @@ export default function JoinMovementSection() {
                 }}
                 transition={{ duration: 0.6 }}
               >
-                →
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 12h14m0 0l-7-7m7 7l-7 7"
+                  />
+                </svg>
               </motion.span>
             </motion.a>
           </motion.div>

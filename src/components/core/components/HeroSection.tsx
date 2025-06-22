@@ -117,17 +117,6 @@ export default function HeroSection() {
               </motion.p>
             </div>
 
-            <motion.button
-              className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full text-white font-medium text-lg shadow-lg hover:shadow-orange-500/40 transition-all duration-300 hover:scale-[1.03] transform group w-fit"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.5 }}
-            >
-              Explore More
-              <span className="ml-3 inline-block group-hover:translate-x-2 transition-transform duration-300">→</span>
-            </motion.button>
           </motion.div>
 
           {/* Right image */}

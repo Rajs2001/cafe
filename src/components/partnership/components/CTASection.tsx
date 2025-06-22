@@ -20,10 +20,10 @@ export const CTASection: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Let's Build Together
           </h2>
-          <p className="text-[#d95410] font-semibold">Your Brand. Our Terrain. Shared Impact.</p>
+          <p className="text-gold font-semibold">Your Brand. Our Terrain. Shared Impact.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <Button size="lg" className="rounded-full px-8 gold-bg text-black hover:gold-bg/90" onClick={handleButtonClick}>
-              Our Deck
+            <Button size="lg" className="rounded-full px-8 bg-gold text-black hover:bg-gold/90" onClick={handleButtonClick}>
+              Lets Build
             </Button>
           </div>
         </div>

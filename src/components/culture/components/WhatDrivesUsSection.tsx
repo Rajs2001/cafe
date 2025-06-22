@@ -12,7 +12,7 @@ export const WhatDrivesUsSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative bg-zinc-900 overflow-hidden ">
+    <section className="relative pt-16 bg-zinc-900 overflow-hidden ">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-5">
         {[...Array.from({ length: 8 })].map((_, i) => (

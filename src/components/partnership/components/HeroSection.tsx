@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks-extra/no-direct-set-state-in-use-effect */
 'use client';
 
 import { animate, motion, useMotionValue, useTransform } from 'framer-motion';
@@ -18,20 +19,25 @@ type Particle = {
 };
 
 export const HeroSection: React.FC = () => {
-  /* ---------------- client‑only guards ---------------- */
   const [hasMounted, setHasMounted] = useState(false);
   const [particles, setParticles] = useState<Particle[]>([]);
   const count = useMotionValue(0);
   const rounded = useTransform(count, Math.round);
 
-  /* mark when we’re safely on the client */
+  const HandleClickToDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/assets/Ventures_Presentation.pdf';
+    link.download = 'cruiserverse_Ventures_Presentation.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   useEffect(() => {
     setHasMounted(true);
 
-    // start the speed counter once on mount
     const controls = animate(count, 100, { duration: 3 });
 
-    // generate particle data once on mount
     const generated: Particle[] = [...Array.from({ length: 20 })].map((_, i) => ({
       id: i,
       size: Math.random() * 10 + 2,
@@ -44,8 +50,7 @@ export const HeroSection: React.FC = () => {
     setParticles(generated);
 
     return () => controls.stop();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-  /* ---------------------------------------------------- */
+  }, []);
 
   const focusItems = [
     {
@@ -62,7 +67,6 @@ export const HeroSection: React.FC = () => {
 
   return (
     <section className="relative w-full min-h-screen bg-gradient-to-b from-zinc-950 to-zinc-900 overflow-hidden">
-      {/* ------- Speedometer backdrop (purely deterministic, so SSR‑safe) ------- */}
       <div className="absolute inset-0 opacity-10">
         <motion.div
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -95,7 +99,6 @@ export const HeroSection: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* -------- Floating particles (render only on the client) -------- */}
       {hasMounted && (
         <div className="absolute inset-0">
           {particles.map(p => (
@@ -124,8 +127,7 @@ export const HeroSection: React.FC = () => {
         </div>
       )}
 
-      {/* -------------------- Main content -------------------- */}
-      <div className="container px-4 mx-auto relative z-10 h-full flex items-center pt-32 pb-20">
+      <div className="container px-4 mx-auto relative z-10 h-full flex items-center pt-16 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left column */}
           <div>
@@ -204,7 +206,9 @@ export const HeroSection: React.FC = () => {
           </div>
 
           {/* Right column – logo */}
-          <motion.div
+          <motion.button
+            type="button"
+            onClick={HandleClickToDownload}
             className="relative w-full aspect-square max-w-xl mx-auto"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -212,10 +216,10 @@ export const HeroSection: React.FC = () => {
             viewport={{ once: true }}
           >
             <Image
-              src="/color1/full/white_logo_color1_background.png"
+              src="/assets/img3.jpg"
               alt="Cruiserverse Logo"
               fill
-              className="object-contain"
+              className="object-contain rounded-full cursor-pointer"
               priority
             />
             <motion.div
@@ -228,11 +232,10 @@ export const HeroSection: React.FC = () => {
               animate={{ scale: [1, 1.05, 1], opacity: [0.3, 0.5, 0.3] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
             />
-          </motion.div>
+          </motion.button>
         </div>
       </div>
 
-      {/* Speed counter */}
       <motion.div
         className="absolute bottom-8 left-8 text-orange-500 text-sm font-mono"
         initial={{ opacity: 0 }}

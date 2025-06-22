@@ -26,20 +26,16 @@ export const HeroSection = () => {
       }
 
       particle.innerHTML = `
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-full h-full">
-          ${svgPath}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-full h-full">          ${svgPath}
         </svg>
       `;
-
       particle.style.width = `${Math.random() * 30 + 10}px`;
       particle.style.left = `${Math.random() * 100}vw`;
       particle.style.top = `${Math.random() * 100}vh`;
       particle.style.opacity = `${Math.random() * 0.2 + 0.05}`;
       particle.style.color = `rgba(234, 88, 12, ${Math.random() * 0.3 + 0.1})`;
-
       const duration = `${Math.random() * 40 + 20}s`;
       particle.style.animation = `float ${duration} infinite linear`;
-
       document.querySelector('.mechanical-container')?.appendChild(particle);
     };
 
@@ -48,7 +44,20 @@ export const HeroSection = () => {
     }
   }, []);
   return (
-    <section className="relative w-full min-h-[80vh] py-24 overflow-hidden bg-gradient-to-b from-black to-zinc-900 flex items-center justify-center">
+    <section className="relative w-full min-h-[90vh] py-24 overflow-hidden bg-gradient-to-b from-black to-zinc-900 flex items-center justify-center">
+      {/* Background image */}
+      <div className="absolute inset-0 z-0">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-100"
+          style={{
+            background: 'url(/assets/img2.jpg)',
+            backgroundBlendMode: 'overlay',
+          }}
+        >
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-zinc-900 opacity-80"></div>
+      </div>
+
       {/* Mechanical background elements container */}
       <div className="absolute inset-0 overflow-hidden mechanical-container"></div>
 

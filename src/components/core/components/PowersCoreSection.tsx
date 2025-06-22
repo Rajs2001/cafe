@@ -18,7 +18,7 @@ export default function PowersCoreSection() {
         'Enjoy club features and local vendor benefits',
       ],
       buttonText: 'Discover Café Cruisers',
-      color: 'from-orange-400 to-orange-600',
+      color: 'from-gold-400 to-gold-600',
     },
     {
       title: 'Cruisers Pilot App',
@@ -27,9 +27,10 @@ export default function PowersCoreSection() {
         'Monitor earnings and trips',
         'Organize rides and manage bookings',
         'Utilize ride analytics and tools',
+        '',
       ],
       buttonText: 'Find Out About the Pilot App',
-      color: 'from-amber-400 to-amber-600',
+      color: 'from-gold-400 to-gold-600',
     },
   ];
 
@@ -64,7 +65,7 @@ export default function PowersCoreSection() {
 
       <div className="container px-4 relative z-10">
         <motion.h4
-          className="text-3xl md:text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-500"
+          className="text-3xl md:text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-gold-500 to-gold-700"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
