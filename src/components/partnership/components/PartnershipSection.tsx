@@ -67,7 +67,7 @@ export const PartnershipSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-20 bg-zinc-900 overflow-hidden">
+    <section className="relative lg:py-14 bg-zinc-900 overflow-hidden">
       {/* Animated background elements */}
       { hasMounted && (
         <div className="absolute inset-0 opacity-10">
@@ -96,7 +96,7 @@ export const PartnershipSection: React.FC = () => {
 
       <div className="container px-4 mx-auto relative z-10">
         <motion.h3
-          className="text-3xl md:text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-600"
+          className="text-3xl md:text-4xl font-bold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-600 py-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}

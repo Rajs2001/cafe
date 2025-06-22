@@ -27,7 +27,7 @@ const otherLinks = [
 const loginLinks = [
   {
     href: 'https://cafe-cruiser-admin-panel.vercel.app/login/',
-    label: 'Admin Login',
+    label: 'Employee Login',
   },
 ];
 
@@ -64,9 +64,9 @@ export default function Header() {
                 <ChevronDown className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="w-48 bg-gold-100 text-black ">
+            <DropdownMenuContent align="start" className="w-48 bg-gold-100 text-black hover:bg-gold-100">
               {verticalLinks.map(({ href, label }) => (
-                <DropdownMenuItem asChild key={href} className="bg-gold-100">
+                <DropdownMenuItem asChild key={href} className="bg-gold-100 hover:bg-gold-500 focud:bg-gold-500">
                   <Link
                     href={href}
                     className="cursor-pointer p-2 rounded-md hover:text-white hover:bg-gold-500"

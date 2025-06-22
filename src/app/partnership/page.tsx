@@ -1,5 +1,5 @@
 'use client';
-import { CTASection, HeroSection, PartnershipSection } from '@/components/partnership';
+import { ContactFormSection, CTASection, HeroSection, PartnershipSection } from '@/components/partnership';
 
 export default function PartnershipPage() {
   return (
@@ -8,6 +8,8 @@ export default function PartnershipPage() {
       <HeroSection />
 
       <PartnershipSection />
+
+      <ContactFormSection />
 
       <CTASection />
 

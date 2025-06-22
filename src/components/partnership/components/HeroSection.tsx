@@ -209,14 +209,14 @@ export const HeroSection: React.FC = () => {
           <motion.button
             type="button"
             onClick={HandleClickToDownload}
-            className="relative w-full aspect-square max-w-xl mx-auto"
+            className="relative w-[80%] aspect-square max-w-xl mx-auto"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
             viewport={{ once: true }}
           >
             <Image
-              src="/assets/img3.jpg"
+              src="/assets/img4.jpg"
               alt="Cruiserverse Logo"
               fill
               className="object-contain rounded-full cursor-pointer"
