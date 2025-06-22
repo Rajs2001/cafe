@@ -5,12 +5,12 @@ import { useState } from 'react';
 
 export const ContactFormSection: React.FC = () => {
   const initial = {
-    name: 'Raajesh',
-    contact: '9931449755',
-    email: 'rkj9023@gmail.com',
-    purpose: 'purpose',
-    business: 'business',
-    message: 'Template message lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    name: '',
+    contact: '',
+    email: '',
+    purpose: '',
+    business: '',
+    message: '',
   };
   const [formData, setFormData] = useState(initial);
   const [errors, setErrors] = useState<Record<string, string>>({});

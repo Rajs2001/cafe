@@ -9,8 +9,8 @@ import { generateUserEmailTemplate } from '@/lib/email-templates/user-contact';
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER || 'fakerajesh365@gmail.com',
-    pass: process.env.EMAIL_PASSWORD || 'bomlzroqfvrcaami',
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASSWORD,
   },
 });
 
@@ -45,8 +45,8 @@ export async function POST(request: Request) {
 
     // Send email to admin
     await transporter.sendMail({
-      from: process.env.EMAIL_USER || 'fakerajesh365@gmail.com',
-      to: process.env.ADMIN_EMAIL || 'kesharijigyashu@gmail.com',
+      from: process.env.EMAIL_USER,
+      to: process.env.ADMIN_EMAIL,
       subject: `New Contact Form Submission: ${name}`,
       html: adminEmailContent,
     });
