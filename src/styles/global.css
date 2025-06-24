@@ -12,6 +12,30 @@ body {
   }
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(10px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.mechanical-particle {
+  position: absolute;
+  pointer-events: none;
+  animation: float 10s infinite ease-in-out;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

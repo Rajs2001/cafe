@@ -21,6 +21,7 @@ const verticalLinks = [
 
 const otherLinks = [
   { href: '/culture', label: 'Culture' },
+  { href: '/careers', label: 'Careers' },
   { href: '/partnership', label: 'Partnership' },
 ];
 
@@ -66,7 +67,7 @@ export default function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="w-48 bg-gold-100 text-black hover:bg-gold-100">
               {verticalLinks.map(({ href, label }) => (
-                <DropdownMenuItem asChild key={href} className="bg-gold-100 hover:bg-gold-500 focud:bg-gold-500">
+                <DropdownMenuItem asChild key={href} className="bg-gold-100 hover:bg-gold-500 focus:bg-gold-500 hover:text-white">
                   <Link
                     href={href}
                     className="cursor-pointer p-2 rounded-md hover:text-white hover:bg-gold-500"
@@ -82,7 +83,7 @@ export default function Header() {
             <Link
               key={href}
               href={href}
-              className="text-sm font-medium transition-colors px-2 py-1 rounded-md hover:bg-gold-500 hover:text-white"
+              className="text-sm font-medium transition-colors transition-al px-6 py-2 rounded-md hover:bg-gold-500 hover:text-white"
             >
               {label}
             </Link>

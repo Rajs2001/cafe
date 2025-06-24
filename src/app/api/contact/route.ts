@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+// eslint-disable-next-line-import/no-extraneous-dependencies
 import nodemailer from 'nodemailer';
 
 // Email templates

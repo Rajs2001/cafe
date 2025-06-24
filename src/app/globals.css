@@ -10,21 +10,47 @@
     --card-foreground: 0 0% 100%;
     --popover: 0 0% 4%;
     --popover-foreground: 0 0% 100%;
-    --primary: 47 100% 50%;
+    /* --primary: 47 100% 50%; */
+    --primary: 22, 86%, 46%;
     --primary-foreground: 0 0% 0%;
     --secondary: 0 0% 9%;
     --secondary-foreground: 0 0% 100%;
     --muted: 0 0% 9%;
     --muted-foreground: 0 0% 63.9%;
-    --accent: 47 100% 50%;
+    --accent: 22, 86%, 46%;
     --accent-foreground: 0 0% 0%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 47 100% 50%;
+    /* --ring: 47 100% 50%; */
+    --ring: 22, 77%, 30%;
     --radius: 1rem;
   }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(10px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.mechanical-particle {
+  position: absolute;
+  pointer-events: none;
+  animation: float 10s infinite ease-in-out;
 }
 
 @layer base {

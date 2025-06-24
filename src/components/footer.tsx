@@ -91,8 +91,9 @@ export default function Footer() {
                   Culture
                 </Link>
               </li>
+              {' '}
               <li>
-                <Link href="/Careers" className="text-sm text-muted-foreground hover:gold-text">
+                <Link href="/careers" className="text-sm text-muted-foreground hover:gold-text">
                   Careers
                 </Link>
               </li>
