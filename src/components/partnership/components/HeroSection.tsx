@@ -216,7 +216,7 @@ export const HeroSection: React.FC = () => {
             viewport={{ once: true }}
           >
             <Image
-              src="/assets/img4.jpg"
+              src="/assets/img5.jpg"
               alt="Cruiserverse Logo"
               fill
               className="object-contain rounded-full cursor-pointer"

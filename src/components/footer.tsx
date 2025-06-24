@@ -5,12 +5,12 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="border-t border-border/40 bg-background">
-      <div className="container py-12">
+      <div className="container py-12 bg-[#1f211e]">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
 
           <div className="flex flex-col gap-2">
             <Link href="/" className="flex flex-col">
-              <div className="flex items-center gap-2 justify-center md:justify-start lg:justify-start">
+              <div className="flex items-center justify-center md:justify-start lg:justify-start">
                 <Image
                   src="/black/icon/white_icon_black_background.png"
                   alt="Cruiserverse Logo"
@@ -18,12 +18,19 @@ export default function Footer() {
                   height={60}
                   className="rounded-md hidden md:block lg:block"
                 />
-                <Image
+                {/* <Image
                   src="/black/text/white_textlogo_transparent_background.png"
                   alt="Cruiserverse Logo"
                   width={220}
                   height={20}
                   className=" md:block lg:block md:w-[150px] md:h-[100px]"
+                /> */}
+                <Image
+                  src="/black/text/white_textlogo_transparent_background.jpg"
+                  alt="Cruiserverse Logo"
+                  width={220}
+                  height={20}
+                  className="hidden md:block md:w-[150px] md:h-[60px] -mt-1"
                 />
               </div>
               <span className="text-sm font-bold gold-text">CIN: U52291TZ2025PTC033425</span>
@@ -33,8 +40,9 @@ export default function Footer() {
               <div className="grid grid-cols-3 gap-4 mt-2 md:gap-2 lg:gap-2 w-[50%] lg:w-[100%] md:w-[50%]">
                 {['/assets/registration/1.jpg', '/assets/registration/2.jpg', '/assets/registration/3.jpg'].map((src, index) => (
                   <div
+                    // eslint-disable-next-line react/no-array-index-key
                     key={index}
-                    className="w-10 h-10 bg-cover bg-center rounded shadow"
+                    className="w-14 h-14 bg-cover bg-center rounded shadow"
                     style={{ backgroundImage: `url(${src})` }}
                   />
                 ))}

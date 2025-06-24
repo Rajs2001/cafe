@@ -18,7 +18,7 @@ const verticalLinks = [
   { href: '/studio', label: 'Studio' },
   { href: '/core', label: 'Core' },
 ];
-
+// #1f211e
 const otherLinks = [
   { href: '/culture', label: 'Culture' },
   { href: '/careers', label: 'Careers' },
@@ -37,8 +37,8 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gold-200 bg-gold-50/95 backdrop-blur supports-[backdrop-filter]:bg-gold-50/80">
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
+      <div className="container flex h-16 items-center justify-between bg-[#1f211e]">
+        <Link href="/" className="flex items-center gap-0">
           <Image
             src="/black/icon/white_icon_black_background.png"
             alt="Cruiserverse Logo"
@@ -47,11 +47,11 @@ export default function Header() {
             className="rounded-md"
           />
           <Image
-            src="/black/text/white_textlogo_transparent_background.png"
+            src="/black/text/white_textlogo_transparent_background.jpg"
             alt="Cruiserverse Logo"
             width={220}
-            height={40}
-            className="hidden md:block md:w-[150px] md:h-[100px]"
+            height={20}
+            className="hidden md:block md:w-[150px] md:h-[40px] -mt-1"
           />
         </Link>
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { SearchIcon, Star, Users } from 'lucide-react';
+import { Star } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
@@ -160,7 +160,7 @@ export default function HeroSection() {
               experiences with a team that's reshaping the way people connect with the open road.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            {/* <div className="flex flex-col sm:flex-row gap-4">
               <motion.a
                 href="#open-positions"
                 className="rounded-full px-8 py-3 bg-orange-500 hover:bg-orange-600 text-black font-medium transition-all transform hover:scale-105 inline-flex items-center justify-center"
@@ -170,7 +170,7 @@ export default function HeroSection() {
                 <SearchIcon className="mr-2 h-5 w-5" />
                 Find Open Positions
               </motion.a>
-            </div>
+            </div> */}
           </motion.div>
 
           <motion.div
@@ -199,15 +199,15 @@ export default function HeroSection() {
               whileHover={{ y: -5 }}
             >
               <div className="flex items-center">
-                <Users className="text-orange-400 w-5 h-5 mr-2" />
+                <Star className="text-orange-400 w-5 h-5 mr-2" />
                 <div>
-                  <p className="text-orange-400 font-semibold">Growing Team</p>
-                  <p className="text-sm text-gray-400">Join 50+ passionate professionals</p>
+                  <p className="text-orange-400 font-semibold">4.8/5 Rating</p>
+                  <p className="text-sm text-gray-400">Employee satisfaction</p>
                 </div>
               </div>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               className="absolute -top-6 -left-3 bg-zinc-900 p-4 rounded-lg border border-orange-500/30 shadow-xl"
               whileHover={{ y: -5 }}
               initial={{ opacity: 0, y: 20 }}
@@ -221,7 +221,7 @@ export default function HeroSection() {
                   <p className="text-sm text-gray-400">Employee satisfaction</p>
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </div>
