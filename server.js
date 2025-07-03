@@ -3,7 +3,10 @@
 const { createServer } = require('node:http');
 // eslint-disable-next-line node/no-deprecated-api
 const { parse } = require('node:url');
+const dotenv = require('dotenv');
 const next = require('next');
+
+dotenv.config();
 
 // Get the port from environment variables or default to 3000
 const port = Number.parseInt(process.env.PORT, 10) || 3000;
@@ -12,6 +15,11 @@ const dev = process.env.NODE_ENV !== 'production';
 // Create Next.js app
 const app = next({ dev });
 const handle = app.getRequestHandler();
+
+// console.log('ENV VARS:', {
+//   NODE_ENV: process.env.NODE_ENV,
+//   PORT: process.env.PORT,
+// });
 
 app.prepare().then(() => {
   createServer((req, res) => {
