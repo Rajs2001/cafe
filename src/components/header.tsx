@@ -26,8 +26,12 @@ const otherLinks = [
 ];
 
 const loginLinks = [
+  // {
+  //   href: 'https://cafe-cruiser-admin-panel.vercel.app/login/',
+  //   label: 'Employee Login',
+  // },
   {
-    href: 'https://cafe-cruiser-admin-panel.vercel.app/login/',
+    href: 'https://dashboard.cruiserverse.in/login/',
     label: 'Employee Login',
   },
 ];

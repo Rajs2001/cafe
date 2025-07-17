@@ -53,10 +53,12 @@ export const ContactFormSection: React.FC = () => {
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://api.cruiserverse.in/v1/contacts/submit', {
+      // const response = await fetch('http://localhost:3002/v1/contacts/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Origin': 'https://cafecruisers.in',
         },
         body: JSON.stringify(formData),
       });
@@ -65,6 +67,7 @@ export const ContactFormSection: React.FC = () => {
         setSubmitStatus('success');
         setFormData(initial);
       } else {
+        console.error('API response error:', await response.text());
         setSubmitStatus('error');
       }
     } catch (error) {
